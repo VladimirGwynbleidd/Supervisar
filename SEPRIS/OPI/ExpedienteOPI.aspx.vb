@@ -212,10 +212,55 @@
 
 
             If e.Row.DataItem("I_PASO_INICIAL").ToString() <> PasoActual And e.Row.DataItem("I_PASO_FINAL").ToString() <> PasoActual Then
+
+                Dim dtArchivos As DataTable = Entities.DocumentoOPI.ObtenerArchivos(Folio, e.Row.DataItem("I_ID_DOCUMENTO").ToString())
+                Dim tablaArchivos As New Table
+                Dim tablaOficios As New Table
+
+                Dim rowOficio As New TableRow
+                Dim cellOficio As New TableCell
+
                 btnRegistroSICOD.Visible = False
                 btnAgregarDocumento.Visible = False
                 btnReemplazarDocumento.Visible = False
                 btnBuscarSICOD.Visible = False
+                For Each archivo As DataRow In dtArchivos.Rows
+
+                    If ((archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "") Or archivo("T_FOLIO_SICOD").ToString() <> "") Then
+                        Dim rowArchivo As New TableRow
+                        Dim cellArchivo As New TableCell
+
+                        Dim linkArchivo As New LinkButton
+
+                        If (archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "") Then
+                            linkArchivo.Text = archivo("T_DSC_NOMBRE_DOCUMENTO")
+                            linkArchivo.OnClientClick = "__doPostBack('" + Button1.UniqueID + "', '" + archivo("T_DSC_NOMBRE_DOCUMENTO") + "'); return false;"
+                            cellArchivo.Controls.Add(linkArchivo)
+                            rowArchivo.Cells.Add(cellArchivo)
+                            tablaArchivos.Rows.Add(rowArchivo)
+                            'btnReemplazarDocumento.Visible = True
+                        End If
+
+                        If (archivo("T_FOLIO_SICOD").ToString() <> "") Then
+                            Dim linkFolioSICOD As New LinkButton
+                            linkFolioSICOD.Text = archivo("T_FOLIO_SICOD").ToString()
+                            linkFolioSICOD.OnClientClick = "ConsultarOficios('" + archivo("T_FOLIO_SICOD").ToString().Replace("/", "-") + "'); return false;"
+                            cellOficio.Controls.Add(linkFolioSICOD)
+                            rowOficio.Cells.Add(cellOficio)
+                            tablaOficios.Rows.Add(rowOficio)
+                            'btnReemplazarDocumento.Visible = False
+                        End If
+
+                        btnRegistroSICOD.Visible = False
+                        btnAgregarDocumento.Visible = False
+
+                        btnBuscarSICOD.Visible = False
+
+
+                    End If
+                    e.Row.Cells(3).Controls.Add(tablaArchivos)
+                    e.Row.Cells(6).Controls.Add(tablaOficios)
+                Next
             Else
                 Dim dtArchivos As DataTable = Entities.DocumentoOPI.ObtenerArchivos(Folio, e.Row.DataItem("I_ID_DOCUMENTO").ToString())
 
