@@ -459,12 +459,16 @@
     End Sub
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
         Dim dv As DataView = CType(Session("CatalogoTemp"), DataView)
+        Session("Registrar") = "Registrar"
 
         Session.Remove("CatalogoTemp")
         Session.Remove("ExportaGridCatalogo")
         Response.Redirect("~/Mantenimiento/ProcesoVigilanciaModif.aspx?catalogo=" & HttpUtility.UrlEncode(dv.Table.TableName))
     End Sub
     Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
+
+        Session("Registrar") = "Modificar"
+
         Try
             'Verifica que haya un registro seleccionado
             If GridPrincipal.SelectedIndex <> -1 Then

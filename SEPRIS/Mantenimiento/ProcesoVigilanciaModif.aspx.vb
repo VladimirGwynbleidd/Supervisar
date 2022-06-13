@@ -64,10 +64,10 @@ Public Class ProcesoVigilanciaModif
         Select Case catTable
             Case "BDS_C_GR_PROCESO", "BDS_C_GR_SUBPROCESO", "BDS_C_GR_SUPERVISOR", "BDS_C_GR_INSPECTOR"
                 psCampoEstatusModif = "B_FLAG_VIGENTE"
-                'Case "BDS_C_GR_PROCESO", "BDS_C_GR_SUBPROCESO"
-                '    psCampoEstatusModif = "B_FLAG_VIGENTE, F_FECH_INI_VIG"
-                'Case "BDS_C_GR_SUPERVISOR", "BDS_C_GR_INSPECTOR"
-                '    psCampoEstatusModif = "B_FLAG_VIGENTE"
+            'Case "BDS_C_GR_PROCESO", "BDS_C_GR_SUBPROCESO"
+            '    psCampoEstatusModif = "B_FLAG_VIGENTE, F_FECH_INI_VIG"
+            'Case "BDS_C_GR_SUPERVISOR", "BDS_C_GR_INSPECTOR"
+            '    psCampoEstatusModif = "B_FLAG_VIGENTE"
             Case Else
                 psCampoEstatusModif = "N_FLAG_VIG"
         End Select
@@ -139,6 +139,10 @@ Public Class ProcesoVigilanciaModif
         End If
     End Sub
     Private Sub BuildControls()
+        Dim valorRegistrar As String
+
+        valorRegistrar = Session("Registrar").ToString()
+
         If Not Session("CatalogoTemp") Is Nothing Then
             Try
                 Dim dv As DataView = CType(Session("CatalogoTemp"), DataView)
@@ -221,13 +225,25 @@ Public Class ProcesoVigilanciaModif
                             lcCalExt.TargetControlID = campo
                             tdCal.Controls.Add(lcCalExt)
 
-                            Dim liImageCal As New Image
-                            liImageCal.ID = "imgCal_" & campo
-                            liImageCal.ImageUrl = "../Imagenes/Calendar.GIF"
-                            liImageCal.Width = 16
-                            liImageCal.ImageAlign = ImageAlign.Bottom
-                            liImageCal.Height = 16
-                            tdCal.Controls.Add(liImageCal)
+                            'Validamos que sea una inserción o actualización
+                            If (valorRegistrar <> "Registrar") Then
+                                Dim liImageCal As New Image
+                                liImageCal.ID = "imgCal_" & campo
+                                liImageCal.ImageUrl = "../Imagenes/Calendar.GIF"
+                                liImageCal.Width = 16
+                                liImageCal.ImageAlign = ImageAlign.Bottom
+                                liImageCal.Height = 16
+                                tdCal.Controls.Add(liImageCal)
+
+                            End If
+
+                            'Dim liImageCal As New Image
+                            'liImageCal.ID = "imgCal_" & campo
+                            'liImageCal.ImageUrl = "../Imagenes/Calendar.GIF"
+                            'liImageCal.Width = 16
+                            'liImageCal.ImageAlign = ImageAlign.Bottom
+                            'liImageCal.Height = 16
+                            'tdCal.Controls.Add(liImageCal)
 
                             If (Not CadCamposMostrarGridOnlyRead.Contains(campo)) Then
                                 tr.Cells.Add(td)
@@ -329,6 +345,10 @@ Public Class ProcesoVigilanciaModif
         'Dim catalogo As New Entities.Catalogo(Request.QueryString("catalogo"))
         Dim catalogo As New Entities.ProcesosVigilancia(Request.QueryString("catalogo"))
         Dim dvEstructura As DataView = catalogo.ObtenerEstructura()
+        Dim valorRegistrar As String
+
+        valorRegistrar = Session("Registrar").ToString()
+
 
         If Not Request.QueryString("catalogo").Equals("BDS_C_GR_PROCESO") Then
             Dim newRow As DataRowView = dvEstructura.AddNew()
@@ -358,6 +378,14 @@ Public Class ProcesoVigilanciaModif
             dvEstructura.Sort = "ColumnID"
         End If
 
+
+        'Validamos que sea una inserción o actualización
+        If (valorRegistrar = "Registrar") Then
+            CadCamposMostrarGridOnlyRead = "B_FLAG_VIGENTE, F_FECH_INI_VIG"
+        Else
+            CadCamposMostrarGridOnlyRead = ""
+        End If
+
         If Request.QueryString.Count = 1 Then 'Nuevo
             Try
 
@@ -369,7 +397,7 @@ Public Class ProcesoVigilanciaModif
                             Dim tb As TextBox = CType(tblContenido.FindControl(columna), TextBox)
                             tb.Text = catalogo.ObtenerIdSiguiente(columna)
                             tb.Enabled = False
-                        ElseIf CadCamposMostrarGridOnlyReadAgregar.Contains(columna) Then
+                        ElseIf CadCamposMostrarGridOnlyRead.Contains(columna) Then
                             If columna.Equals("B_FLAG_VIGENTE") Then
                                 Dim tb As TextBox = CType(tblContenido.FindControl(columna), TextBox)
                                 tb.Text = "1"
