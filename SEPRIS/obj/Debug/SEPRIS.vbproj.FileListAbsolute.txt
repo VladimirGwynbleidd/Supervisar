@@ -1,0 +1,200 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\SEPRIS.dll.config
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\SEPRIS.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\SEPRIS.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\SEPRIS.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\AccesoDatos.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\ADExtender.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\AjaxControlToolkit.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Clases.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Conexion.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\ControlErrores.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\CustomGridView.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Encryption64.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Entities.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\LogicaNegocio.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\LogicaNegocioSICOD.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Negocio.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\SICOD.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Microsoft.Exchange.WebServices.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\SharePoint.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\ADExtender.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Conexion.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Conexion.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\CustomGridView.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\CustomGridView.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Entities.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Entities.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Negocio.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Negocio.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Utilerias.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\bin\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.ResolveComReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.Resources.resources
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.GenerateResource.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.CopyComplete
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\SEPRIS\obj\Debug\SEPRIS.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\SEPRIS.dll.config
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\SEPRIS.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\SEPRIS.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\SEPRIS.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\AccesoDatos.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\ADExtender.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\AjaxControlToolkit.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Clases.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Conexion.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\ControlErrores.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\CustomGridView.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Encryption64.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Entities.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\LogicaNegocio.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\LogicaNegocioSICOD.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Negocio.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\SICOD.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Utilerias.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Microsoft.Exchange.WebServices.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\SharePoint.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\ADExtender.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Conexion.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Conexion.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\CustomGridView.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\CustomGridView.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Entities.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Entities.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Negocio.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Negocio.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Utilerias.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\bin\Utilerias.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.AssemblyReference.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.ResolveComReference.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.Resources.resources
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.GenerateResource.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.CoreCompileInputs.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.vbproj.CopyComplete
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\SEPRIS\obj\Debug\SEPRIS.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\SEPRIS.dll.config
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\SEPRIS.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\SEPRIS.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\SEPRIS.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\AccesoDatos.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\AjaxControlToolkit.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Clases.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Conexion.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\CustomGridView.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\LogicaNegocio.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\LogicaNegocioSICOD.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Negocio.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\SICOD.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Conexion.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Conexion.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\CustomGridView.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\CustomGridView.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Negocio.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Negocio.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\bin\DocumentFormat.OpenXml.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\obj\Debug\SEPRIS.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\obj\Debug\SEPRIS.vbproj.ResolveComReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\obj\Debug\SEPRIS.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\obj\Debug\SEPRIS.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\obj\Debug\SEPRIS.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\obj\Debug\SEPRIS.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\SEPRIS\obj\Debug\SEPRIS.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\SEPRIS.dll.config
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\SEPRIS.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\SEPRIS.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\SEPRIS.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\AccesoDatos.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\ADExtender.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\AjaxControlToolkit.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Clases.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Conexion.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\ControlErrores.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\CustomGridView.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Encryption64.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Entities.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\LogicaNegocio.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\LogicaNegocioSICOD.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Negocio.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\SICOD.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Utilerias.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\SharePoint.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\DocumentFormat.OpenXml.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\ADExtender.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Conexion.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Conexion.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\CustomGridView.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\CustomGridView.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Entities.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Entities.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Negocio.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Negocio.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Utilerias.pdb
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\Utilerias.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\bin\DocumentFormat.OpenXml.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\obj\Debug\SEPRIS.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\obj\Debug\SEPRIS.vbproj.ResolveComReference.cache
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\obj\Debug\SEPRIS.Resources.resources
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\obj\Debug\SEPRIS.vbproj.GenerateResource.Cache
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\obj\Debug\SEPRIS.dll
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\obj\Debug\SEPRIS.xml
+C:\PROYECTOS CON\08062022\Codigo\SEPRIS\obj\Debug\SEPRIS.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\SEPRIS.dll.config
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\SEPRIS.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\SEPRIS.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\SEPRIS.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\AccesoDatos.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\ADExtender.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\AjaxControlToolkit.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Clases.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Conexion.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\ControlErrores.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\CustomGridView.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Encryption64.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Entities.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\LogicaNegocio.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\LogicaNegocioSICOD.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Negocio.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\SICOD.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Utilerias.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\SharePoint.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\DocumentFormat.OpenXml.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\ADExtender.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Conexion.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Conexion.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\CustomGridView.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\CustomGridView.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Entities.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Entities.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Negocio.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Negocio.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Utilerias.pdb
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\Utilerias.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\bin\DocumentFormat.OpenXml.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\obj\Debug\SEPRIS.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS CON\JR 13062022\SEPRIS\obj\Debug\SEPRIS.vbproj.ResolveComReference.cache
+C:\PROYECTOS CON\JR 13062022\SEPRIS\obj\Debug\SEPRIS.Resources.resources
+C:\PROYECTOS CON\JR 13062022\SEPRIS\obj\Debug\SEPRIS.vbproj.GenerateResource.Cache
+C:\PROYECTOS CON\JR 13062022\SEPRIS\obj\Debug\SEPRIS.dll
+C:\PROYECTOS CON\JR 13062022\SEPRIS\obj\Debug\SEPRIS.xml
+C:\PROYECTOS CON\JR 13062022\SEPRIS\obj\Debug\SEPRIS.pdb

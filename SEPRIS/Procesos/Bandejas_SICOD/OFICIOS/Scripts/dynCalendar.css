@@ -1,0 +1,52 @@
+.dynCalendar_header
+{
+	clear: none;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+}
+.dynCalendar_dayname
+{
+	clear: none;
+	border-right: #c0c0c0 1px solid;
+	border-top: #c0c0c0 1px solid;
+	font-size: 8pt;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color: #eeeeee;
+	text-align: center;
+}
+
+.dynCalendar_day
+{
+	clear: none;
+	font-size: 8pt;
+	color: #000000;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color: #eeeeee;
+}
+
+.dynCalendar_today
+{
+	clear: none;
+	border-right: #c0c0c0 1px solid;
+	border-top: #c0c0c0 1px solid;
+	font-size: 8pt;
+	border-left: #c0c0c0 1px solid;
+	border-bottom: #c0c0c0 1px solid;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color: #ffffff;
+}
+
+.dynCalendar
+{
+	clear: none;
+	border-right: white 2px outset;
+	border-top: white 2px outset;
+	visibility: hidden;
+	border-left: white 2px outset;
+	border-bottom: white 2px outset;
+	position: absolute;
+	background-color: #c0c0c0;
+}

@@ -1,0 +1,86 @@
+﻿body {
+  background: #fff;
+  color: #333;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  padding: 40px;
+}
+
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 10px;
+  background: #ebedf2;
+  border: 1px solid #333;
+  line-height: 80%;
+}
+
+#containerG1 {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#chartG1, #chartDataG1 {
+  /*border: 1px solid #333;
+  background: #ebedf2 url("images/gradient.png") repeat-x 0 0;*/
+}
+
+#chartG1 {
+  display: block;
+  margin: 0 0 50px 0;
+  float: left;
+  cursor: pointer;
+}
+
+#chartDataG1 {
+  width: 200px;
+  margin: 120px 150px 50px 50px;
+  float: right;
+  border-collapse: collapse;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  background-position: 0 -100px;
+}
+
+/*#chart {
+  display: block;
+  margin: -90px;
+  float: left;
+  cursor: pointer;
+}
+
+#chartData {
+  width: 200px;
+  margin: 50px 150px 50px 50px;
+  float: right;
+  border-collapse: collapse;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  background-position: 0 -100px;
+}*/
+
+#chartDataG1 th, #chartDataG1 td {
+  padding: 0.5em;
+  border: 1px dotted #666;
+  text-align: left;
+}
+
+#chartDataG1 th {
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+}
+
+#chartDataG1 td {
+  cursor: pointer;
+}
+
+#chartDataG1 td.highlight {
+  background: #e8e8e8;
+}
+
+#chartDataG1 tr:hover td {
+  background: #f0f0f0;
+}

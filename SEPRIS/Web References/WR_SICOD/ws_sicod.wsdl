@@ -1,0 +1,2622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetUnidadesAdministrativas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoUnidad" type="tns:UnidadAdministrativaTipo" />
+            <s:element minOccurs="1" maxOccurs="1" name="EstatusUnidad" type="tns:UnidadAdministrativaEstatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="UnidadAdministrativaTipo">
+        <s:restriction base="s:string">
+          <s:enumeration value="Oficial" />
+          <s:enumeration value="Funcional" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="UnidadAdministrativaEstatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Todos" />
+          <s:enumeration value="Activo" />
+          <s:enumeration value="Inactivo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetUnidadesAdministrativasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnidadesAdministrativasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnidadesAdministrativasVPOTree">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUnidadesAdministrativasVPOTreeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnidadesAdministrativasVPOTreeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAutorizadoresPosiblesSistic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAutorizadoresPosiblesSisticResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAutorizadoresPosiblesSisticResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getsuperior">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetsuperiorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetsuperiorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFuncionariosVPO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdNivel" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoUnidad" type="tns:UnidadAdministrativaTipo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFuncionariosVPOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFuncionariosVPOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEstructuraDependientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoUnidad" type="tns:UnidadAdministrativaTipo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEstructuraDependientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEstructuraDependientesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTemasVicepresidenciaJuridica">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTemasVicepresidenciaJuridicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTemasVicepresidenciaJuridicaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMachotesVicepresidenciaJuridica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tema" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMachotesVicepresidenciaJuridicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMachotesVicepresidenciaJuridicaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNombreCompleto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNombreCompletoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNombreCompletoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnidadAdministrativaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoUnidad" type="tns:UnidadAdministrativaTipo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnidadAdministrativaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnidadAdministrativaUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuarioFirmaElectronica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdAreaBase" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoUnidad" type="tns:UnidadAdministrativaTipo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuarioFirmaElectronicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsuarioFirmaElectronicaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetinicialesUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaUsuarios" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDiccionario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Diccionario" nillable="true" type="tns:Diccionario" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Diccionario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetinicialesUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetinicialesUsuariosResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosEntidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdEntidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoEntidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosEntidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosEntidadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogoCargoDestinatarioOficios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EsConsar" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogoCargoDestinatarioOficiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCatalogoCargoDestinatarioOficiosResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosFirmaOficios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodigoAreaPadre" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EsSIE" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosFirmaOficiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsuariosFirmaOficiosResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDestinatariosOficios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEntidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoEntidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDestinatariosOficiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDestinatariosOficiosResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClasificacionesOficiosSISAN">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClasificacionesOficiosSISANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClasificacionesOficiosSISANResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOficioPDFName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="T_Oficio_Numero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOficioPDFNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOficioPDFNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaOficio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="T_OFICIO_NUMERO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_CODIGO_AREA" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_TIPO_DOCUMENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ANIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_FIRMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_SOLICITA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SISTEMA_SOLICITA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ENTIDAD_TIPO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ENTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_SUBENTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_DESTINATARIO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_CLASIFICACION" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ESTATUS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_PRIORIDAD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_OFICIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_ELABORO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DICTAMINADO_FLAG" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_PUESTO_DESTINATARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_ASUNTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_COMENTARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_INCUMPLIMIENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PLAZO_FLAG" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="I_PLAZO_DIAS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_ACUSE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_RECEPCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_VENCIMIENTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRMAS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RUBRICAS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FIRMA_SIE_FLAG" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NOMBRE_DESTINATARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaOficioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AltaOficioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaOficioConIdSistema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="T_OFICIO_NUMERO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_CODIGO_AREA" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_TIPO_DOCUMENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ANIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_FIRMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_SOLICITA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SISTEMA_SOLICITA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ENTIDAD_TIPO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ENTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_SUBENTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_DESTINATARIO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_CLASIFICACION" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ESTATUS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_PRIORIDAD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_OFICIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_ELABORO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DICTAMINADO_FLAG" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_PUESTO_DESTINATARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_ASUNTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_COMENTARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_INCUMPLIMIENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PLAZO_FLAG" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="I_PLAZO_DIAS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_ACUSE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_RECEPCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_VENCIMIENTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRMAS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RUBRICAS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FIRMA_SIE_FLAG" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NOMBRE_DESTINATARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_SISTEMA" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaOficioConIdSistemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AltaOficioConIdSistemaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaOficioConIdSistemaDictamen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="T_OFICIO_NUMERO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_CODIGO_AREA" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_TIPO_DOCUMENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ANIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_FIRMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_SOLICITA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SISTEMA_SOLICITA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ENTIDAD_TIPO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ENTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_SUBENTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_DESTINATARIO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_CLASIFICACION" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ESTATUS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_PRIORIDAD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_OFICIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_ELABORO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DICTAMINADO_FLAG" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_PUESTO_DESTINATARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_ASUNTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_COMENTARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_INCUMPLIMIENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PLAZO_FLAG" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="I_PLAZO_DIAS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_ACUSE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_RECEPCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="F_FECHA_VENCIMIENTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRMAS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RUBRICAS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FIRMA_SIE_FLAG" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NOMBRE_DESTINATARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_SISTEMA" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaOficioConIdSistemaDictamenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AltaOficioConIdSistemaDictamenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApartaNumOficio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID_CODIGO_AREA" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_TIPO_DOCUMENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_ANIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_SOLICITA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SISTEMA_SOLICITA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_FIRMA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FIRMA_SIE_FLAG" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApartaNumOficioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApartaNumOficioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaArchivosOficio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUMERO_OFICIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ARCHIVO_WORD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ARCHIVO_PDF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRMA_SBM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CEDULA_PDF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CEDULA_SBM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RESPUESTA_OFICIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ACUSE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EXPEDIENTE_DICTAMEN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ANEXO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ANEXO_SBM" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaArchivosOficioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConsultaCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID_CATALOGO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaCatalogoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneraNombreArchivoWordOficios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUMERO_OFICIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneraNombreArchivoWordOficiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeneraNombreArchivoWordOficiosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtenderDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FOLIO" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_TURNADO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GRUPO_TURNADO" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TIPO_ATENCION" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NUMERO_OFICIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COMENTARIOS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_SOLICITA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SISTEMA_SOLICITA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtenderDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AtenderDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TurnarDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FOLIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO_TURNADO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VOBO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="INSTRUCCIONES" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TurnadoResultado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="iserro" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TurnarDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TurnarDocumentoResult" type="tns:TurnadoResultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarEstatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FOLIO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ESTATUS" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarEstatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CambiarEstatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiaSistemaWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FOLIO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Sistema" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiaSistemaWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CambiaSistemaWSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HayTurnadoSICOD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HayTurnadoSICODResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HayTurnadoSICODResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtenderSISAT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario_solicitud" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtenderSISATResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AtenderSISATResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActiveDirectoryGetMails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuarios" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActiveDirectoryGetMailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActiveDirectoryGetMailsResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActiveDirectoryGetUsers">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="OAD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="area" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomusuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombres" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellidos" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOAD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OAD" nillable="true" type="tns:OAD" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActiveDirectoryGetUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActiveDirectoryGetUsersResult" type="tns:ArrayOfOAD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaUsuarios" type="tns:ArrayOfUS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="US" nillable="true" type="tns:US" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="US">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="perfil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="area" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CustomListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomListResult" type="tns:ArrayOfOAD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTipoEntidades">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTipoEntidadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTipoEntidadesResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntidades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoEntidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntidadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntidadesResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntidadesComplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoEntidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntidadesCompleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntidadesCompleteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListaAfores">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListaAforesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListaAforesResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTipoEntidadAfore">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTipoEntidadAforeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTipoEntidadAforeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdEntidadConsar">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetIdEntidadConsarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetIdEntidadConsarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBitacoraArchivosOsiris">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdEstado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Condicion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBitacoraArchivosOsirisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBitacoraArchivosOsirisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInicialesEntidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Entidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInicialesEntidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInicialesEntidadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosAnexo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_fto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_t_ent_env" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cve_id_ent_env" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fech_env_inf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fech_proc_inf" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_subent" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_archivo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosAnexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosAnexoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFormatoCatalogo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OnlyActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFormatoCatalogoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFormatoCatalogoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntidadesAforeConsar">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="EntidadOsiris">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdEntidad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCorto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreLargo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsConsar" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntidadOsiris">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntidadOsiris" nillable="true" type="tns:EntidadOsiris" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEntidadesAforeConsarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntidadesAforeConsarResult" type="tns:ArrayOfEntidadOsiris" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOneEntidadesAforeConsar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdEntidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoEntidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOneEntidadesAforeConsarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOneEntidadesAforeConsarResult" type="tns:EntidadOsiris" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEjecutivosSISVIG">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEjecutivosSISVIGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEjecutivosSISVIGResult" type="tns:ArrayOfDiccionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreasJerarquia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="area" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreasJerarquiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAreasJerarquiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDirectorGeneral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="area" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDirectorGeneralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDirectorGeneralResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInicialesUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInicialesUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInicialesUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosPorAreaFuncional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="area" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsuariosPorAreaFuncionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsuariosPorAreaFuncionalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFraseAnio">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFraseAnioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFraseAnioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubEntidadesComplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Entidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubEntidadesCompleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSubEntidadesCompleteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUnidadesAdministrativasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnidadesAdministrativas" />
+  </wsdl:message>
+  <wsdl:message name="GetUnidadesAdministrativasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnidadesAdministrativasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnidadesAdministrativasVPOTreeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnidadesAdministrativasVPOTree" />
+  </wsdl:message>
+  <wsdl:message name="GetUnidadesAdministrativasVPOTreeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnidadesAdministrativasVPOTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAutorizadoresPosiblesSisticSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAutorizadoresPosiblesSistic" />
+  </wsdl:message>
+  <wsdl:message name="GetAutorizadoresPosiblesSisticSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAutorizadoresPosiblesSisticResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetsuperiorSoapIn">
+    <wsdl:part name="parameters" element="tns:Getsuperior" />
+  </wsdl:message>
+  <wsdl:message name="GetsuperiorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetsuperiorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFuncionariosVPOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFuncionariosVPO" />
+  </wsdl:message>
+  <wsdl:message name="GetFuncionariosVPOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFuncionariosVPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEstructuraDependientesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEstructuraDependientes" />
+  </wsdl:message>
+  <wsdl:message name="GetEstructuraDependientesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEstructuraDependientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTemasVicepresidenciaJuridicaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTemasVicepresidenciaJuridica" />
+  </wsdl:message>
+  <wsdl:message name="GetTemasVicepresidenciaJuridicaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTemasVicepresidenciaJuridicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMachotesVicepresidenciaJuridicaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMachotesVicepresidenciaJuridica" />
+  </wsdl:message>
+  <wsdl:message name="GetMachotesVicepresidenciaJuridicaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMachotesVicepresidenciaJuridicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNombreCompletoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNombreCompleto" />
+  </wsdl:message>
+  <wsdl:message name="GetNombreCompletoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNombreCompletoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnidadAdministrativaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnidadAdministrativaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="GetUnidadAdministrativaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnidadAdministrativaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsuarioFirmaElectronicaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsuarioFirmaElectronica" />
+  </wsdl:message>
+  <wsdl:message name="GetUsuarioFirmaElectronicaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsuarioFirmaElectronicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetinicialesUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetinicialesUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="GetinicialesUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetinicialesUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosEntidadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosEntidad" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosEntidadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosEntidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogoCargoDestinatarioOficiosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCatalogoCargoDestinatarioOficios" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogoCargoDestinatarioOficiosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCatalogoCargoDestinatarioOficiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosFirmaOficiosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsuariosFirmaOficios" />
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosFirmaOficiosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsuariosFirmaOficiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDestinatariosOficiosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDestinatariosOficios" />
+  </wsdl:message>
+  <wsdl:message name="GetDestinatariosOficiosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDestinatariosOficiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClasificacionesOficiosSISANSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClasificacionesOficiosSISAN" />
+  </wsdl:message>
+  <wsdl:message name="GetClasificacionesOficiosSISANSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClasificacionesOficiosSISANResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOficioPDFNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOficioPDFName" />
+  </wsdl:message>
+  <wsdl:message name="GetOficioPDFNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOficioPDFNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="AltaOficioSoapIn">
+    <wsdl:part name="parameters" element="tns:AltaOficio" />
+  </wsdl:message>
+  <wsdl:message name="AltaOficioSoapOut">
+    <wsdl:part name="parameters" element="tns:AltaOficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="AltaOficioConIdSistemaSoapIn">
+    <wsdl:part name="parameters" element="tns:AltaOficioConIdSistema" />
+  </wsdl:message>
+  <wsdl:message name="AltaOficioConIdSistemaSoapOut">
+    <wsdl:part name="parameters" element="tns:AltaOficioConIdSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AltaOficioConIdSistemaDictamenSoapIn">
+    <wsdl:part name="parameters" element="tns:AltaOficioConIdSistemaDictamen" />
+  </wsdl:message>
+  <wsdl:message name="AltaOficioConIdSistemaDictamenSoapOut">
+    <wsdl:part name="parameters" element="tns:AltaOficioConIdSistemaDictamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartaNumOficioSoapIn">
+    <wsdl:part name="parameters" element="tns:ApartaNumOficio" />
+  </wsdl:message>
+  <wsdl:message name="ApartaNumOficioSoapOut">
+    <wsdl:part name="parameters" element="tns:ApartaNumOficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaArchivosOficioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaArchivosOficio" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaArchivosOficioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaArchivosOficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GeneraNombreArchivoWordOficiosSoapIn">
+    <wsdl:part name="parameters" element="tns:GeneraNombreArchivoWordOficios" />
+  </wsdl:message>
+  <wsdl:message name="GeneraNombreArchivoWordOficiosSoapOut">
+    <wsdl:part name="parameters" element="tns:GeneraNombreArchivoWordOficiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtenderDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:AtenderDocumento" />
+  </wsdl:message>
+  <wsdl:message name="AtenderDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:AtenderDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TurnarDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:TurnarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="TurnarDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:TurnarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiarEstatus" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiarEstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiaSistemaWSSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiaSistemaWS" />
+  </wsdl:message>
+  <wsdl:message name="CambiaSistemaWSSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiaSistemaWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="HayTurnadoSICODSoapIn">
+    <wsdl:part name="parameters" element="tns:HayTurnadoSICOD" />
+  </wsdl:message>
+  <wsdl:message name="HayTurnadoSICODSoapOut">
+    <wsdl:part name="parameters" element="tns:HayTurnadoSICODResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtenderSISATSoapIn">
+    <wsdl:part name="parameters" element="tns:AtenderSISAT" />
+  </wsdl:message>
+  <wsdl:message name="AtenderSISATSoapOut">
+    <wsdl:part name="parameters" element="tns:AtenderSISATResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActiveDirectoryGetMailsSoapIn">
+    <wsdl:part name="parameters" element="tns:ActiveDirectoryGetMails" />
+  </wsdl:message>
+  <wsdl:message name="ActiveDirectoryGetMailsSoapOut">
+    <wsdl:part name="parameters" element="tns:ActiveDirectoryGetMailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActiveDirectoryGetUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:ActiveDirectoryGetUsers" />
+  </wsdl:message>
+  <wsdl:message name="ActiveDirectoryGetUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:ActiveDirectoryGetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomListSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomList" />
+  </wsdl:message>
+  <wsdl:message name="CustomListSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoEntidadesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTipoEntidades" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoEntidadesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTipoEntidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntidadesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntidades" />
+  </wsdl:message>
+  <wsdl:message name="GetEntidadesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntidadesCompleteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntidadesComplete" />
+  </wsdl:message>
+  <wsdl:message name="GetEntidadesCompleteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntidadesCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListaAforesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListaAfores" />
+  </wsdl:message>
+  <wsdl:message name="GetListaAforesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListaAforesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoEntidadAforeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTipoEntidadAfore" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoEntidadAforeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTipoEntidadAforeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIdEntidadConsarSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIdEntidadConsar" />
+  </wsdl:message>
+  <wsdl:message name="GetIdEntidadConsarSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIdEntidadConsarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBitacoraArchivosOsirisSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBitacoraArchivosOsiris" />
+  </wsdl:message>
+  <wsdl:message name="GetBitacoraArchivosOsirisSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBitacoraArchivosOsirisResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInicialesEntidadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInicialesEntidad" />
+  </wsdl:message>
+  <wsdl:message name="GetInicialesEntidadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInicialesEntidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosAnexoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosAnexo" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosAnexoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosAnexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFormatoCatalogoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFormatoCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="GetFormatoCatalogoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFormatoCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntidadesAforeConsarSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntidadesAforeConsar" />
+  </wsdl:message>
+  <wsdl:message name="GetEntidadesAforeConsarSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntidadesAforeConsarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOneEntidadesAforeConsarSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOneEntidadesAforeConsar" />
+  </wsdl:message>
+  <wsdl:message name="GetOneEntidadesAforeConsarSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOneEntidadesAforeConsarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEjecutivosSISVIGSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEjecutivosSISVIG" />
+  </wsdl:message>
+  <wsdl:message name="GetEjecutivosSISVIGSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEjecutivosSISVIGResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAreasJerarquiaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAreasJerarquia" />
+  </wsdl:message>
+  <wsdl:message name="GetAreasJerarquiaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAreasJerarquiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDirectorGeneralSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDirectorGeneral" />
+  </wsdl:message>
+  <wsdl:message name="GetDirectorGeneralSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDirectorGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInicialesUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInicialesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="GetInicialesUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInicialesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosPorAreaFuncionalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsuariosPorAreaFuncional" />
+  </wsdl:message>
+  <wsdl:message name="GetUsuariosPorAreaFuncionalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsuariosPorAreaFuncionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFraseAnioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFraseAnio" />
+  </wsdl:message>
+  <wsdl:message name="GetFraseAnioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFraseAnioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubEntidadesCompleteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubEntidadesComplete" />
+  </wsdl:message>
+  <wsdl:message name="GetSubEntidadesCompleteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubEntidadesCompleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ws_SICODSoap">
+    <wsdl:operation name="GetUnidadesAdministrativas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las unidad administrativas filtradas por el tipo y el estatus.</wsdl:documentation>
+      <wsdl:input message="tns:GetUnidadesAdministrativasSoapIn" />
+      <wsdl:output message="tns:GetUnidadesAdministrativasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnidadesAdministrativasVPOTree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el árbol de Unidades Administrativas de la VPO: Estructura Funcional</wsdl:documentation>
+      <wsdl:input message="tns:GetUnidadesAdministrativasVPOTreeSoapIn" />
+      <wsdl:output message="tns:GetUnidadesAdministrativasVPOTreeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutorizadoresPosiblesSistic">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa los usuarios superiores</wsdl:documentation>
+      <wsdl:input message="tns:GetAutorizadoresPosiblesSisticSoapIn" />
+      <wsdl:output message="tns:GetAutorizadoresPosiblesSisticSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getsuperior">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el usuario superior</wsdl:documentation>
+      <wsdl:input message="tns:GetsuperiorSoapIn" />
+      <wsdl:output message="tns:GetsuperiorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFuncionariosVPO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa los funcionarios jerarquicamente superiores o iguales al nivel proporcionado</wsdl:documentation>
+      <wsdl:input message="tns:GetFuncionariosVPOSoapIn" />
+      <wsdl:output message="tns:GetFuncionariosVPOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstructuraDependientes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el o las unidades y personal dependiente de un usuario (aplica el caso de Asistentes-Director)</wsdl:documentation>
+      <wsdl:input message="tns:GetEstructuraDependientesSoapIn" />
+      <wsdl:output message="tns:GetEstructuraDependientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemasVicepresidenciaJuridica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa los temas de las plantillas de vicepresidencia juridica.</wsdl:documentation>
+      <wsdl:input message="tns:GetTemasVicepresidenciaJuridicaSoapIn" />
+      <wsdl:output message="tns:GetTemasVicepresidenciaJuridicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMachotesVicepresidenciaJuridica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa los machotes de las plantillas de vicepresidencia juridica.</wsdl:documentation>
+      <wsdl:input message="tns:GetMachotesVicepresidenciaJuridicaSoapIn" />
+      <wsdl:output message="tns:GetMachotesVicepresidenciaJuridicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreCompleto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona el nombre completo de un usuario</wsdl:documentation>
+      <wsdl:input message="tns:GetNombreCompletoSoapIn" />
+      <wsdl:output message="tns:GetNombreCompletoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnidadAdministrativaUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona la unidad a la que pertenece el usuario proporcionado (identificador y codigo del area)</wsdl:documentation>
+      <wsdl:input message="tns:GetUnidadAdministrativaUsuarioSoapIn" />
+      <wsdl:output message="tns:GetUnidadAdministrativaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioFirmaElectronica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona el usuario de firma electrónica mas cercano a la unidad proporcionada)</wsdl:documentation>
+      <wsdl:input message="tns:GetUsuarioFirmaElectronicaSoapIn" />
+      <wsdl:output message="tns:GetUsuarioFirmaElectronicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetinicialesUsuarios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las iniciales de los usuarios proporcionados</wsdl:documentation>
+      <wsdl:input message="tns:GetinicialesUsuariosSoapIn" />
+      <wsdl:output message="tns:GetinicialesUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosEntidad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona los datos de una entidad</wsdl:documentation>
+      <wsdl:input message="tns:GetDatosEntidadSoapIn" />
+      <wsdl:output message="tns:GetDatosEntidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogoCargoDestinatarioOficios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona el catalogo de Cargos Destinatario para alta de Oficios (identificador y descripción)</wsdl:documentation>
+      <wsdl:input message="tns:GetCatalogoCargoDestinatarioOficiosSoapIn" />
+      <wsdl:output message="tns:GetCatalogoCargoDestinatarioOficiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosFirmaOficios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona lista de usuarios (identificador y nombre) con facultades para firmar oficios, solicitando Código de área (300 p.e.) y si es firma SIE o no</wsdl:documentation>
+      <wsdl:input message="tns:GetUsuariosFirmaOficiosSoapIn" />
+      <wsdl:output message="tns:GetUsuariosFirmaOficiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDestinatariosOficios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona lista de destinatarios para oficios</wsdl:documentation>
+      <wsdl:input message="tns:GetDestinatariosOficiosSoapIn" />
+      <wsdl:output message="tns:GetDestinatariosOficiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClasificacionesOficiosSISAN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona las clasificaciones de oficios configuradas para SISAN</wsdl:documentation>
+      <wsdl:input message="tns:GetClasificacionesOficiosSISANSoapIn" />
+      <wsdl:output message="tns:GetClasificacionesOficiosSISANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOficioPDFName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona el nombre del oficio digitalizado en caso de existir</wsdl:documentation>
+      <wsdl:input message="tns:GetOficioPDFNameSoapIn" />
+      <wsdl:output message="tns:GetOficioPDFNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Alta/Actualizacion de Oficio</wsdl:documentation>
+      <wsdl:input message="tns:AltaOficioSoapIn" />
+      <wsdl:output message="tns:AltaOficioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficioConIdSistema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Alta/Actualizacion de Oficio enviando ID_SISTEMA</wsdl:documentation>
+      <wsdl:input message="tns:AltaOficioConIdSistemaSoapIn" />
+      <wsdl:output message="tns:AltaOficioConIdSistemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficioConIdSistemaDictamen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Alta/Actualizacion de Oficio enviando ID_SISTEMA - DICTAMEN</wsdl:documentation>
+      <wsdl:input message="tns:AltaOficioConIdSistemaDictamenSoapIn" />
+      <wsdl:output message="tns:AltaOficioConIdSistemaDictamenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApartaNumOficio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Apartado de Oficio</wsdl:documentation>
+      <wsdl:input message="tns:ApartaNumOficioSoapIn" />
+      <wsdl:output message="tns:ApartaNumOficioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaArchivosOficio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualización de datos de Archivos de Oficio</wsdl:documentation>
+      <wsdl:input message="tns:ActualizaArchivosOficioSoapIn" />
+      <wsdl:output message="tns:ActualizaArchivosOficioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCatalogo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona catalogo según identificador proporcionado. Consulta documentación con el Administrador del Sistema</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaCatalogoSoapIn" />
+      <wsdl:output message="tns:ConsultaCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneraNombreArchivoWordOficios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona el cómo debería llamarse el archivo word de un oficio determinado</wsdl:documentation>
+      <wsdl:input message="tns:GeneraNombreArchivoWordOficiosSoapIn" />
+      <wsdl:output message="tns:GeneraNombreArchivoWordOficiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtenderDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Atención de un documento SICOD</wsdl:documentation>
+      <wsdl:input message="tns:AtenderDocumentoSoapIn" />
+      <wsdl:output message="tns:AtenderDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TurnarDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Turnado de un documento SICOD</wsdl:documentation>
+      <wsdl:input message="tns:TurnarDocumentoSoapIn" />
+      <wsdl:output message="tns:TurnarDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cambiar Estatus_Tramite de un documento SICOD</wsdl:documentation>
+      <wsdl:input message="tns:CambiarEstatusSoapIn" />
+      <wsdl:output message="tns:CambiarEstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiaSistemaWS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cambiar el Origen del Sistema</wsdl:documentation>
+      <wsdl:input message="tns:CambiaSistemaWSSoapIn" />
+      <wsdl:output message="tns:CambiaSistemaWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HayTurnadoSICOD">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Porporciona un booleano para decir si ese folio ya fue turnado en SICOD</wsdl:documentation>
+      <wsdl:input message="tns:HayTurnadoSICODSoapIn" />
+      <wsdl:output message="tns:HayTurnadoSICODSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtenderSISAT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Porporciona un booleano para decir si ese folio ya fue turnado en SICOD</wsdl:documentation>
+      <wsdl:input message="tns:AtenderSISATSoapIn" />
+      <wsdl:output message="tns:AtenderSISATSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetMails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa los mails registrados en el active directory para los usuarios proporcionados</wsdl:documentation>
+      <wsdl:input message="tns:ActiveDirectoryGetMailsSoapIn" />
+      <wsdl:output message="tns:ActiveDirectoryGetMailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa datos de usuarios del Active Directory</wsdl:documentation>
+      <wsdl:input message="tns:ActiveDirectoryGetUsersSoapIn" />
+      <wsdl:output message="tns:ActiveDirectoryGetUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetUsersCustom">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa datos de usuarios del Active Directory segun lista proporcionada</wsdl:documentation>
+      <wsdl:input name="CustomList" message="tns:CustomListSoapIn" />
+      <wsdl:output name="CustomList" message="tns:CustomListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoEntidades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa lista sencilla de Tipos de Entidad</wsdl:documentation>
+      <wsdl:input message="tns:GetTipoEntidadesSoapIn" />
+      <wsdl:output message="tns:GetTipoEntidadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa lista sencilla de Entidades segun tipo proporcionado</wsdl:documentation>
+      <wsdl:input message="tns:GetEntidadesSoapIn" />
+      <wsdl:output message="tns:GetEntidadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidadesComplete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa datos de Entidades segun tipo proporcionado</wsdl:documentation>
+      <wsdl:input message="tns:GetEntidadesCompleteSoapIn" />
+      <wsdl:output message="tns:GetEntidadesCompleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaAfores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa lista sencilla de Entidades Tipo Afore</wsdl:documentation>
+      <wsdl:input message="tns:GetListaAforesSoapIn" />
+      <wsdl:output message="tns:GetListaAforesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoEntidadAfore">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el identificador de Entidad tipo Afore</wsdl:documentation>
+      <wsdl:input message="tns:GetTipoEntidadAforeSoapIn" />
+      <wsdl:output message="tns:GetTipoEntidadAforeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdEntidadConsar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el identificador de Entidad Consar</wsdl:documentation>
+      <wsdl:input message="tns:GetIdEntidadConsarSoapIn" />
+      <wsdl:output message="tns:GetIdEntidadConsarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBitacoraArchivosOsiris">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa la bitacora de archivos segun el estado proporcionado</wsdl:documentation>
+      <wsdl:input message="tns:GetBitacoraArchivosOsirisSoapIn" />
+      <wsdl:output message="tns:GetBitacoraArchivosOsirisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInicialesEntidad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las iniciales de la Entidades</wsdl:documentation>
+      <wsdl:input message="tns:GetInicialesEntidadSoapIn" />
+      <wsdl:output message="tns:GetInicialesEntidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosAnexo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa los datos del anexo de un archivo de bitacora Orisis-SISVIG</wsdl:documentation>
+      <wsdl:input message="tns:GetDatosAnexoSoapIn" />
+      <wsdl:output message="tns:GetDatosAnexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormatoCatalogo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catálogo de Formatos</wsdl:documentation>
+      <wsdl:input message="tns:GetFormatoCatalogoSoapIn" />
+      <wsdl:output message="tns:GetFormatoCatalogoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidadesAforeConsar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa la lista de entidades Tipo Afore y la CONSAR</wsdl:documentation>
+      <wsdl:input message="tns:GetEntidadesAforeConsarSoapIn" />
+      <wsdl:output message="tns:GetEntidadesAforeConsarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneEntidadesAforeConsar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa La entidad solicitada</wsdl:documentation>
+      <wsdl:input message="tns:GetOneEntidadesAforeConsarSoapIn" />
+      <wsdl:output message="tns:GetOneEntidadesAforeConsarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEjecutivosSISVIG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona lista de funcionarios en creacion de PC y ID de tipo Afore y , llaves: DIR_GRAL, DIR_IRRE_ENVIO, DIR_IRRE_NO_ENVIO, ID_TIPO_AFORE</wsdl:documentation>
+      <wsdl:input message="tns:GetEjecutivosSISVIGSoapIn" />
+      <wsdl:output message="tns:GetEjecutivosSISVIGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreasJerarquia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona las areas superiores</wsdl:documentation>
+      <wsdl:input message="tns:GetAreasJerarquiaSoapIn" />
+      <wsdl:output message="tns:GetAreasJerarquiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorGeneral">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Proporciona el director general del area.</wsdl:documentation>
+      <wsdl:input message="tns:GetDirectorGeneralSoapIn" />
+      <wsdl:output message="tns:GetDirectorGeneralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInicialesUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las iniciales del usuario solicitado</wsdl:documentation>
+      <wsdl:input message="tns:GetInicialesUsuarioSoapIn" />
+      <wsdl:output message="tns:GetInicialesUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosPorAreaFuncional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa las iniciales del usuario solicitado</wsdl:documentation>
+      <wsdl:input message="tns:GetUsuariosPorAreaFuncionalSoapIn" />
+      <wsdl:output message="tns:GetUsuariosPorAreaFuncionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFraseAnio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa la frase del año.</wsdl:documentation>
+      <wsdl:input message="tns:GetFraseAnioSoapIn" />
+      <wsdl:output message="tns:GetFraseAnioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubEntidadesComplete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa datos de SubEntidades segun la Entidad proporcionada</wsdl:documentation>
+      <wsdl:input message="tns:GetSubEntidadesCompleteSoapIn" />
+      <wsdl:output message="tns:GetSubEntidadesCompleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_SICODSoap" type="tns:ws_SICODSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUnidadesAdministrativas">
+      <soap:operation soapAction="http://tempuri.org/GetUnidadesAdministrativas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnidadesAdministrativasVPOTree">
+      <soap:operation soapAction="http://tempuri.org/GetUnidadesAdministrativasVPOTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutorizadoresPosiblesSistic">
+      <soap:operation soapAction="http://tempuri.org/GetAutorizadoresPosiblesSistic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsuperior">
+      <soap:operation soapAction="http://tempuri.org/Getsuperior" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFuncionariosVPO">
+      <soap:operation soapAction="http://tempuri.org/GetFuncionariosVPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstructuraDependientes">
+      <soap:operation soapAction="http://tempuri.org/GetEstructuraDependientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemasVicepresidenciaJuridica">
+      <soap:operation soapAction="http://tempuri.org/GetTemasVicepresidenciaJuridica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachotesVicepresidenciaJuridica">
+      <soap:operation soapAction="http://tempuri.org/GetMachotesVicepresidenciaJuridica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreCompleto">
+      <soap:operation soapAction="http://tempuri.org/GetNombreCompleto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnidadAdministrativaUsuario">
+      <soap:operation soapAction="http://tempuri.org/GetUnidadAdministrativaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioFirmaElectronica">
+      <soap:operation soapAction="http://tempuri.org/GetUsuarioFirmaElectronica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetinicialesUsuarios">
+      <soap:operation soapAction="http://tempuri.org/GetinicialesUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosEntidad">
+      <soap:operation soapAction="http://tempuri.org/GetDatosEntidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogoCargoDestinatarioOficios">
+      <soap:operation soapAction="http://tempuri.org/GetCatalogoCargoDestinatarioOficios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosFirmaOficios">
+      <soap:operation soapAction="http://tempuri.org/GetUsuariosFirmaOficios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDestinatariosOficios">
+      <soap:operation soapAction="http://tempuri.org/GetDestinatariosOficios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClasificacionesOficiosSISAN">
+      <soap:operation soapAction="http://tempuri.org/GetClasificacionesOficiosSISAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOficioPDFName">
+      <soap:operation soapAction="http://tempuri.org/GetOficioPDFName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficio">
+      <soap:operation soapAction="http://tempuri.org/AltaOficio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficioConIdSistema">
+      <soap:operation soapAction="http://tempuri.org/AltaOficioConIdSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficioConIdSistemaDictamen">
+      <soap:operation soapAction="http://tempuri.org/AltaOficioConIdSistemaDictamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApartaNumOficio">
+      <soap:operation soapAction="http://tempuri.org/ApartaNumOficio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaArchivosOficio">
+      <soap:operation soapAction="http://tempuri.org/ActualizaArchivosOficio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCatalogo">
+      <soap:operation soapAction="http://tempuri.org/ConsultaCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneraNombreArchivoWordOficios">
+      <soap:operation soapAction="http://tempuri.org/GeneraNombreArchivoWordOficios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtenderDocumento">
+      <soap:operation soapAction="http://tempuri.org/AtenderDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TurnarDocumento">
+      <soap:operation soapAction="http://tempuri.org/TurnarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstatus">
+      <soap:operation soapAction="http://tempuri.org/CambiarEstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiaSistemaWS">
+      <soap:operation soapAction="http://tempuri.org/CambiaSistemaWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HayTurnadoSICOD">
+      <soap:operation soapAction="http://tempuri.org/HayTurnadoSICOD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtenderSISAT">
+      <soap:operation soapAction="http://tempuri.org/AtenderSISAT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetMails">
+      <soap:operation soapAction="http://tempuri.org/ActiveDirectoryGetMails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetUsers">
+      <soap:operation soapAction="http://tempuri.org/ActiveDirectoryGetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetUsersCustom">
+      <soap:operation soapAction="http://tempuri.org/CustomList" style="document" />
+      <wsdl:input name="CustomList">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CustomList">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoEntidades">
+      <soap:operation soapAction="http://tempuri.org/GetTipoEntidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidades">
+      <soap:operation soapAction="http://tempuri.org/GetEntidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidadesComplete">
+      <soap:operation soapAction="http://tempuri.org/GetEntidadesComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaAfores">
+      <soap:operation soapAction="http://tempuri.org/GetListaAfores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoEntidadAfore">
+      <soap:operation soapAction="http://tempuri.org/GetTipoEntidadAfore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdEntidadConsar">
+      <soap:operation soapAction="http://tempuri.org/GetIdEntidadConsar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBitacoraArchivosOsiris">
+      <soap:operation soapAction="http://tempuri.org/GetBitacoraArchivosOsiris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInicialesEntidad">
+      <soap:operation soapAction="http://tempuri.org/GetInicialesEntidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosAnexo">
+      <soap:operation soapAction="http://tempuri.org/GetDatosAnexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormatoCatalogo">
+      <soap:operation soapAction="http://tempuri.org/GetFormatoCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidadesAforeConsar">
+      <soap:operation soapAction="http://tempuri.org/GetEntidadesAforeConsar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneEntidadesAforeConsar">
+      <soap:operation soapAction="http://tempuri.org/GetOneEntidadesAforeConsar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEjecutivosSISVIG">
+      <soap:operation soapAction="http://tempuri.org/GetEjecutivosSISVIG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreasJerarquia">
+      <soap:operation soapAction="http://tempuri.org/GetAreasJerarquia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorGeneral">
+      <soap:operation soapAction="http://tempuri.org/GetDirectorGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInicialesUsuario">
+      <soap:operation soapAction="http://tempuri.org/GetInicialesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosPorAreaFuncional">
+      <soap:operation soapAction="http://tempuri.org/GetUsuariosPorAreaFuncional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFraseAnio">
+      <soap:operation soapAction="http://tempuri.org/GetFraseAnio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubEntidadesComplete">
+      <soap:operation soapAction="http://tempuri.org/GetSubEntidadesComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_SICODSoap12" type="tns:ws_SICODSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUnidadesAdministrativas">
+      <soap12:operation soapAction="http://tempuri.org/GetUnidadesAdministrativas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnidadesAdministrativasVPOTree">
+      <soap12:operation soapAction="http://tempuri.org/GetUnidadesAdministrativasVPOTree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutorizadoresPosiblesSistic">
+      <soap12:operation soapAction="http://tempuri.org/GetAutorizadoresPosiblesSistic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsuperior">
+      <soap12:operation soapAction="http://tempuri.org/Getsuperior" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFuncionariosVPO">
+      <soap12:operation soapAction="http://tempuri.org/GetFuncionariosVPO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstructuraDependientes">
+      <soap12:operation soapAction="http://tempuri.org/GetEstructuraDependientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemasVicepresidenciaJuridica">
+      <soap12:operation soapAction="http://tempuri.org/GetTemasVicepresidenciaJuridica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachotesVicepresidenciaJuridica">
+      <soap12:operation soapAction="http://tempuri.org/GetMachotesVicepresidenciaJuridica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreCompleto">
+      <soap12:operation soapAction="http://tempuri.org/GetNombreCompleto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnidadAdministrativaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/GetUnidadAdministrativaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuarioFirmaElectronica">
+      <soap12:operation soapAction="http://tempuri.org/GetUsuarioFirmaElectronica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetinicialesUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/GetinicialesUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosEntidad">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosEntidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogoCargoDestinatarioOficios">
+      <soap12:operation soapAction="http://tempuri.org/GetCatalogoCargoDestinatarioOficios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosFirmaOficios">
+      <soap12:operation soapAction="http://tempuri.org/GetUsuariosFirmaOficios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDestinatariosOficios">
+      <soap12:operation soapAction="http://tempuri.org/GetDestinatariosOficios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClasificacionesOficiosSISAN">
+      <soap12:operation soapAction="http://tempuri.org/GetClasificacionesOficiosSISAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOficioPDFName">
+      <soap12:operation soapAction="http://tempuri.org/GetOficioPDFName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficio">
+      <soap12:operation soapAction="http://tempuri.org/AltaOficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficioConIdSistema">
+      <soap12:operation soapAction="http://tempuri.org/AltaOficioConIdSistema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaOficioConIdSistemaDictamen">
+      <soap12:operation soapAction="http://tempuri.org/AltaOficioConIdSistemaDictamen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApartaNumOficio">
+      <soap12:operation soapAction="http://tempuri.org/ApartaNumOficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaArchivosOficio">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaArchivosOficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneraNombreArchivoWordOficios">
+      <soap12:operation soapAction="http://tempuri.org/GeneraNombreArchivoWordOficios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtenderDocumento">
+      <soap12:operation soapAction="http://tempuri.org/AtenderDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TurnarDocumento">
+      <soap12:operation soapAction="http://tempuri.org/TurnarDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstatus">
+      <soap12:operation soapAction="http://tempuri.org/CambiarEstatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiaSistemaWS">
+      <soap12:operation soapAction="http://tempuri.org/CambiaSistemaWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HayTurnadoSICOD">
+      <soap12:operation soapAction="http://tempuri.org/HayTurnadoSICOD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtenderSISAT">
+      <soap12:operation soapAction="http://tempuri.org/AtenderSISAT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetMails">
+      <soap12:operation soapAction="http://tempuri.org/ActiveDirectoryGetMails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetUsers">
+      <soap12:operation soapAction="http://tempuri.org/ActiveDirectoryGetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveDirectoryGetUsersCustom">
+      <soap12:operation soapAction="http://tempuri.org/CustomList" style="document" />
+      <wsdl:input name="CustomList">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CustomList">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoEntidades">
+      <soap12:operation soapAction="http://tempuri.org/GetTipoEntidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidades">
+      <soap12:operation soapAction="http://tempuri.org/GetEntidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidadesComplete">
+      <soap12:operation soapAction="http://tempuri.org/GetEntidadesComplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaAfores">
+      <soap12:operation soapAction="http://tempuri.org/GetListaAfores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoEntidadAfore">
+      <soap12:operation soapAction="http://tempuri.org/GetTipoEntidadAfore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdEntidadConsar">
+      <soap12:operation soapAction="http://tempuri.org/GetIdEntidadConsar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBitacoraArchivosOsiris">
+      <soap12:operation soapAction="http://tempuri.org/GetBitacoraArchivosOsiris" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInicialesEntidad">
+      <soap12:operation soapAction="http://tempuri.org/GetInicialesEntidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosAnexo">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosAnexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormatoCatalogo">
+      <soap12:operation soapAction="http://tempuri.org/GetFormatoCatalogo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntidadesAforeConsar">
+      <soap12:operation soapAction="http://tempuri.org/GetEntidadesAforeConsar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneEntidadesAforeConsar">
+      <soap12:operation soapAction="http://tempuri.org/GetOneEntidadesAforeConsar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEjecutivosSISVIG">
+      <soap12:operation soapAction="http://tempuri.org/GetEjecutivosSISVIG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreasJerarquia">
+      <soap12:operation soapAction="http://tempuri.org/GetAreasJerarquia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectorGeneral">
+      <soap12:operation soapAction="http://tempuri.org/GetDirectorGeneral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInicialesUsuario">
+      <soap12:operation soapAction="http://tempuri.org/GetInicialesUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsuariosPorAreaFuncional">
+      <soap12:operation soapAction="http://tempuri.org/GetUsuariosPorAreaFuncional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFraseAnio">
+      <soap12:operation soapAction="http://tempuri.org/GetFraseAnio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubEntidadesComplete">
+      <soap12:operation soapAction="http://tempuri.org/GetSubEntidadesComplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_SICOD">
+    <wsdl:port name="ws_SICODSoap" binding="tns:ws_SICODSoap">
+      <soap:address location="http://172.16.51.10:82/ws/ws_sicod.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_SICODSoap12" binding="tns:ws_SICODSoap12">
+      <soap12:address location="http://172.16.51.10:82/ws/ws_sicod.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

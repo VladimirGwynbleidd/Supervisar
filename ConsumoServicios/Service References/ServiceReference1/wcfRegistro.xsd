@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SEPRIS" />
+  <xs:element name="InsertaVisita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisitaSisvig" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pdFechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="piIdEntidad" type="xs:int" />
+        <xs:element minOccurs="0" name="psNombreEntidad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="piTipoVisita" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="psLstObjetoVisita" nillable="true" type="q1:ArrayOfint" />
+        <xs:element minOccurs="0" name="psDscOtroObjVisita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psSupervisor" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="psLstInspector" nillable="true" type="q2:ArrayOfstring" />
+        <xs:element minOccurs="0" name="psDescripcionVisita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psOrdenVisita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pbHayRevicioVul" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pdFechaVul" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertaVisitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="InsertaVisitaResult" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditaVisita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisitaSepris" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pdFechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="piTipoVisita" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="psLstObjetoVisita" nillable="true" type="q4:ArrayOfint" />
+        <xs:element minOccurs="0" name="psSupervisor" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="psLstInspector" nillable="true" type="q5:ArrayOfstring" />
+        <xs:element minOccurs="0" name="psDescripcionVisita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psOrdenVisita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditaVisitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EditaVisitaResult" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvanzaPaso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvanzaPasoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AvanzaPasoResult" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvanzaPasoSiete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pbFlagReunHallazgos" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pbFlagSancion" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvanzaPasoSieteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AvanzaPasoSieteResult" nillable="true" type="q8:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvanzaPasoOcho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pbFlagSancion" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvanzaPasoOchoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AvanzaPasoOchoResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechazaPaso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechazaPasoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RechazaPasoResult" nillable="true" type="q10:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaFecha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SEPRIS" minOccurs="0" name="TipoFecha" type="q11:Constantes.TipoFecha" />
+        <xs:element minOccurs="0" name="NotificarCambio" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaFechaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ActualizaFechaResult" nillable="true" type="q12:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizaCargaDocumentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psCadenaParametros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psComentarios" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizaCargaDocumentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FinalizaCargaDocumentosResult" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitaProrroga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="motivoProrroga" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitaProrrogaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SolicitaProrrogaResult" nillable="true" type="q14:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getErrorValidacionSupervisar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_error" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getErrorValidacionSupervisarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getErrorValidacionSupervisarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarVisita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVisita" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentificadorUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="motivoCancela" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarVisitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CancelarVisitaResult" nillable="true" type="q15:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

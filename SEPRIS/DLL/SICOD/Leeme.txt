@@ -1,0 +1,1 @@
+Estas clases deben ser incluidas en el BIN de SEPRIS son necesarias para el funcionamiento de App_Oficios

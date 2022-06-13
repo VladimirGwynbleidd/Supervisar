@@ -1,0 +1,48 @@
+﻿html, body
+{
+    margin: 0 26 0 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+
+#container
+{
+    min-height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin:0;
+    padding:0;
+    height: 655px;
+    width: 1248px;
+}
+
+#body
+{
+    /*padding: 10px;*/
+    padding-bottom: 40px; /* Height of the footer */
+}
+
+#footer
+{
+    position: absolute;
+    bottom: 250px;
+    height: 40px;
+    left: 109px;
+}
+
+#GridPrincipalwrapper thead td
+{
+    border:none;
+}
+
+
+.DataGridFixedHeader
+{
+   position:relative ;
+   top: expression(offsetParent.scrollTop+1+"px");
+   left: expression(offsetParent.scrollTop == 0 ? 0+"px" : -1+"px");
+   z-index: 10;
+}

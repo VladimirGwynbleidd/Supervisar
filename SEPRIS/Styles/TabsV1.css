@@ -1,0 +1,81 @@
+﻿div#tabs_wrapper
+{
+    background-color: #FFFFFF;
+    
+    width: 100%;
+    height: 1px;
+}
+
+ul.tabs {
+	border-bottom: 1px solid #999999;
+    border-left: 1px solid #999999;
+    float: left;
+    height: 32px;
+    list-style: none outside none;
+    margin: 15px 150px 0px 0px;           
+    padding: 0;
+    top: 1px;
+    width: 67%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px;
+	line-height: 31px;
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px;
+	overflow: hidden;
+	position: relative;
+	background: #696969;
+	color:#fff;
+	font-family: Verdana;
+	font-size: 11px;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	font-size: 1em;
+	padding: 0 20px;
+	border: 1px solid #fff;
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #777;
+}
+html ul.tabs li.active, 
+html ul.tabs li.active a:hover  {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+	
+}
+
+html ul.tabs li.active a{
+    color:#000;
+}
+
+.tab_container {
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; 
+	width: 100%;
+	background: #fff;
+	margin-top: 45px;
+}
+
+.tab_content {
+	padding: 5px;
+	font-size: 1.2em;
+    height: 193px;
+    width: 847px;
+}
+
+#form1_AbogadoContesta,
+#form1_RegistroActuaciones
+{
+    margin:0;
+    padding:0;
+}

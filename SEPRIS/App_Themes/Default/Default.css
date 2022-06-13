@@ -1,0 +1,529 @@
+﻿
+@font-face { font-family: 'trajan'; src: url("../fonts/trajan_pro_regular-webfont.eot"); src: url("../fonts/trajan_pro_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/trajan_pro_regular-webfont.woff") format("woff"), url("../fonts/trajan_pro_regular-webfont.ttf") format("truetype"), url("../fonts/trajan_pro_regular-webfont.svg#TrajanProRegular") format("svg"); font-weight: normal; font-style: normal; }
+/* Estilos para la Master Page */
+
+.TemaFondoOscuro
+{    background-color: #010C8F;} /* DEFINIDO POR EL USUARIO */
+.TemaFondoMedio
+{    background-color: #0110C5;} /* DEFINIDO POR EL USUARIO */
+.TemaFondoClaro
+{    background-color: #0A1CFE;} /* DEFINIDO POR EL USUARIO */
+.TemaFondoMuyClaro
+{    background-color: #7E88FE;} /* DEFINIDO POR EL USUARIO */
+
+
+.txt_submenu, .txt_submenu:link, .txt_submenu:visited, .txt_submenu:hover, .txt_submenu:active
+{
+    font-family: "trajan";
+    font-size: 12px;
+    text-decoration: none;
+    width: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+    vertical-align: baseline;
+}
+
+.txt_menu, .txt_menu:link, .txt_menu:visited, .txt_menu:hover, .txt_menu:active
+{
+    font-family: "trajan";
+    font-size: 12px;
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    vertical-align: baseline;
+}
+
+.txt_submenu_header
+{
+    background-color: #010C8F;
+    font-family: "trajan";
+    font-size: 14px;
+    text-decoration: none;
+    width: 100%;
+    color: #FFFFFF;
+    vertical-align: baseline;
+}
+
+.liveclock
+{
+	font-family: Verdana;	font-size: 10px;
+	font-style: normal;	font-weight: bold;
+	font-variant: normal;	text-transform: none;	color: #182C31;
+	text-decoration: none; top: 96px; position: fixed; left: 0; right: 0;
+}
+
+.txt_nombre_usuario
+{
+    font-family: "trajan";    font-size: 10px;
+    text-decoration: none;    color: #182C31;
+    right: 5px; top: 96px;
+    position: fixed;
+}
+
+
+.txt_pie
+{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+
+.div_pie
+{
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.div_pie_externo
+{
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 35px;
+}
+
+.header
+{
+    height: 64px;
+    width: 100%;
+}
+
+.headerIzq
+{
+    width: 157px;
+}
+
+.headerDer
+{
+    width: 66px;
+}
+
+.headerCentro
+{
+    float: left;
+    text-align: center;
+}
+
+.txt_menuDer
+{
+    font-family: "trajan";
+    color: #FFFFFF;
+    vertical-align: middle;
+}
+
+#divMenu
+{
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    z-index: 100;
+}
+
+#divEspaciador
+{
+    position: fixed;
+    top: 92px;
+    width: 100%;
+    height: 21px;
+    margin: 0;
+    z-index: 100;
+    text-align: center;
+    left: 0;
+}
+
+#divEncabezado
+{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background-color: White;
+    z-index: 100;
+}
+#divEncabezadoIzq
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 157px;
+    height: 100%;
+}
+#divEncabezadoCentro
+{
+    position: absolute;
+    top: 0px;
+    left: 157px;
+    right: 66px;
+    height: 100%;
+    width: auto;
+}
+#divEncabezadoDer
+{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 100%;
+}
+.stretch
+{
+    width: 100%;
+    height: 100%;
+}
+#menuContenido
+{
+    position: absolute;
+    top: 0px;
+    left: 157px;
+    right: 66px;
+    height: 28px;
+    width: auto;
+    background-color: #808080;
+    text-align: center;
+}
+#menuDer
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 28px;
+    width: 66px;
+    padding-top: 4px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#menuIzq
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 157px;
+    height: 28px;
+}
+#divMiddle
+{
+    position: absolute;
+    top: 113px;
+    left: -0px;
+    right: 0px;
+    bottom: 65px;
+    overflow: auto;
+}
+#divSubmenu
+{
+    position: fixed;
+    top: 113px;
+    left: 0px;
+    bottom: 65px;
+    z-index: 90;
+    background-color: White;
+}
+
+#divMain
+{
+    position: relative;
+    top: 0px;
+    margin-left: 157px;
+    margin-right: 0px;
+    margin-bottom: 65px;
+    width: 867px;
+}
+/* Fin estilos para la Master Page */
+
+/* Estilos para Texto */
+
+.txt_gral {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #595959;
+	text-decoration: none;
+}
+
+.txt_gral_blanco {
+	font-family: Verdana;
+	list-style-image:url(/images/constante/bullet_verde_full.gif);
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/* Fin de estilos para Texto */
+
+/* Estilos para botones */
+.botones
+{
+    border-right: medium none;
+    border-top: medium none;
+    font: 11px Arial;
+    text-transform: none;
+    border-left: medium none;
+    cursor: pointer;
+    color: white;
+    border-bottom: medium none;
+    letter-spacing: normal;
+    background-color: #696969;
+    text-align: center;
+    text-decoration: none;
+    width: 93px;
+    height: 28px;
+}
+
+.botones:hover
+{
+    background-color: #A9A9A9;
+    border-color: -moz-use-text-color;
+    border-right: medium none;
+    border-style: none;
+    border-width: medium;
+    color: white;
+    cursor: pointer;
+    font: 11px Arial;
+    height: 28px;
+    letter-spacing: normal;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    width: 93px;
+}
+
+.botones_x
+{
+	border-style: solid;
+	border-width: 1;
+	font: 07px Arial;
+	text-transform: none;
+	cursor: hand;
+	color: white;
+	letter-spacing: normal;
+	background-color:#045959;
+	text-align:center;
+	text-decoration: none;
+	width: 14;
+	height: 14;
+	vertical-align:text-top;
+}
+
+.botones_x:hover
+{
+	border-style: solid;
+	border-width: 1;
+	font: 07px Arial;
+	text-transform: none;
+	cursor: hand;
+	color: white;
+	letter-spacing: normal;
+	background-color:#87100C;
+	text-align:center;
+	text-decoration: none;
+	width: 14;
+	height: 14;
+	vertical-align:text-top;
+}
+
+/* Fin estilos para botones */
+
+
+/* Uso general */
+
+.stretch
+{
+    width: 100%;
+    height: 100%;
+}
+
+.TitulosWebProyectos
+{
+    font-weight: 100;
+    font-size: 20px;
+    color: black; 
+    font-family: "trajan",Arial Black;
+    text-decoration: none;
+
+}
+
+.titulo_animado
+{
+    padding-left: 0px;
+    margin-left: 0px;
+    list-style-type: none;
+       font-weight: 100; 
+       font-size: 30px; 
+       color: #888888; 
+       font-family: "trajan", Arial Black;
+       text-decoration: none;
+       vertical-align: middle;
+}
+
+.tbl_login
+{
+    width: 221px;
+    background-color: #cccccc;
+}
+
+.tbl_login_encabezado
+{
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+    font: Arial;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.txt_solo_lectura
+{
+    padding: 2px;
+    background-color:#dddddd;
+    border-style:ridge;
+    border-width: 2px;
+       font-family: Verdana;
+       font-size: 11px;
+       font-style: normal;
+       font-weight: normal;
+       font-variant: normal;
+       text-transform: none;
+       color: #182C31;
+       text-decoration: none;
+}
+
+.mensaje_login
+{
+    color: #CA0016;   
+}
+
+.liga_recupera_pass
+{
+    text-align: right;
+    font-size: 10px;
+}
+
+
+/* Fin Uso general */
+
+
+/* Inicia estilos del GridView*/
+.SelectedRow td
+{
+    background-color: #C1DAD7;
+    color: Fuchsia;
+}
+
+.CongelaColumna
+{
+    background-color: #EFEFEF;
+    color: Lime;
+}
+
+.GridViewEncabezado TH, .GridViewEncabezado TD
+{
+    padding: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    background-color: #EFEFEF;
+    vertical-align: bottom;
+    text-align: left;
+}
+.GridViewContenido TD
+{
+    padding: 5px;
+    white-space: nowrap;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+}
+.GridViewContenido .Freeze
+{
+    background-color: #EFEFEF;
+}
+.GridviewScrollItemHover TD
+{
+    padding: 5px;
+    white-space: nowrap;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    background-color: #CCCCCC;
+    cursor: pointer;
+}
+.GridviewScrollItemHover .Freeze
+{
+    background-color: #CCCCCC;
+}
+.GridviewScrollItemSelected TD
+{
+    padding: 5px;
+    white-space: nowrap;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    background-color: #999999;
+    color: #FFFFFF;
+}
+.GridviewScrollItemSelected .Freeze
+{
+    background-color: #999999;
+}
+.GridviewScrollPager 
+{
+    border-top: 1px solid #AAAAAA;
+    background-color: #FFFFFF;
+}
+.GridviewScrollPager TD
+{
+    padding-top: 3px;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.GridviewScrollPager A
+{
+    color: #666666;
+}
+
+.GridviewScrollPager SPAN
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.GridViewContenidoAlternate TD
+{
+    padding: 5px;
+    white-space: nowrap;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    background-color: Fuchsia;
+}
+
+.GridViewContenidoAlternate .Freeze
+{
+    background-color: #EFEFEF;
+}
+
+/*Terminan estilos de GridView*/
+
+
+
+
+
+

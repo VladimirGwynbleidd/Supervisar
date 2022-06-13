@@ -1,0 +1,1273 @@
+﻿/* ********************************************************************************************************************************
+
+Fecha Creación:       18 Julio 2013
+Codificó:             Jorge Alberto Rangel Ruiz
+Empresa:              Softtek
+Descripción:          Código para implementar mensajes modales.
+
+
+Consideraciones:      
+1.- Debe existir la referencia a la librería jquery-ui-1.10.3.custom.js (http://jqueryui.com/download/)
+y jquery-ui-1.10.3.custom.min.js (http://jqueryui.com/themeroller/) con el tema Smoothness, así mismo, a la libreria de jquery
+jquery-1.9.1.js (versión actual al momento del desarrollo el presente componente)
+
+2.- Cada Mensaje está compuesto de dos llamadas, una en la carga de la página:
+método "$(document).ready(function() { XXXXXXX });" o "$(function() { XXXXXXX });"   en javascript
+y la segunda donde se desea mostrar el mensaje
+
+3.- Los botones de acción (que realicen postbacks deben incluir la etiqueta ClientIDMode="Static")
+
+4.- Los elementos div deben tener la etiqueta style="display: none"
+
+5.- LEA LA DESCRIPCIÓN Y OBSERVACIONES DE CADA MENSAJE QUE DESEE IMPLEMENTAR
+
+
+MODIFICACIONES: 
+
+
+******************************************************************************************************************************** */
+
+
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  MensajeDosBotonesDosAcciones  */
+
+/*  Descripción: Función para mostrar una ventana modal con un mensaje y dos botones de acción, Continuar y Cerrar  
+ambos botones realizan un llamado a servidor
+Caracteristicas:  Mensaje en ventana modal, NO CONTIENE MENSAJE DE TITULO
+Observaciones IMPORTANTES:
+1.- En la página donde se consuma, debe existir un div de nombre divConfirmacionM2B2A, mismo que contiene
+el mensaje a mostrar
+2.- Así mismo, deben existir dos botones de nombre btnContinuarM2B2A y btnSalirM2B2A, mismos que implementarán las
+acciones deseadas por el programador, se sugiere esten ocultos (Style="display: none").  Deben tener la etiqueta ClientIDMode="Static"
+
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+MensajeDosBotonesDosAccionesLoad();
+
+});
+
+function CreaConfirmacion() {
+
+MensajeDosBotonesDosAcciones();
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="CreaConfirmacion()" />  
+<br />
+<div id="divConfirmacionM2B2A" style="display: none">
+<p>
+Mensaje a mostrar. </p>
+<p>
+</div>
+<asp:Button runat="server" ID="btnSalirM2B2A" Style="display: none" ClientIDMode="Static" />
+<asp:Button runat="server" ID="btnContinuarM2B2A" Style="display: none" ClientIDMode="Static" />   
+</body>
+
+*/
+
+
+// Funcion que debe ser invocada en el método "$(document).ready(function()" o "$(function() {" 
+// de la página donde se deseee implementar 
+function MensajeDosBotonesDosAccionesLoad() {
+
+    $("#divConfirmacionM2B2A").dialog({
+        resizable: false,
+        autoOpen: false,
+        height: 300,
+        width: 500,
+        modal: true,
+        buttons: {
+            "Continuar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cerrar", disabled: true }]);
+                $('#btnContinuarM2B2A').trigger("click");
+            },
+            "Cerrar": function () {
+                $("#btnSalirM2B2A").trigger("click");
+            }
+        }
+    });
+
+}
+
+// Funcion que debe ser invocada en el instante que se desee mostrar la ventana
+function MensajeDosBotonesDosAcciones() {
+
+    $("#divConfirmacionM2B2A").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Continuar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cerrar", disabled: true }]);
+                $('#btnContinuarM2B2A').trigger("click");
+            },
+            "Cerrar": function () {
+                $("#btnSalirM2B2A").trigger("click");
+            }
+        }
+    });
+
+
+    $("#divConfirmacionM2B2A").dialog("open");
+
+}
+
+/*  FIN MensajeDosBotonesDosAcciones  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  MensajeUnBotonNoAccion  */
+
+/*  Descripción: Función para mostrar una ventana modal con un mensaje y un boton, mismo que cierra el mensaje
+Caracteristicas:  Mensaje en ventana modal
+Observaciones IMPORTANTES:
+1.- En la página donde se consuma, debe existir un div de nombre divMensajeUnBotonNoAccion, mismo que contiene
+el mensaje a mostrar, y debe implementar la propiedad title para mostrar el titulo en la ventana
+
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+MensajeUnBotonNoAccionLoad();
+
+});
+
+function MuestraMensajeUnBotonNoAccion() {
+
+MensajeUnBotonNoAccion();
+return false;
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="return MuestraMensajeUnBotonNoAccion()" />  
+<br />
+<div id="divMensajeUnBotonNoAccion" title="Titulo del mensaje" style="display: none">
+<p>
+Mensaje a mostrar sin acciones a realizar </p>
+<p>
+</div>
+</body>
+
+*/
+
+function MensajeUnBotonNoAccionLoad() {
+
+    $("#divMensajeUnBotonNoAccion").dialog({
+        resizable: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        autoOpen: false,
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+function MensajeUnBotonNoAccion() {
+
+    $("#divMensajeUnBotonNoAccion").dialog({
+        resizable: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+/*  FIN MensajeUnBotonNoAccion  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  MensajeUnBotonUnaAccion  */
+
+/*  Descripción: Función para mostrar una ventana modal con un mensaje y un boton, mismo que realiza una acción
+Caracteristicas:  Mensaje en ventana modal
+Observaciones IMPORTANTES:
+1.- En la página donde se consuma, debe existir un div de nombre divMensajeUnBotonUnaAccion, mismo que contiene
+el mensaje a mostrar, y debe implementar la propiedad title para mostrar el titulo en la ventana
+2.- Así mismo, debe existir un boton de nombre btnAceptarM1B1A, mismo que implementará la
+accion deseada por el programador, se sugiere este oculto (Style="display: none").  Debe tener la etiqueta ClientIDMode="Static"
+
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+MensajeUnBotonUnaAccionLoad();
+
+});
+
+function MuestraMensajeAceptar() {
+
+MensajeUnBotonUnaAccion();
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="MuestraMensajeAceptar()" />  
+<br />
+<div id="divMensajeUnBotonUnaAccion" style="display: none">
+<p>
+Mensaje a mostrar, esto puede ser un label </p>
+<p>
+</div>
+<asp:Button runat="server" ID="btnAceptarM1B1A" Style="display: none" ClientIDMode="Static" />
+</body>
+
+*/
+
+
+function MensajeUnBotonUnaAccionLoad() {
+
+    $("#divMensajeUnBotonUnaAccion").dialog({
+        resizable: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        autoOpen: false,
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }]);
+                $('#btnAceptarM1B1A').trigger("click");
+            }
+        }
+    });
+
+}
+
+
+function MensajeUnBotonUnaAccion() {
+
+    $("#divMensajeUnBotonUnaAccion").dialog({
+        resizable: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }]);
+                $('#btnAceptarM1B1A').trigger("click");
+            }
+        }
+    });
+
+}
+
+
+/*  FIN MensajeUnBotonUnaAccion  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  MensajeDosBotonesUnaAccion  */
+
+/*  Descripción: Función para mostrar una ventana modal con un mensaje y dos botones con solo una acción, Aceptar y Cancelar  
+el botón Aceptar realiza un llamado a servidor
+Caracteristicas:  Mensaje en ventana modal
+Observaciones IMPORTANTES:
+1.- En la página donde se consuma, debe existir un div de nombre divMensajeDosBotonesUnaAccion, mismo que contiene
+el mensaje a mostrar
+2.- Así mismo, debe existir un boton de nombre btnAceptarM2B1A, mismo que implementará la
+accion deseada por el programador, se sugiere este oculto (Style="display: none").  Debe tener la etiqueta ClientIDMode="Static"
+
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+MensajeDosBotonesUnaAccionLoad();
+
+});
+
+function LevantaVentanaConfirma() {
+
+MensajeDosBotonesUnaAccion();
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="LevantaVentanaConfirma()" />  
+<br />
+<div id="divMensajeDosBotonesUnaAccion" style="display: none">
+<p>
+Mensaje a mostrar. </p>
+<p>
+</div>
+<asp:Button runat="server" ID="btnAceptarM2B1A" Style="display: none" ClientIDMode="Static" />
+</body>
+
+*/
+
+
+// Funcion que debe ser invocada en el método "$(document).ready(function()" o "$(function() {" 
+// de la página donde se deseee implementar 
+function MensajeDosBotonesUnaAccionLoad() {
+
+    $("#divMensajeDosBotonesUnaAccion").dialog({
+        resizable: false,
+        autoOpen: false,
+        height: 300,
+        width: 500,
+        modal: true,
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cancelar", disabled: true }]);
+                $('#btnAceptarM2B1A').trigger("click");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+// Funcion que debe ser invocada en el instante que se desee mostrar la ventana
+function MensajeDosBotonesUnaAccion() {
+
+    $("#divMensajeDosBotonesUnaAccion").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cancelar", disabled: true }]);
+                $('#btnAceptarM2B1A').trigger("click");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+
+    //    $("#divMensajeDosBotonesUnaAccion").dialog("open");
+
+}
+
+/*  FIN MensajeDosBotonesUnaAccion  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje300x300 Mensaje sin contenido y tamaño 300 x 300 px  */
+
+/*  Descripción: Función para mostrar una ventana modal con un mensaje 
+Observaciones IMPORTANTES:
+1.- En la página donde se consuma, debe existir un div de nombre divMensaje300x300, mismo que contiene
+lo necesario
+
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+Mensaje300x300Load();
+
+});
+
+function MuestraMensaje300() {
+
+Mensaje300x300();
+return false;
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="return MuestraMensaje300()" />  
+<br />
+<div id="divMensaje300x300" title="Titulo del mensaje" style="display: none">
+<p>
+Aqui coloquen lo necesario para que funcione su control </p>
+</div>
+</body>
+
+*/
+
+function Mensaje300x300Load() {
+
+    $("#divMensaje300x300").dialog({
+        resizable: false,
+        width: 300,
+        height: 300,
+        modal: true,
+        autoOpen: false
+    });
+
+}
+
+
+function Mensaje300x300() {
+
+    $("#divMensaje300x300").dialog({
+        resizable: false,
+        width: 300,
+        height: 300,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            }
+    });
+
+}
+
+
+/*  FIN Mensaje300x300  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje800x400 Mensaje sin contenido y tamaño 800 x 400 px  */
+
+/*  Descripción: Función para mostrar una ventana modal con un mensaje 
+Observaciones IMPORTANTES:
+1.- En la página donde se consuma, debe existir un div de nombre divMensaje800x400, mismo que contiene
+lo necesario
+
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+Mensaje800x400Load();
+
+});
+
+function MuestraMensaje800x400() {
+
+Mensaje800x400();
+return false;
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="return MuestraMensaje800x400()" />  
+<br />
+<div id="divMensaje800x400" title="Titulo del mensaje" style="display: none">
+<p>
+Aqui coloquen lo necesario para que funcione su control </p>
+</div>
+</body>
+
+*/
+
+function Mensaje800x400Load() {
+
+    $("#divMensaje800x400").dialog({
+        resizable: false,
+        width: 800,
+        height: 400,
+        modal: true,
+        autoOpen: false
+    });
+
+}
+
+
+function Mensaje800x400() {
+
+    $("#divMensaje800x400").dialog({
+        resizable: false,
+        width: 800,
+        height: 400,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            }
+    });
+
+}
+
+
+/*  FIN Mensaje800x400  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje800x400 Mensaje sin contenido y tamaño 800 x 400 px  */
+
+/*  Descripción: Función para mostrar una ventana modal con un mensaje 
+Observaciones IMPORTANTES:
+1.- En la página donde se consuma, debe existir un div de nombre divMensaje800x400Historial, mismo que contiene
+lo necesario
+
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+Mensaje800x400HistorialLoad();
+
+});
+
+function MuestraMensaje800x400() {
+
+Mensaje800x400Historial();
+return false;
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="return MuestraMensaje800x400()" />  
+<br />
+<div id="divMensaje800x400" title="Titulo del mensaje" style="display: none">
+<p>
+Aqui coloquen lo necesario para que funcione su control </p>
+</div>
+</body>
+
+*/
+
+function Mensaje800x400HistorialLoad() {
+
+    $("#divMensaje800x400Historial").dialog({
+        resizable: false,
+        width: 800,
+        height: 400,
+        modal: true,
+        autoOpen: false,
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+function Mensaje800x400Historial() {
+
+    $("#divMensaje800x400Historial").dialog({
+        resizable: false,
+        width: 800,
+        height: 400,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+/*  FIN Mensaje800x400  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************************************************************************************************************** */
+/*  SECCION PARA MENSAJES EXCLUSIVOS DE CONTROLES O PÁGINAS DE USO COMÚN, NO USAR EN LAS PÁGINAS DE NEGOCIO  */
+/* ***************************************************************************************************************************** */
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje para ser usado por el control de Vencimiento de Sesiones NO USAR  */
+
+function MensajeVencimientoSesionLoad() {
+
+    $("#divConfirmacionVencimientoSesion").dialog({
+        resizable: false,
+        autoOpen: false,
+        height: 300,
+        width: 500,
+        modal: true,
+        buttons: {
+            "Continuar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cerrar", disabled: true }]);
+                $('#btnContinuarVencimientoSesion').trigger("click");
+            },
+            "Cerrar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Continuar", disabled: true }, { text: "Procesando...", disabled: true }]);
+                $("#btnSalirVencimientoSesion").trigger("click");
+            }
+        }
+    });
+
+}
+
+// Funcion que debe ser invocada en el instante que se desee mostrar la ventana
+function MensajeVencimientoSesion() {
+
+    $("#divConfirmacionVencimientoSesion").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Continuar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cerrar", disabled: true }]);
+                $('#btnContinuarVencimientoSesion').trigger("click");
+            },
+            "Cerrar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Continuar", disabled: true }, { text: "Procesando...", disabled: true }]);
+                $("#btnSalirVencimientoSesion").trigger("click");
+            }
+        }
+    });
+
+
+    $("#divConfirmacionVencimientoSesion").dialog("open");
+
+}
+
+/*  FIN Mensaje para ser usado por el control de Vencimiento de Sesiones NO USAR  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje para ser usado por el control de Filtros NO USAR  */
+
+/*  
+Ejemplo implementacion:
+
+<script type="text/javascript">
+$(function () {
+
+MensajeVerificaFiltroLoad();
+
+});
+
+function MuestraVerificacionFiltro() {
+
+MensajeVerificaFiltro();
+return false;
+
+}
+</script>
+
+<body>
+<br />
+<asp:Button runat="server" ID="btnMostrarMensaje"  OnClientClick="return MuestraVerificacionFiltro()" />  
+<br />
+<div id="divMensajeVerificaFiltro" title="Titulo del mensaje">
+<p>
+<asp:Label runat="server" ID="lblMensajeFiltro" Text="Aqui va el mensaje"></asp:Label> 
+</p>
+</div>
+</body>
+
+*/
+
+function MensajeVerificaFiltroLoad() {
+
+    $("#divMensajeVerificaFiltro").dialog({
+        resizable: true,
+        width: 500,
+        height: 300,
+        modal: true,
+        autoOpen: false,
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+function MensajeVerificaFiltro() {
+
+    $("#divMensajeVerificaFiltro").dialog({
+        resizable: true,
+        width: 500,
+        height: 300,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+/*  FIN Mensaje para ser usado por el control de Filtros NO USAR  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje para notificaciones NO USAR  */
+
+/*  Descripción: Función para mostrar una ventana modal para las notificaciones 
+
+*/
+
+function MensajeNotificacionUsuarioLoad() {
+
+    $("#divMensajeNotificacionUsuario").dialog({
+        resizable: false,
+        width: 800,
+        height: 500,
+        modal: true,
+        autoOpen: false
+    });
+
+}
+
+
+function MensajeNotificacionUsuario() {
+
+    $("#divMensajeNotificacionUsuario").dialog({
+        resizable: false,
+        width: 800,
+        height: 500,
+        modal: true,
+        autoOpen: true,
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+                $(".ui-dialog-titlebar-close").hide();
+            }
+    });
+
+}
+
+
+/*  FIN Mensaje para notificaciones NO USAR  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje para Personalizacion de Columans NO USAR  */
+
+/*  Descripción: Función para mostrar una ventana modal para las notificaciones 
+
+*/
+
+function MensajePersonalizaColumnasControlLoad() {
+
+    $("#divPersonalizaColumnasControlPadre").dialog({
+        resizable: false,
+        width: 710,
+        height: 420,
+        modal: true,
+        autoOpen: false,
+        buttons: {
+            "Guardar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cancelar", disabled: true }]);
+                $('#btnGuardarPersonalizacion').trigger("click");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+function MensajePersonalizaColumnasControl() {
+
+    $("#divPersonalizaColumnasControlPadre").dialog({
+        resizable: false,
+        width: 710,
+        height: 420,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Guardar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cancelar", disabled: true }]);
+                $('#btnGuardarPersonalizacion').trigger("click");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+/*  FIN Mensaje para notificaciones NO USAR  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+
+
+
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+/*  Mensaje para Componente de Ayuda NO USAR  */
+
+/*  Descripción: Función para mostrar una ventana modal para el componente de ayuda 
+
+*/
+
+function MensajeComponenteAyudaControlLoad() {
+
+    $("#divMensajeComponenteAyudaControlPadre").dialog({
+        resizable: false,
+        width: 800,
+        height: 500,
+        modal: true,
+        autoOpen: false
+    });
+
+}
+
+
+function MensajeComponenteAyudaControl() {
+
+    $("#divMensajeComponenteAyudaControlPadre").dialog({
+        resizable: false,
+        width: 800,
+        height: 500,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            }
+    });
+
+}
+
+
+/*  FIN Mensaje para notificaciones NO USAR  */
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
+function Deshabilita(btn) {
+    btn.disabled = true;
+    btn.value = 'Procesando...';
+    __doPostBack(btn.name, "");
+}
+
+function MensajeUnBotonAgendaLoad() {
+
+    $("#divMensajeUnBotonNoAccion").dialog({
+        resizable: true,
+        height: 400,
+        width: 500,
+        modal: true,
+        autoOpen: false,
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+function MensajeUnBotonAgenda() {
+
+    $("#divMensajeUnBotonNoAccion").dialog({
+        resizable: true,
+        height: 400,
+        width: 500,
+        modal: true,
+        autoOpen: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+}
+
+
+
+// Funcion que debe ser invocada en el instante que se desee mostrar la ventana
+function MensajeDosBotonesUnaAccion_CargarDocumentosInicio() {
+
+    $("#divMensajeDosBotonesUnaAccion_CargarDocumentosInicio").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 300,
+        width: 600,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Cargar Archivos": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cancelar", disabled: true }]);
+                $('#btnCargaArchivo').trigger("click");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+
+    //    $("#divMensajeDosBotonesUnaAccion").dialog("open");
+
+}
+
+
+// Funcion que debe ser invocada en el instante que se desee mostrar la ventana
+function MensajeDosBotonesUnaAccion_CancelarVisita() {
+
+    $("#divMensajeDosBotonesUnaAccion_CancelarVisita").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 400,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cancelar", disabled: true }]);
+                $('#btnAceptarM2B1A').trigger("click");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+                $('#btnCancelarM2B1A').trigger("click");
+            }
+        }
+    });
+
+
+    //    $("#divMensajeDosBotonesUnaAccion").dialog("open");
+
+}
+
+
+
+// Funcion que debe ser invocada en el instante que se desee mostrar la ventana
+function MensajeDosBotonesUnaAccion_SolicitarProrroga() {
+
+    $("#divMensajeDosBotonesUnaAccion_SolicitarProrroga").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 400,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("option", "buttons", [{ text: "Procesando...", disabled: true }, { text: "Cancelar", disabled: true }]);
+                $('#btnAceptarM2B1A').trigger("click");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+                $('#btnCancelarM2B1A').trigger("click");
+            }
+        }
+    });
+
+
+    //    $("#divMensajeDosBotonesUnaAccion").dialog("open");
+
+}
+
+// Funcion que debe ser invocada en el instante que se desee mostrar la ventana
+function MensajeDosBotonesUnaAccion_Redirect() {
+
+    $("#divMensajeDosBotonesUnaAccion_Redirect").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "SI": function () {
+                $(this).dialog("close");
+                $('#btnAceptarM2B1A').trigger("click");
+            },
+            "NO": function () {
+                $(this).dialog("close");
+                $('#btnCancelarM2B1A').trigger("click");
+            }
+        }
+    });
+
+
+    //    $("#divMensajeDosBotonesUnaAccion").dialog("open");
+
+}
+
+// Funcion para invocar el evento que borra un archivo del expediente
+function MensajeDosBotonesUnaAccion_BorraArchivo(nDocumento) {
+
+    $("#divMensajeDosBotonesUnaAccion_BorrarAchivo").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 300,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Borrar": function () {
+                $('#ButtonDoc' + nDocumento).trigger("click");
+                $(this).dialog("close");
+            },
+            "Cancelar": function () {
+                $(this).dialog("close");
+                //$('#btnCancelarM2B1A').trigger("click");
+            }
+        }
+    });   
+}
+
+// Funcion para invocar el evento que borra un archivo del expediente
+function ConfirmaRegistroVisitaLoad() {
+
+    $("#divMensajeConfirmaRegistroVisita").dialog({
+        resizable: false,
+        autoOpen: true,
+        height: 250,
+        width: 500,
+        modal: true,
+        closeText: 'Cerrar',
+        open:
+            function (event, ui) {
+                $(this).parent().css('z-index', 3999);
+                $(this).parent().appendTo(jQuery("form:last"));
+                $('.ui-widget-overlay').css('position', 'fixed');
+                $('.ui-widget-overlay').css('z-index', 3998);
+                $('.ui-widget-overlay').appendTo($("form:last"));
+            },
+        buttons: {
+            "Aceptar": function () {
+                $('#BtnConfirmaRegistro').trigger("click");
+                $(this).dialog("close");
+            }
+        }
+    });
+
+    //    $("#divMensajeDosBotonesUnaAccion").dialog("open");
+
+}

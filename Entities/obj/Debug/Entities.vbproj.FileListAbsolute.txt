@@ -1,0 +1,124 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Entities.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Entities.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Entities.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Conexion.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\ADExtender.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\OpenXML.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\itextsharp.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\SharePoint.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\ControlErrores.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Encryption64.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Conexion.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Conexion.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Utilerias.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Debug\ADExtender.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.vbproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.Resources.resources
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.vbproj.GenerateResource.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.vbproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.vbproj.CopyComplete
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Debug\Entities.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Entities.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Entities.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Entities.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Conexion.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Utilerias.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\ADExtender.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\OpenXML.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\itextsharp.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\SharePoint.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\ControlErrores.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Encryption64.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Conexion.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Conexion.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Utilerias.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\Utilerias.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\bin\Debug\ADExtender.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.vbproj.AssemblyReference.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.Resources.resources
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.vbproj.GenerateResource.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.vbproj.CoreCompileInputs.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.vbproj.CopyComplete
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Entities\obj\Debug\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Conexion.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Conexion.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Conexion.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Debug\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Debug\Entities.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Debug\Entities.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Debug\Entities.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Debug\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Debug\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Debug\Entities.pdb
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Entities.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Entities.pdb
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Entities.xml
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Conexion.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Utilerias.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\ADExtender.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\OpenXML.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\itextsharp.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\SharePoint.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\DocumentFormat.OpenXml.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\ControlErrores.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Encryption64.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Conexion.pdb
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Conexion.xml
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Utilerias.pdb
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\Utilerias.xml
+C:\PROYECTOS CON\08062022\Codigo\Entities\bin\Debug\ADExtender.pdb
+C:\PROYECTOS CON\08062022\Codigo\Entities\obj\Debug\Entities.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS CON\08062022\Codigo\Entities\obj\Debug\Entities.Resources.resources
+C:\PROYECTOS CON\08062022\Codigo\Entities\obj\Debug\Entities.vbproj.GenerateResource.Cache
+C:\PROYECTOS CON\08062022\Codigo\Entities\obj\Debug\Entities.dll
+C:\PROYECTOS CON\08062022\Codigo\Entities\obj\Debug\Entities.xml
+C:\PROYECTOS CON\08062022\Codigo\Entities\obj\Debug\Entities.pdb
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Entities.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Entities.pdb
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Entities.xml
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Conexion.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Utilerias.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\ADExtender.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\OpenXML.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\itextsharp.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\SharePoint.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\DocumentFormat.OpenXml.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\ControlErrores.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Encryption64.dll
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Conexion.pdb
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Conexion.xml
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Utilerias.pdb
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\Utilerias.xml
+C:\PROYECTOS CON\JR 13062022\Entities\bin\Debug\ADExtender.pdb
+C:\PROYECTOS CON\JR 13062022\Entities\obj\Debug\Entities.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS CON\JR 13062022\Entities\obj\Debug\Entities.Resources.resources
+C:\PROYECTOS CON\JR 13062022\Entities\obj\Debug\Entities.vbproj.GenerateResource.Cache
+C:\PROYECTOS CON\JR 13062022\Entities\obj\Debug\Entities.dll
+C:\PROYECTOS CON\JR 13062022\Entities\obj\Debug\Entities.xml
+C:\PROYECTOS CON\JR 13062022\Entities\obj\Debug\Entities.pdb

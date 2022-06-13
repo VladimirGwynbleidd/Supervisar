@@ -1,0 +1,37 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\bin\Debug\CustomGridView.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\bin\Debug\CustomGridView.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\bin\Debug\CustomGridView.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\obj\Debug\CustomGridView.vbproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\obj\Debug\CustomGridView.Resources.resources
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\obj\Debug\CustomGridView.vbproj.GenerateResource.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\obj\Debug\CustomGridView.vbproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\obj\Debug\CustomGridView.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\obj\Debug\CustomGridView.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\CustomGridView\obj\Debug\CustomGridView.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\bin\Debug\CustomGridView.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\bin\Debug\CustomGridView.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\bin\Debug\CustomGridView.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\obj\Debug\CustomGridView.vbproj.AssemblyReference.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\obj\Debug\CustomGridView.Resources.resources
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\obj\Debug\CustomGridView.vbproj.GenerateResource.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\obj\Debug\CustomGridView.vbproj.CoreCompileInputs.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\obj\Debug\CustomGridView.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\obj\Debug\CustomGridView.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\CustomGridView\obj\Debug\CustomGridView.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\bin\Debug\CustomGridView.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\bin\Debug\CustomGridView.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\bin\Debug\CustomGridView.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\obj\Debug\CustomGridView.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\obj\Debug\CustomGridView.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\obj\Debug\CustomGridView.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\obj\Debug\CustomGridView.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\CustomGridView\obj\Debug\CustomGridView.pdb
+C:\PROYECTOS CON\JR 13062022\CustomGridView\bin\Debug\CustomGridView.dll
+C:\PROYECTOS CON\JR 13062022\CustomGridView\bin\Debug\CustomGridView.pdb
+C:\PROYECTOS CON\JR 13062022\CustomGridView\bin\Debug\CustomGridView.xml
+C:\PROYECTOS CON\JR 13062022\CustomGridView\obj\Debug\CustomGridView.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS CON\JR 13062022\CustomGridView\obj\Debug\CustomGridView.Resources.resources
+C:\PROYECTOS CON\JR 13062022\CustomGridView\obj\Debug\CustomGridView.vbproj.GenerateResource.Cache
+C:\PROYECTOS CON\JR 13062022\CustomGridView\obj\Debug\CustomGridView.dll
+C:\PROYECTOS CON\JR 13062022\CustomGridView\obj\Debug\CustomGridView.xml
+C:\PROYECTOS CON\JR 13062022\CustomGridView\obj\Debug\CustomGridView.pdb

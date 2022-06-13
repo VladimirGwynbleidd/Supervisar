@@ -1,0 +1,2881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6250891F-846A-46C7-9924-B5DEB7DD1310}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SEPRIS</RootNamespace>
+    <AssemblyName>SEPRIS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SEPRIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SEPRIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AccesoDatos">
+      <HintPath>..\DLL\SICOD\AccesoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Clases">
+      <HintPath>..\DLL\Clases.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlErrores">
+      <HintPath>..\DLL\ControlErrores.dll</HintPath>
+    </Reference>
+    <Reference Include="Encryption64">
+      <HintPath>..\DLL\Encryption64.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicaNegocio">
+      <HintPath>..\DLL\LogicaNegocio.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicaNegocioSICOD">
+      <HintPath>..\DLL\SICOD\LogicaNegocioSICOD.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\DLL\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenXML, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\OpenXML.dll</HintPath>
+    </Reference>
+    <Reference Include="SICOD, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SICOD\SICOD.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Acerca.aspx" />
+    <Content Include="AltaSolicitud.aspx" />
+    <Content Include="App_Themes\ThemeConsar\Site.css" />
+    <Content Include="Bandeja.aspx" />
+    <Content Include="BandejaRegistrarAgenda.aspx" />
+    <Content Include="BandejaSICOD.aspx" />
+    <Content Include="CambioContrasenia.aspx" />
+    <Content Include="Carrusel\CarruselAsignacion.aspx" />
+    <Content Include="Carrusel\PeriodosNoAsignacion.aspx" />
+    <Content Include="ConsultaAgenda.aspx" />
+    <Content Include="Controles\Calendar.ascx" />
+    <Content Include="Controles\Filtro3\chkButtomUserControl3.ascx" />
+    <Content Include="Controles\Filtro3\chkUserControl3.ascx" />
+    <Content Include="Controles\Filtro3\cldUserControl3.ascx" />
+    <Content Include="Controles\Filtro3\ddlUserControl3.ascx" />
+    <Content Include="Controles\Filtro3\ddlUserControlR3.ascx" />
+    <Content Include="Controles\Filtro3\imagenes\Calendar.GIF" />
+    <Content Include="Controles\Filtro3\rbUserControl3.ascx" />
+    <Content Include="Controles\Filtro3\txtUserControl3.ascx" />
+    <Content Include="Controles\Filtro2\chkButtomUserControl2.ascx" />
+    <Content Include="Controles\Filtro2\chkUserControl2.ascx" />
+    <Content Include="Controles\Filtro2\cldUserControl2.ascx" />
+    <Content Include="Controles\Filtro2\ddlUserControl2.ascx" />
+    <Content Include="Controles\Filtro2\ddlUserControlR2.ascx" />
+    <Content Include="Controles\Filtro2\imagenes\Calendar.GIF" />
+    <Content Include="Controles\Filtro2\rbUserControl2.ascx" />
+    <Content Include="Controles\Filtro2\txtUserControl2.ascx" />
+    <Content Include="Controles\ucDoctosProrroga.ascx" />
+    <Content Include="Controles\CopiarFolios.ascx" />
+    <Content Include="Controles\cuDetalleVisita.ascx" />
+    <Content Include="Controles\Filtro\ddlUserControlR.ascx" />
+    <Content Include="Controles\PersonalizarColumnas.ascx" />
+    <Content Include="Controles\Filtro\chkButtomUserControl.ascx" />
+    <Content Include="Controles\Script\GridviewScroll.css" />
+    <Content Include="Controles\Script\gridviewScrollAgc.min.js" />
+    <Content Include="Controles\SubVisitas.ascx" />
+    <Content Include="Controles\ucDocumentos.ascx" />
+    <Content Include="Controles\ucDocumentosVisita.ascx" />
+    <Content Include="Controles\ucFiltro3.ascx" />
+    <Content Include="Controles\ucFiltro2.ascx" />
+    <Content Include="Controles\ucRespVisita.ascx" />
+    <Content Include="Controles\wucAyuda.ascx" />
+    <Content Include="Controles\wucNotificaciones.ascx" />
+    <Content Include="Controles\wucPersonalizarColumnas.ascx" />
+    <Content Include="Controles\wucVencimientoSesion.ascx" />
+    <Content Include="Imagenes\aceptado.png" />
+    <Content Include="Imagenes\aceptarPaloma.png" />
+    <Content Include="Imagenes\aceptarPalomaPeque.png" />
+    <Content Include="Imagenes\Actualizar.bmp" />
+    <Content Include="Imagenes\Add.png" />
+    <Content Include="Imagenes\AddDestinatario.jpg" />
+    <Content Include="Imagenes\adjuntarDocs.png" />
+    <Content Include="Imagenes\adjuntarDocs2.png" />
+    <Content Include="Imagenes\agregar.gif" />
+    <Content Include="Imagenes\agregar.png" />
+    <Content Include="Imagenes\agregar2.gif" />
+    <Content Include="Imagenes\ajax-loader.gif" />
+    <Content Include="Imagenes\ajax-loadercircle.gif" />
+    <Content Include="Imagenes\Anterior.png" />
+    <Content Include="Imagenes\AnteriorExpediente.png" />
+    <Content Include="Imagenes\aprobarDejarSEfecto.png" />
+    <Content Include="Imagenes\AprobarDocto.png" />
+    <Content Include="Imagenes\aprobarProrroga.png" />
+    <Content Include="Imagenes\archivo-acuse.gif" />
+    <Content Include="Imagenes\archivo-anexo1.gif" />
+    <Content Include="Imagenes\archivo-anexo2.gif" />
+    <Content Include="Imagenes\archivo-cedula.gif" />
+    <Content Include="Imagenes\archivo-cne.gif" />
+    <Content Include="Imagenes\archivo-expediente.gif" />
+    <Content Include="Imagenes\archivo-firma.gif" />
+    <Content Include="Imagenes\archivo-pdf.gif" />
+    <Content Include="Imagenes\archivo-respuesta.gif" />
+    <Content Include="Imagenes\archivo-word.gif" />
+    <Content Include="Imagenes\archivo_01.jpg" />
+    <Content Include="Imagenes\Asociado.png" />
+    <Content Include="Imagenes\ATENDIDO.png" />
+    <Content Include="Imagenes\bandera_amarillo.gif" />
+    <Content Include="Imagenes\bandera_negro.gif" />
+    <Content Include="Imagenes\bandera_roja.gif" />
+    <Content Include="Imagenes\bandera_verde.gif" />
+    <Content Include="Imagenes\b_cerrar_1.gif" />
+    <Content Include="Imagenes\b_cerrar_2.gif" />
+    <Content Include="Imagenes\cabeza046DerSICOD.png" />
+    <Content Include="Imagenes\campanaPendientes.png" />
+    <Content Include="Imagenes\cancelarVisita.png" />
+    <Content Include="Imagenes\cancelarVisitaPeque.png" />
+    <Content Include="Imagenes\carga.gif" />
+    <Content Include="Imagenes\cerrar.png" />
+    <Content Include="Imagenes\collapse.png" />
+    <Content Include="Imagenes\concluido.png" />
+    <Content Include="Imagenes\CONSAR_PDF.png" />
+    <Content Include="Imagenes\CONSAR_PDF_SMALL.png" />
+    <Content Include="Imagenes\Copia de Anterior.png" />
+    <Content Include="Imagenes\copia.gif" />
+    <Content Include="Imagenes\copia_disabled.gif" />
+    <Content Include="Imagenes\corregir.png" />
+    <Content Include="Imagenes\DejarSinEfecto.png" />
+    <Content Include="Imagenes\Delete.png" />
+    <Content Include="Imagenes\detalleReporte.png" />
+    <Content Include="Imagenes\detener.png" />
+    <Content Include="Imagenes\diasAgregar.png" />
+    <Content Include="Imagenes\diasQuitar.png" />
+    <Content Include="Imagenes\document.gif" />
+    <Content Include="Imagenes\Duplicado.png" />
+    <Content Include="Imagenes\dynCalendar.gif" />
+    <Content Include="Imagenes\editar.png" />
+    <Content Include="Imagenes\email_01.jpg" />
+    <Content Include="Imagenes\Encabezado001.bmp" />
+    <Content Include="Imagenes\Encabezado002.bmp" />
+    <Content Include="Imagenes\Encabezado003.bmp" />
+    <Content Include="Imagenes\encabezado_logoconsar_blanco.gif" />
+    <Content Include="Imagenes\encabezado_verdebotella.bmp" />
+    <Content Include="Imagenes\ERROR.jpg" />
+    <Content Include="Imagenes\expand.png" />
+    <Content Include="Imagenes\favicon.ico" />
+    <Content Include="Imagenes\flechAct.bmp" />
+    <Content Include="Imagenes\FlechaRojaDer.gif" />
+    <Content Include="Imagenes\FlechaRojaDerOculta.gif" />
+    <Content Include="Imagenes\FlechaRojaIzq.gif" />
+    <Content Include="Imagenes\FlechaRojaIzqOculta.gif" />
+    <Content Include="Imagenes\Flecha_Roja_Icono_006.gif" />
+    <Content Include="Imagenes\flecha_verde_0.gif" />
+    <Content Include="Imagenes\fondo_consar1.jpg" />
+    <Content Include="Imagenes\fup1.png" />
+    <Content Include="Imagenes\fup2.png" />
+    <Content Include="Imagenes\fup3.png" />
+    <Content Include="Imagenes\fup4.png" />
+    <Content Include="Imagenes\iconocambionormatividad.png" />
+    <Content Include="Imagenes\icono_lapiz_Sub.GIF" />
+    <Content Include="Imagenes\IniciarVisita.png" />
+    <Content Include="Imagenes\inicio.png" />
+    <Content Include="Imagenes\IrADetallevisita.png" />
+    <Content Include="Imagenes\loading.gif" />
+    <Content Include="Imagenes\mail_direcc_arbol.png" />
+    <Content Include="Imagenes\mail_Encabezado.png" />
+    <Content Include="Imagenes\mail_logo_consar.png" />
+    <Content Include="Imagenes\masDocumentos.png" />
+    <Content Include="Imagenes\No Asigno.GIF" />
+    <Content Include="Imagenes\notificar.png" />
+    <Content Include="Imagenes\notificar_3.png" />
+    <Content Include="Imagenes\notificar_generado.png" />
+    <Content Include="Imagenes\notificar_pendiente.png" />
+    <Content Include="Imagenes\nuevo02.jpg" />
+    <Content Include="Imagenes\OK.jpg" />
+    <Content Include="Imagenes\OPI_VF.JPG" />
+    <Content Include="Imagenes\OPI_VO.JPG" />
+    <Content Include="Imagenes\ORIENTACION.png" />
+    <Content Include="Imagenes\original.gif" />
+    <Content Include="Imagenes\OriginalTurnado.gif" />
+    <Content Include="Imagenes\original_disabled.gif" />
+    <Content Include="Imagenes\PC_VF.JPG" />
+    <Content Include="Imagenes\PC_VO.JPG" />
+    <Content Include="Imagenes\pdf01.jpg" />
+    <Content Include="Imagenes\pdficon_large.png" />
+    <Content Include="Imagenes\PREVENTIVO.jpg" />
+    <Content Include="Imagenes\PREVENTIVO.png" />
+    <Content Include="Imagenes\PROBLEMATICA.png" />
+    <Content Include="Imagenes\proceso.png" />
+    <Content Include="Imagenes\ProcesoInspeccion.png" />
+    <Content Include="Imagenes\ProcesoInspSan\DiagramaProcesoInspeccion.png" />
+    <Content Include="Imagenes\ProcesoInspSan\Proceso_Insp_San_VF.png" />
+    <Content Include="Imagenes\ProcesoInspSan\Proceso_Insp_San_VO-PLD-CGIV.png" />
+    <Content Include="Imagenes\prorroga.png" />
+    <Content Include="Imagenes\question.png" />
+    <Content Include="Imagenes\question_anexos.png" />
+    <Content Include="Imagenes\quitaCriterio.jpg" />
+    <Content Include="Imagenes\rechazarDejarSEfecto.png" />
+    <Content Include="Imagenes\RechazarDocto.png" />
+    <Content Include="Imagenes\RechazarProrroga.png" />
+    <Content Include="Imagenes\registrarVisita.png" />
+    <Content Include="Imagenes\reload.png" />
+    <Content Include="Imagenes\Requerimiento.png" />
+    <Content Include="Imagenes\reunion.png" />
+    <Content Include="Imagenes\revisarDocs.png" />
+    <Content Include="Imagenes\rojo.png" />
+    <Content Include="Imagenes\save.png" />
+    <Content Include="Imagenes\save2.png" />
+    <Content Include="Imagenes\seguimiento.ico" />
+    <Content Include="Imagenes\Seleccionar.png" />
+    <Content Include="Imagenes\semaforo1.png" />
+    <Content Include="Imagenes\semaforo2.png" />
+    <Content Include="Imagenes\semaforo3.png" />
+    <Content Include="Imagenes\semaforo4.png" />
+    <Content Include="Imagenes\SepararSubvisitas.png" />
+    <Content Include="Imagenes\show.swf" />
+    <Content Include="Imagenes\siguiente.png" />
+    <Content Include="Imagenes\solicitarProrroga.png" />
+    <Content Include="Imagenes\statusNormal.gif" />
+    <Content Include="Imagenes\statusNormal.jpg" />
+    <Content Include="Imagenes\statusNormal.png" />
+    <Content Include="Imagenes\Subvisitas.png" />
+    <Content Include="Imagenes\TemplateTab1.gif" />
+    <Content Include="Imagenes\TemplateTab1_disabled.gif" />
+    <Content Include="Imagenes\TemplateTab2.gif" />
+    <Content Include="Imagenes\TemplateTab2_disabled.gif" />
+    <Content Include="Imagenes\tramite.jpg" />
+    <Content Include="Imagenes\TRAMITE.png" />
+    <Content Include="Imagenes\vencido.png" />
+    <Content Include="Imagenes\VerDetalle.png" />
+    <Content Include="Imagenes\VerReporte.png" />
+    <Content Include="Imagenes\vistaPreliminar.png" />
+    <Content Include="Imagenes\word.jpg" />
+    <Content Include="Images\aceptado.png" />
+    <Content Include="Images\Actualizar.bmp" />
+    <Content Include="Images\Add.png" />
+    <Content Include="Images\AddDestinatario.jpg" />
+    <Content Include="Images\agregar.gif" />
+    <Content Include="Images\agregar2.gif" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\ajax-loadercircle.gif" />
+    <Content Include="Images\archivo-acuse.gif" />
+    <Content Include="Images\archivo-anexo1.gif" />
+    <Content Include="Images\archivo-anexo2.gif" />
+    <Content Include="Images\archivo-cedula.gif" />
+    <Content Include="Images\archivo-cne.gif" />
+    <Content Include="Images\archivo-expediente.gif" />
+    <Content Include="Images\archivo-firma.gif" />
+    <Content Include="Images\archivo-pdf.gif" />
+    <Content Include="Images\archivo-respuesta.gif" />
+    <Content Include="Images\archivo-word.gif" />
+    <Content Include="Images\archivo_01.jpg" />
+    <Content Include="Images\arrow_next.gif" />
+    <Content Include="Images\Asociado.png" />
+    <Content Include="Images\ATENDIDO.png" />
+    <Content Include="Images\bandera_amarillo.gif" />
+    <Content Include="Images\bandera_negro.gif" />
+    <Content Include="Images\bandera_roja.gif" />
+    <Content Include="Images\bandera_verde.gif" />
+    <Content Include="Images\b_cerrar_1.gif" />
+    <Content Include="Images\b_cerrar_2.gif" />
+    <Content Include="Images\cabeza046DerSICOD.png" />
+    <Content Include="Images\Calendar.GIF" />
+    <Content Include="Images\carga.gif" />
+    <Content Include="Images\collapse.png" />
+    <Content Include="Images\concluido.png" />
+    <Content Include="Images\CONSAR_PDF.png" />
+    <Content Include="Images\CONSAR_PDF_SMALL.png" />
+    <Content Include="Images\copia.gif" />
+    <Content Include="Images\copia_disabled.gif" />
+    <Content Include="Images\corregir.png" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\document.gif" />
+    <Content Include="Images\down_arrow_grey.png" />
+    <Content Include="Images\Duplicado.png" />
+    <Content Include="Images\dynCalendar.gif" />
+    <Content Include="Images\email_01.jpg" />
+    <Content Include="Images\Encabezado001.bmp" />
+    <Content Include="Images\Encabezado002.bmp" />
+    <Content Include="Images\Encabezado003.bmp" />
+    <Content Include="Images\encabezado_logoconsar_blanco.gif" />
+    <Content Include="Images\encabezado_verdebotella.bmp" />
+    <Content Include="Images\ERROR.gif" />
+    <Content Include="Images\ERROR.jpg" />
+    <Content Include="Images\expand.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\flechAct.bmp" />
+    <Content Include="Images\FlechaRojaDer.gif" />
+    <Content Include="Images\FlechaRojaIzq.gif" />
+    <Content Include="Images\Flecha_Roja_Icono_006.gif" />
+    <Content Include="Images\flecha_verde_0.gif" />
+    <Content Include="Images\fondo_consar.jpeg" />
+    <Content Include="Images\fondo_consar1.jpg" />
+    <Content Include="Images\fup1.png" />
+    <Content Include="Images\fup2.png" />
+    <Content Include="Images\fup3.png" />
+    <Content Include="Images\fup4.png" />
+    <Content Include="Images\No Asigno.GIF" />
+    <Content Include="Images\No Existen.gif" />
+    <Content Include="Images\notificar.png" />
+    <Content Include="Images\notificar_generado.png" />
+    <Content Include="Images\notificar_pendiente.png" />
+    <Content Include="Images\no_vigente.gif" />
+    <Content Include="Images\nuevo02.jpg" />
+    <Content Include="Images\OK.gif" />
+    <Content Include="Images\OK.jpg" />
+    <Content Include="Images\ORIENTACION.png" />
+    <Content Include="Images\original.gif" />
+    <Content Include="Images\OriginalTurnado.gif" />
+    <Content Include="Images\original_disabled.gif" />
+    <Content Include="Images\pdf01.jpg" />
+    <Content Include="Images\pdficon_large.png" />
+    <Content Include="Images\PREVENTIVO.jpg" />
+    <Content Include="Images\PREVENTIVO.png" />
+    <Content Include="Images\PROBLEMATICA.png" />
+    <Content Include="Images\proceso.png" />
+    <Content Include="Images\question.png" />
+    <Content Include="Images\question_anexos.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\save2.png" />
+    <Content Include="Images\seguimiento.ico" />
+    <Content Include="Images\Seleccionar.png" />
+    <Content Include="Images\show.swf" />
+    <Content Include="Images\statusNormal.gif" />
+    <Content Include="Images\statusNormal.jpg" />
+    <Content Include="Images\statusNormal.png" />
+    <Content Include="Images\TemplateTab1.gif" />
+    <Content Include="Images\TemplateTab1_disabled.gif" />
+    <Content Include="Images\TemplateTab2.gif" />
+    <Content Include="Images\TemplateTab2_disabled.gif" />
+    <Content Include="Images\tramite.jpg" />
+    <Content Include="Images\TRAMITE.png" />
+    <Content Include="Images\up_arrow_grey.png" />
+    <Content Include="Images\vencido.png" />
+    <Content Include="Images\vigente.gif" />
+    <Content Include="Images\word.jpg" />
+    <Content Include="Mantenimiento\Catalogo.aspx" />
+    <Content Include="Mantenimiento\CatalogoDocumento.aspx" />
+    <Content Include="Mantenimiento\CatalogoFormato.aspx" />
+    <Content Include="Mantenimiento\CatalogoModif.aspx" />
+    <Content Include="Mantenimiento\Catalogos.aspx" />
+    <Content Include="Mantenimiento\ImgProceso.aspx" />
+    <Content Include="Mantenimiento\ProcesosVigilancia.aspx" />
+    <Content Include="Mantenimiento\ProcesoVigilancia.aspx" />
+    <Content Include="Mantenimiento\ProcesoVigilanciaModif.aspx" />
+    <Content Include="MensajeModal\MensajeModal.ascx" />
+    <Content Include="OPI\BandejaOPI.aspx" />
+    <Content Include="OPI\DetalleOPI.aspx" />
+    <Content Include="OPI\ExpedienteOPI.aspx" />
+    <Content Include="OPI\RegistroOPI.aspx" />
+    <Content Include="OPI\UserControls\AltaIrregularidadesOPI.ascx" />
+    <Content Include="OPI\UserControls\Bitacora.ascx" />
+    <Content Include="OPI\UserControls\ClasificacionOPI.ascx" />
+    <Content Include="OPI\UserControls\ComentariosOPI.ascx" />
+    <Content Include="OPI\UserControls\DetalleOPIuc.ascx" />
+    <Content Include="OPI\UserControls\ExpedienteSisan.ascx" />
+    <Content Include="OPI\UserControls\InspectoresOPI.ascx" />
+    <Content Include="OPI\UserControls\IrregularidadOPI.ascx" />
+    <Content Include="OPI\UserControls\Motivo.ascx" />
+    <Content Include="OPI\UserControls\MotivoOpi1.ascx" />
+    <Content Include="OPI\UserControls\PosibleIncumplimiento.ascx" />
+    <Content Include="OPI\UserControls\RespuestaAforeOPI.ascx" />
+    <Content Include="OPI\UserControls\SupervisorOPI.ascx" />
+    <Content Include="OPI\UserControls\SupuestoAvisoOPI.ascx" />
+    <Content Include="PC\BandejaPC.aspx" />
+    <Content Include="PC\CompletarIrregularidad.aspx" />
+    <Content Include="PC\DetallePC.aspx" />
+    <Content Include="PC\ExpedientePC.aspx" />
+    <Content Include="PC\NuevaIrregularidad.aspx" />
+    <Content Include="PC\Paso1.aspx" />
+    <Content Include="PC\ReasignaSupervisores.aspx" />
+    <Content Include="PC\ServiciosSICOD.aspx" />
+    <Content Include="PC\UserControls\Actividades.ascx" />
+    <Content Include="PC\UserControls\Bitacora.ascx" />
+    <Content Include="PC\UserControls\Checklist.ascx" />
+    <Content Include="PC\UserControls\DetalleSICOD.ascx" />
+    <Content Include="PC\UserControls\Documentos.ascx" />
+    <Content Include="PC\UserControls\Inspector.ascx" />
+    <Content Include="PC\UserControls\Irregularidad.ascx" />
+    <Content Include="PC\UserControls\IrregularidadCompleta.ascx" />
+    <Content Include="PC\UserControls\Irregularidades.ascx" />
+    <Content Include="PC\UserControls\RequerimientoInformacion.ascx" />
+    <Content Include="PC\UserControls\SancionPC.ascx" />
+    <Content Include="PC\UserControls\Supervisor.ascx" />
+    <Content Include="PC\VerOficios.aspx" />
+    <Content Include="Procesos\Bandejas_SICOD\ENTRADA\BandejaEntrada.aspx" />
+    <Content Include="Procesos\Bandejas_SICOD\ENTRADA\FiltroBusqueda.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\ENTRADA\Scripts\browserSniffer.js" />
+    <Content Include="Procesos\Bandejas_SICOD\ENTRADA\Scripts\dynCalendar.js" />
+    <Content Include="Procesos\Bandejas_SICOD\ENTRADA\Scripts\script.js" />
+    <Content Include="Procesos\Bandejas_SICOD\ENTRADA\Styles.css" />
+    <Content Include="Procesos\Bandejas_SICOD\ENTRADA\UserControls\ucAnexoModalRow.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\BandejaOficios.aspx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\FiltroBusquedaOfi.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\PersonalizarColumasOfi.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\browserSniffer.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\calendar.html" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\calendar1.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\dynCalendar.css" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\dynCalendar.html" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\dynCalendar.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\jquery-1.4.1.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\json2.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\script.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\wait.js" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\Styles.css" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\cldUserControlOfi.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\ddlUserControlOfi.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\imagenes\Calendar.GIF" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\rbUserControlOfi.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\txtUserControlOfi.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\ucAnexoModalRowOfi.ascx" />
+    <Content Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\ucFiltroOfi.ascx" />
+    <Content Include="Procesos\DetalleVisita.aspx" />
+    <Content Include="Procesos\DetalleVisita_V17.aspx" />
+    <Content Include="Procesos\Seguimiento.aspx" />
+    <Content Include="Procesos\SeguimientoDetalle.aspx" />
+    <Content Include="Procesos\SeguimientoReporte.aspx" />
+    <Content Include="PruebaOSIRIS.aspx" />
+    <Content Include="PruebaServicios.aspx" />
+    <Content Include="PruebaSISAN.aspx" />
+    <Content Include="Scripts\bootstrap-3.3.4\css\bootstrap-theme.css" />
+    <Content Include="Scripts\bootstrap-3.3.4\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\bootstrap-3.3.4\css\bootstrap.css" />
+    <Content Include="Scripts\bootstrap-3.3.4\css\bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap-3.3.4\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap-3.3.4\js\bootstrap.js" />
+    <Content Include="Scripts\bootstrap-3.3.4\js\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4\js\npm.js" />
+    <Content Include="Scripts\Chart.bundle.js" />
+    <Content Include="Scripts\funcion3.js" />
+    <Content Include="Scripts\funcion2.js" />
+    <Content Include="Scripts\data.js" />
+    <Content Include="Scripts\funcion.js" />
+    <Content Include="Scripts\highcharts-3d.js" />
+    <Content Include="Scripts\highcharts.js" />
+    <Content Include="Scripts\jquery.quicksearch.js" />
+    <Content Include="Scripts\utils.js" />
+    <Content Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="ServiciosWeb\wcfRegistro.svc" />
+    <Content Include="ServiciosWeb\wcfRegistro_V17.svc" />
+    <Content Include="Styles\estilosChromeImgProc.css" />
+    <Content Include="Styles\estilosIEImgProc.css" />
+    <Content Include="Styles\estilosChrome.css" />
+    <Content Include="Styles\estilosIE.css" />
+    <Content Include="Styles\estilosPayGrafo.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\TabsV1.css" />
+    <Content Include="Correos\CatalogoMensajes.aspx" />
+    <Content Include="Correos\CorreosPerfil.aspx" />
+    <Content Include="Correos\ExclusionCorreoUsuario.aspx" />
+    <Content Include="Correos\MenuOpciones.aspx" />
+    <Content Include="CrearSolicitud.aspx" />
+    <Content Include="Documentacion\DocBitacora.aspx" />
+    <Content Include="Documentacion\DocCarrusel.aspx" />
+    <Content Include="Documentacion\DocCatalogoAyuda.aspx" />
+    <Content Include="Documentacion\DocCatalogoErrores.aspx" />
+    <Content Include="Documentacion\DocCatalogoEstatus.aspx" />
+    <Content Include="Documentacion\DocCatalogoImagenes.aspx" />
+    <Content Include="Documentacion\DocCatalogoMenus.aspx" />
+    <Content Include="Documentacion\DocCatalogoParametros.aspx" />
+    <Content Include="Documentacion\DocCatalogoPerfiles.aspx" />
+    <Content Include="Documentacion\DocCatalogoSubmenus.aspx" />
+    <Content Include="Documentacion\DocCatalogoUsuarios.aspx" />
+    <Content Include="Documentacion\DocCatalogoUsuariosInternos.aspx" />
+    <Content Include="Documentacion\DocComponenteAyuda.aspx" />
+    <Content Include="Documentacion\DocControlSesiones.aspx" />
+    <Content Include="Documentacion\DocCorreos.aspx" />
+    <Content Include="Documentacion\DocExportarExcel.aspx" />
+    <Content Include="Documentacion\DocFiltrosDinamicos.aspx" />
+    <Content Include="Documentacion\DocLogin.aspx" />
+    <Content Include="Documentacion\DocMasterPage.aspx" />
+    <Content Include="Documentacion\DocMensajeModal.aspx" />
+    <Content Include="Documentacion\DocMensajesNotificacion.aspx" />
+    <Content Include="Documentacion\DocMenuPerfiles.aspx" />
+    <Content Include="Documentacion\DocPantallasInicio.aspx" />
+    <Content Include="Documentacion\DocPersonalizarColumnas.aspx" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f254s655ed9w233a_html_4dascb47ffe0112.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f2565543a34rfw4233a_html_447ffe.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f2565543arw233a_html_4cb47ffe.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_1778250f.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_39a40821.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_4cb47ffe.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_68a9bbbb.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_c2b4b96.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_m29d58e61.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_m3648e8f5.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_m46353339.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_m562866dd.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_m59afd33c.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9846aa_html_mb75099f.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9rw233a_html_4cb47ffe.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f25655ed9w233a_html_4cb47ffe0112.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04f2sdaa43a34rfw4233a_html_447ffe.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_04fa565543a34rfw43wssa3a_html_47ffe.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_2388d7dc.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_3b104268.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_46ed8346.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_4dfa7d71.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_m23d8c46f.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_m558dc042.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_m729f246e.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_m8j4m340d.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_079937cc9f30acca_html_m8j4m555d.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_16f96b25763ca0f3_html_44d0f393.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_16f96b25763ca0f3_html_m63912bed.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_16f96b25763ca0f3_html_m680ff247.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_16f96b25763ca0f3_html_m7579120b.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_16f96b25763ca0f3_html_m7579999z.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a0533451f0_html_m5b9eabc8.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a053e4051f0_html_15f342c1.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a053e4051f0_html_25ebe1a1.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a053e4051f0_html_47a2efca.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a053e4051f0_html_m5b9eabc8.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a053e4051f0_html_m6f1b6cae.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a053e4051f0_html_m72daca54.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a053e4051f0_html_m7b0f107b.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17113a4051f0_html_m5b93easeabc8.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_171ii7651f0_html_m5b93easeabcq.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_172dd2a053345f0_html_m5b9eabc8.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_24accdbe.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_37107a10.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_4b6274d7.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_4b6274d7231a.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_5c0dcef0.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_5df07b20.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_m362e3068.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_m37cd5b98.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_m6c1a83dd.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_17e70b3c468cef72_html_m73fb0eaa.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_19c42d78e19ae773_html_33244718.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_19c42d78e19ae773_html_7e5e0268.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_19c42d78e19ae773_html_m5ee24b2.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_19c42d78e19ae773_html_m5ee24b23sa.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_19c42d78e19ae773_html_m6d3d0158.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd4932cffdasda09d85bc_html_10d628.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_10d6a628.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_14218611.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_1dc7a5be.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_3df3b8bd.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_477e319e.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_47b41473.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_5fefbdef.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_69517e05.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_702b68cd.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_7bf843bc.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_m32ea89d7.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_m48a0d445.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd49cff09d85bc_html_m725a696f.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd4za33a754564dasda09d85_html_10d628.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_1bbd4za33aacffdasda09d85_html_10d628.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_18665c24.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_1d81ebbe.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_1eaf25c7.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_4670fff1.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_47ebf54d.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_53987871.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_5abdc12c.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_5b43066b.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_5c882d40.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_60c8e22c.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_6d093f18.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_6f093a3.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_7805cd5e.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_7a0a50cf.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m1fc3dd01.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m21299eff.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m29a2f91c.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m2a1bee38.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m48c929e4.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m4c31d3c1.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m5d988037.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m663c87d2.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m6b026cd.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m6c345f23.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m6e3dd352.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m6fa4cc90.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m76d29a7c.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m78e4f9fa.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_m7aa6d8e0.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23caab85b2bda157_html_mf99e298.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_1808e48c.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_3ae4de2d.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_589faa21.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_62b9bb36.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_m13369760.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_m2d3cca9e.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_m3dff8630.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_m57b521b4.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_m7986be58.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_23e3431c9171361d_html_mc475630.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_17485da2.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_23f4575d.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_35db0a48.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_3f2c11b0.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_68295875.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_74bb8c5e.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_b09f2f6.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_m247c48da.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_m358199a9.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_m4bede4f3.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_m65f0960c.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_26dfc53240755105_html_m6f81e84f.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3941c0cc2ee0f6f2_html_6977f66d.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3941c0cc2ee0f6f2_html_6f2a3d46.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3941c0cc2ee0f6f2_html_m7e32202.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_1b6631ff.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_499ed670.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_6c53d762.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_m154618bd.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_m1ce3c9dd.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_m35d2573.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_m51bab93f.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_m6718b58b.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3bff65296815de31_html_ma9b3d1e.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea232113053_html_1f6b2f4z.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053zza2x_html_1f6b2f4a.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_1f6b2f4a.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_29818972.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_2d10620f.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_35db0a48.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_4c02fdf3.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_4f96e0f3.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_b09f2f6.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_m16cd5b0a.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_m366bcf6.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_m682cd1ea.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_m6fc676ef.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec2399ea3053_html_m737a39e4.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_3e04ec239fgh43113053_html_142df4z.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_23ce2a29.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_29818972.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_2d10620f.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_35db0a48.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_422f2b93.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_51cda839.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_a5c5b34.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_b09f2f6.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_m55a5c7e1.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_m5ad29d2f.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_4ae740220b707df0_html_m71084356.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_43d08f6.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_499ed670.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_5de16d8f.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_62e86767.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_71ce9f25.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_m1d68709b.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_m35d2573.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_504c29dd14b85023_html_m43229dc1.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_53e04ec2222211773z77a2x_html_1f6b2f4a.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_53e04ec2m8765ea3053z77a2x_html_1f6b2f4a.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_53e04ec2mjhgea3053zza2x_html_1f6b2f4a.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_61de4a98a1b586aa_html_143c1ceb.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_61de4a98a1b586aa_html_1c1d68f1.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_61de4a98a1b586aa_html_39c6b8a1.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_61de4a98a1b586aa_html_4929e6f5.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_61de4a98a1b586aa_html_4e7b4a0c.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_61de4a98a1b586aa_html_m71c614d.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_61de4a98a1b586aa_html_m72cacc37.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_15e669c8.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_49a10388.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_7728864f.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_m36d04b7.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_m4bede4f3.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_m540da677.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_m65c1e645.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_m6c0325ff.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_m76e5f7fc.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_6275622ece4c8ffa_html_mbddb596.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_638445a2eb4e767f_html_63de45f5.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_638445a2eb4e767f_html_m12065dd8.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_638445a2eb4e767f_html_m4f771c1b.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_64b4e8b8936d2efa_html_75b40a3c.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_64b4e8b8936d2efa_html_m483abe2.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_1959387.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_1e8330c9.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_1ff77d05.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_23fb029.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_2a9319a5.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_2dcb2543.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_330f852.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_343f5dba.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_4fc5710d.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_53226337.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_6d87d94b.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_e863a4b.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_m2a0b2678.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_m41a56f9.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_m567c32cb.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_m56d8e3c5.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_m61eb50cf.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_727cabd9fc217b30_html_m6eed943b.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_30c5dcd3.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_3a213f43.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_44330da0.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_47c36c9c.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_4a9692b8.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_4b4a0c8a.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_5b1c36a1.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m23f17455.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m281300bf.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m32378021.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m3beeaba0.gif" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m57697114.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m65bb34fc.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m663c87d2.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m716ed1d0.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_81846839fac8c0da_html_m7d9302a9.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_8b8e696cd8324ee8_html_1ae8aba0.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_8b8e696cd8324ee8_html_2f3460c7.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_8b8e696cd8324ee8_html_m36f0de9f.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_a34fdwcdea32da19bed_html_5d463s618.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_1675bee3.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_20cb5b82.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_24c739f9.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_5b1c36a1.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_5d21641.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_5d463618.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_m281300bf.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_m32378021.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_m37888e53.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea19bed_html_m48145688.jpg" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf092cdea32da19bed_html_5d463618.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_aabf09as239bed_html_5d463618.png" />
+    <Content Include="Documentacion\Imagenes_Manual\o_wqw12dd2a053345f0_html_meabc8.png" />
+    <Content Include="Error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagenes\aprobado.gif" />
+    <Content Include="Imagenes\arrowhl.png" />
+    <Content Include="Imagenes\arrowhr.png" />
+    <Content Include="Imagenes\arrowvb.png" />
+    <Content Include="Imagenes\arrowvt.png" />
+    <Content Include="Imagenes\arrow_next.gif" />
+    <Content Include="Imagenes\asc.png" />
+    <Content Include="Imagenes\atencion_usuario.gif" />
+    <Content Include="Imagenes\book_search.png" />
+    <Content Include="Imagenes\Calendar.GIF" />
+    <Content Include="Imagenes\candado3.jpg" />
+    <Content Include="Imagenes\candado4.jpg" />
+    <Content Include="Imagenes\candado5.jpg" />
+    <Content Include="Imagenes\cp_button.png" />
+    <Content Include="Imagenes\desc.png" />
+    <Content Include="Imagenes\direcc_arbol.png" />
+    <Content Include="Imagenes\download.png" />
+    <Content Include="Imagenes\down_arrow_grey.png" />
+    <Content Include="Imagenes\Encabezado.png" />
+    <Content Include="Imagenes\encabezado001.png" />
+    <Content Include="Imagenes\encabezado002.png" />
+    <Content Include="Imagenes\encabezado003.png" />
+    <Content Include="Imagenes\ERROR.gif" />
+    <Content Include="Imagenes\Errores\10Error.jpg" />
+    <Content Include="Imagenes\Errores\11Error.jpg" />
+    <Content Include="Imagenes\Errores\12Error.png" />
+    <Content Include="Imagenes\Errores\13Error.jpg" />
+    <Content Include="Imagenes\Errores\14Error.jpg" />
+    <Content Include="Imagenes\Errores\15Error.jpg" />
+    <Content Include="Imagenes\Errores\16Error.jpg" />
+    <Content Include="Imagenes\Errores\17Error.jpg" />
+    <Content Include="Imagenes\Errores\18Error.png" />
+    <Content Include="Imagenes\Errores\19Error.jpg" />
+    <Content Include="Imagenes\Errores\1Error.png" />
+    <Content Include="Imagenes\Errores\20Error.jpg" />
+    <Content Include="Imagenes\Errores\21Error.jpg" />
+    <Content Include="Imagenes\Errores\22Error.jpg" />
+    <Content Include="Imagenes\Errores\23Error.jpg" />
+    <Content Include="Imagenes\Errores\24Error.png" />
+    <Content Include="Imagenes\Errores\25Error.png" />
+    <Content Include="Imagenes\Errores\26Error.jpg" />
+    <Content Include="Imagenes\Errores\27Error.jpg" />
+    <Content Include="Imagenes\Errores\28Error.jpg" />
+    <Content Include="Imagenes\Errores\29Error.jpg" />
+    <Content Include="Imagenes\Errores\2Error.png" />
+    <Content Include="Imagenes\Errores\30Error.jpg" />
+    <Content Include="Imagenes\Errores\31Error.png" />
+    <Content Include="Imagenes\Errores\32Error.jpg" />
+    <Content Include="Imagenes\Errores\33Error.jpg" />
+    <Content Include="Imagenes\Errores\34Error.jpg" />
+    <Content Include="Imagenes\Errores\35Error.jpg" />
+    <Content Include="Imagenes\Errores\36Error.jpg" />
+    <Content Include="Imagenes\Errores\37Error.jpg" />
+    <Content Include="Imagenes\Errores\38Error.jpg" />
+    <Content Include="Imagenes\Errores\39Error.jpg" />
+    <Content Include="Imagenes\Errores\3Error.png" />
+    <Content Include="Imagenes\Errores\40Error.jpg" />
+    <Content Include="Imagenes\Errores\41Error.jpg" />
+    <Content Include="Imagenes\Errores\41Error.png" />
+    <Content Include="Imagenes\Errores\42Error.jpg" />
+    <Content Include="Imagenes\Errores\42Error.png" />
+    <Content Include="Imagenes\Errores\43Error.png" />
+    <Content Include="Imagenes\Errores\44Error.jpg" />
+    <Content Include="Imagenes\Errores\44Error.png" />
+    <Content Include="Imagenes\Errores\45Error.jpg" />
+    <Content Include="Imagenes\Errores\46Error.png" />
+    <Content Include="Imagenes\Errores\47Error.jpg" />
+    <Content Include="Imagenes\Errores\47Error.png" />
+    <Content Include="Imagenes\Errores\48Error.jpg" />
+    <Content Include="Imagenes\Errores\48Error.png" />
+    <Content Include="Imagenes\Errores\49Error.jpg" />
+    <Content Include="Imagenes\Errores\49Error.png" />
+    <Content Include="Imagenes\Errores\4Error.jpg" />
+    <Content Include="Imagenes\Errores\50Error.png" />
+    <Content Include="Imagenes\Errores\51Error.jpg" />
+    <Content Include="Imagenes\Errores\51Error.png" />
+    <Content Include="Imagenes\Errores\52Error.jpg" />
+    <Content Include="Imagenes\Errores\53Error.png" />
+    <Content Include="Imagenes\Errores\54Error.jpg" />
+    <Content Include="Imagenes\Errores\54Error.png" />
+    <Content Include="Imagenes\Errores\55Error.gif" />
+    <Content Include="Imagenes\Errores\55Error.png" />
+    <Content Include="Imagenes\Errores\56Error.gif" />
+    <Content Include="Imagenes\Errores\56Error.png" />
+    <Content Include="Imagenes\Errores\57Error.gif" />
+    <Content Include="Imagenes\Errores\57Error.png" />
+    <Content Include="Imagenes\Errores\58Error.gif" />
+    <Content Include="Imagenes\Errores\58Error.png" />
+    <Content Include="Imagenes\Errores\59Error.png" />
+    <Content Include="Imagenes\Errores\5Error.jpg" />
+    <Content Include="Imagenes\Errores\60Error.jpg" />
+    <Content Include="Imagenes\Errores\60Error.png" />
+    <Content Include="Imagenes\Errores\61Error.png" />
+    <Content Include="Imagenes\Errores\62Error.gif" />
+    <Content Include="Imagenes\Errores\62Error.png" />
+    <Content Include="Imagenes\Errores\63Error.gif" />
+    <Content Include="Imagenes\Errores\63Error.png" />
+    <Content Include="Imagenes\Errores\64Error.gif" />
+    <Content Include="Imagenes\Errores\64Error.png" />
+    <Content Include="Imagenes\Errores\65Error.gif" />
+    <Content Include="Imagenes\Errores\65Error.png" />
+    <Content Include="Imagenes\Errores\66Error.gif" />
+    <Content Include="Imagenes\Errores\67Error.gif" />
+    <Content Include="Imagenes\Errores\68Error.GIF" />
+    <Content Include="Imagenes\Errores\69Error.gif" />
+    <Content Include="Imagenes\Errores\6Error.jpg" />
+    <Content Include="Imagenes\Errores\70Error.gif" />
+    <Content Include="Imagenes\Errores\71Error.gif" />
+    <Content Include="Imagenes\Errores\72Error.png" />
+    <Content Include="Imagenes\Errores\73Error.gif" />
+    <Content Include="Imagenes\Errores\74Error.png" />
+    <Content Include="Imagenes\Errores\75Error.gif" />
+    <Content Include="Imagenes\Errores\76Error.gif" />
+    <Content Include="Imagenes\Errores\77Error.gif" />
+    <Content Include="Imagenes\Errores\77Error.png" />
+    <Content Include="Imagenes\Errores\78Error.gif" />
+    <Content Include="Imagenes\Errores\78Error.png" />
+    <Content Include="Imagenes\Errores\79Error.jpg" />
+    <Content Include="Imagenes\Errores\79Error.png" />
+    <Content Include="Imagenes\Errores\7Error.jpg" />
+    <Content Include="Imagenes\Errores\8Error.jpg" />
+    <Content Include="Imagenes\Errores\9Error.jpg" />
+    <Content Include="Imagenes\Errores\Error1.png" />
+    <Content Include="Imagenes\fondo_consar.jpeg" />
+    <Content Include="Imagenes\fondo_PDF.png" />
+    <Content Include="Imagenes\Home.png" />
+    <Content Include="Imagenes\icono_corregir.jpg" />
+    <Content Include="Imagenes\icono_lapiz.GIF" />
+    <Content Include="Imagenes\icono_lupa.gif" />
+    <Content Include="Imagenes\icono_paloma.png" />
+    <Content Include="Imagenes\icono_tache.png" />
+    <Content Include="Imagenes\logo_consar.png" />
+    <Content Include="Imagenes\No Existen.gif" />
+    <Content Include="Imagenes\no_vigente.gif" />
+    <Content Include="Imagenes\OK.gif" />
+    <Content Include="Imagenes\pendiente.png" />
+    <Content Include="Imagenes\Question_mark.png" />
+    <Content Include="Imagenes\rechazado.gif" />
+    <Content Include="Imagenes\rechazo_usuario.gif" />
+    <Content Include="Imagenes\registro.png" />
+    <Content Include="Imagenes\up_arrow_grey.png" />
+    <Content Include="Imagenes\vigente.gif" />
+    <Content Include="Imagenes\warning.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Mantenimiento\CatalogoAplicativo.aspx" />
+    <Content Include="Mantenimiento\CatalogoArea.aspx" />
+    <Content Include="Mantenimiento\CatalogoAspectosEvaluar.aspx" />
+    <Content Include="Mantenimiento\CatalogoAyuda.aspx" />
+    <Content Include="Mantenimiento\CatalogoEncuestas.aspx" />
+    <Content Include="Mantenimiento\CatalogoErrores.aspx" />
+    <Content Include="Mantenimiento\CatalogoEstatus.aspx" />
+    <Content Include="Mantenimiento\CatalogoEstatusServicio.aspx" />
+    <Content Include="Mantenimiento\CatalogoFlujo.aspx" />
+    <Content Include="Mantenimiento\CatalogoFunciones.aspx" />
+    <Content Include="Mantenimiento\CatalogoFuncionesGrupo.aspx" />
+    <Content Include="Mantenimiento\CatalogoGrupoPerfil.aspx" />
+    <Content Include="Mantenimiento\CatalogoGrupos.aspx" />
+    <Content Include="Mantenimiento\CatalogoNivelServicioPaqueteServicio.aspx" />
+    <Content Include="Mantenimiento\CatalogoOpcionesEvaluacion.aspx" />
+    <Content Include="Mantenimiento\CatalogoPaqueteServicios.aspx" />
+    <Content Include="Mantenimiento\CatalogoImagen.aspx" />
+    <Content Include="Mantenimiento\CatalogoParametros.aspx" />
+    <Content Include="Mantenimiento\CatalogoNivelesServicio.aspx" />
+    <Content Include="Mantenimiento\CatalogoPasosFlujo.aspx" />
+    <Content Include="Mantenimiento\CatalogoPeriodosVacacionales.aspx" />
+    <Content Include="Mantenimiento\CatalogoSeguimientoFlujo.aspx" />
+    <Content Include="Mantenimiento\CatalogoServicios.aspx" />
+    <Content Include="Mantenimiento\CatalogoTipoActividades.aspx" />
+    <Content Include="Mantenimiento\CatalogoTipoAusencias.aspx" />
+    <Content Include="Mantenimiento\CatalogoTipoImagen.aspx" />
+    <Content Include="Mantenimiento\CatalogoTipoServicio.aspx" />
+    <Content Include="Mantenimiento\Encuestas.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\Notificaciones.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\NotificacionesBandeja.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\NotificacionesConfiguracionEstilos.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\NotificacionesDatos.aspx" />
+    <Content Include="Plantilla\PlantillaAcuse.htm" />
+    <Content Include="Plantilla\PlantillaSolicitud.htm" />
+    <Content Include="ReasignarServicio.aspx" />
+    <Content Include="RegistrarAgenda.aspx" />
+    <Content Include="Scripts\jsCarousel-2.0.0.js" />
+    <Content Include="Scripts\MensajeModal.js" />
+    <Content Include="Scripts\Tools.js" />
+    <Content Include="Scripts\ToolTip.js" />
+    <Content Include="Seguridad\Bitacora.aspx" />
+    <Content Include="Seguridad\CatalogoMenu.aspx" />
+    <Content Include="Manual.aspx" />
+    <Content Include="Principal.aspx" />
+    <Content Include="PruebaConexion.aspx" />
+    <Content Include="Recuperar.aspx" />
+    <Content Include="Requerimientos.aspx" />
+    <Content Include="Responsables.aspx" />
+    <Content Include="Scripts\animateText.js" />
+    <Content Include="Scripts\gridviewScroll.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Seguridad\CatalogoMenuPerfil.aspx" />
+    <Content Include="Seguridad\CatalogoPerfiles.aspx" />
+    <Content Include="Seguridad\CatalogoSubmenu.aspx" />
+    <Content Include="Seguridad\CatalogoUsuarios.aspx" />
+    <Content Include="Seguridad\RegistroSesiones.aspx" />
+    <Content Include="Seguridad\ValidacionSelloDigital.aspx" />
+    <Content Include="Styles\images\animated-overlay.gif" />
+    <Content Include="Styles\jsCarousel-2.0.0.css" />
+    <Content Include="Styles\images\left_arrow.jpg" />
+    <Content Include="Styles\images\right_arrow.jpg" />
+    <Content Include="Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Styles\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Controles\Filtro\chkUserControl.ascx" />
+    <Content Include="Controles\Filtro\cldUserControl.ascx" />
+    <Content Include="Controles\Filtro\ddlUserControl.ascx" />
+    <Content Include="Controles\Filtro\imagenes\Calendar.GIF" />
+    <Content Include="Controles\Filtro\rbUserControl.ascx" />
+    <Content Include="Controles\Filtro\txtUserControl.ascx" />
+    <Content Include="Controles\ucFiltro.ascx" />
+    <Content Include="Plantilla\STIC00001.pdf" />
+    <Content Include="Scripts\bootstrap-3.3.4\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\bootstrap-3.3.4\css\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap-3.3.4\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bootstrap-3.3.4\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\bootstrap-3.3.4\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\bootstrap-3.3.4\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Visita\Bandeja.aspx" />
+    <Content Include="Visita\Reporte4.aspx" />
+    <Content Include="Visita\Reporte3.aspx" />
+    <Content Include="Visita\Reporte2.aspx" />
+    <Content Include="Visita\Reportes.aspx" />
+    <Content Include="Visita\Registro.aspx" />
+    <Content Include="OPI\UploadFileOPI.ashx" />
+    <Content Include="Visita\UserControls\AltaIrregularidadesVisita.ascx" />
+    <Content Include="Visita\UserControls\BitacoraVisita.ascx" />
+    <Content Include="Visita\UserControls\ObjetoVisita.ascx" />
+    <Content Include="Web References\wsSisanRegV2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="My Project\PublishProfiles\SEPRISQA.pubxml" />
+    <None Include="Web References\wsSisanRegV2\RegistroExternoV2.disco" />
+    <Content Include="WS\Sicod.asmx" />
+    <None Include="My Project\PublishProfiles\Prueba.pubxml" />
+    <None Include="Web References\WR_Osiris\osiris.disco" />
+    <Content Include="Web References\WR_SICOD\Diccionario1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WR_SICOD\EntidadOsiris1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WR_SICOD\OAD1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Images\ImageHandler.ashx" />
+    <Content Include="fonts\font.otf" />
+    <Content Include="Controles\ghCargaArchivo.ashx" />
+    <Content Include="WS\Osiris.asmx" />
+    <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\PC.pubxml" />
+    <Content Include="PC\UserControls\ImageHandlerEntidad.ashx" />
+    <None Include="My Project\PublishProfiles\Supervisa.pubxml" />
+    <Content Include="PC\UploadFilePC.ashx" />
+    <None Include="Procesos\Bandejas_SICOD\OFICIOS\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Reportes\NoBorrar.pdf" />
+    <Content Include="ReiniciaSesion.ashx" />
+    <None Include="Web References\WR_Osiris\osiris.wsdl" />
+    <Content Include="Web References\WR_Osiris\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="Web References\WR_SICOD\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Web References\WR_SICOD\TurnadoResultado1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WR_SICOD\ws_sicod.disco" />
+    <None Include="Web References\wsSisanRegV2\RegistroExternoV2.wsdl" />
+    <Content Include="Web References\wsSisanRegV2\WsResultado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsSisanReg\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\wsSisanReg\RegistroExterno.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebService.asmx" />
+    <None Include="Web References\WR_SICOD\ws_sicod.wsdl" />
+    <None Include="Web References\wsSisanReg\RegistroExterno.wsdl" />
+    <Content Include="Web References\wsSisanReg\WsResultado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wsSisanReg\WsResultadoCatalogoIrregularidad.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wsSisanReg\WsResultadoCatalogoProceso.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acerca.aspx.designer.vb">
+      <DependentUpon>Acerca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acerca.aspx.vb">
+      <DependentUpon>Acerca.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AltaSolicitud.aspx.designer.vb">
+      <DependentUpon>AltaSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaSolicitud.aspx.vb">
+      <DependentUpon>AltaSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bandeja.aspx.designer.vb">
+      <DependentUpon>Bandeja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bandeja.aspx.vb">
+      <DependentUpon>Bandeja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BandejaRegistrarAgenda.aspx.designer.vb">
+      <DependentUpon>BandejaRegistrarAgenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BandejaRegistrarAgenda.aspx.vb">
+      <DependentUpon>BandejaRegistrarAgenda.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BandejaSICOD.aspx.designer.vb">
+      <DependentUpon>BandejaSICOD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BandejaSICOD.aspx.vb">
+      <DependentUpon>BandejaSICOD.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CambioContrasenia.aspx.designer.vb">
+      <DependentUpon>CambioContrasenia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CambioContrasenia.aspx.vb">
+      <DependentUpon>CambioContrasenia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrusel\CarruselAsignacion.aspx.designer.vb">
+      <DependentUpon>CarruselAsignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrusel\CarruselAsignacion.aspx.vb">
+      <DependentUpon>CarruselAsignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrusel\PeriodosNoAsignacion.aspx.designer.vb">
+      <DependentUpon>PeriodosNoAsignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrusel\PeriodosNoAsignacion.aspx.vb">
+      <DependentUpon>PeriodosNoAsignacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaAgenda.aspx.designer.vb">
+      <DependentUpon>ConsultaAgenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaAgenda.aspx.vb">
+      <DependentUpon>ConsultaAgenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Calendar.ascx.designer.vb">
+      <DependentUpon>Calendar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Calendar.ascx.vb">
+      <DependentUpon>Calendar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro3\chkButtomUserControl3.ascx.designer.vb">
+      <DependentUpon>chkButtomUserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro3\chkButtomUserControl3.ascx.vb">
+      <DependentUpon>chkButtomUserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro3\chkUserControl3.ascx.designer.vb">
+      <DependentUpon>chkUserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro3\chkUserControl3.ascx.vb">
+      <DependentUpon>chkUserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro3\cldUserControl3.ascx.designer.vb">
+      <DependentUpon>cldUserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro3\cldUserControl3.ascx.vb">
+      <DependentUpon>cldUserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro3\ddlUserControl3.ascx.designer.vb">
+      <DependentUpon>ddlUserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro3\ddlUserControl3.ascx.vb">
+      <DependentUpon>ddlUserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro3\ddlUserControlR3.ascx.designer.vb">
+      <DependentUpon>ddlUserControlR3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro3\ddlUserControlR3.ascx.vb">
+      <DependentUpon>ddlUserControlR3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro3\rbUserControl3.ascx.designer.vb">
+      <DependentUpon>rbUserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro3\rbUserControl3.ascx.vb">
+      <DependentUpon>rbUserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro3\txtUserControl3.ascx.designer.vb">
+      <DependentUpon>txtUserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro3\txtUserControl3.ascx.vb">
+      <DependentUpon>txtUserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro2\chkButtomUserControl2.ascx.designer.vb">
+      <DependentUpon>chkButtomUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro2\chkButtomUserControl2.ascx.vb">
+      <DependentUpon>chkButtomUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro2\chkUserControl2.ascx.designer.vb">
+      <DependentUpon>chkUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro2\chkUserControl2.ascx.vb">
+      <DependentUpon>chkUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro2\cldUserControl2.ascx.designer.vb">
+      <DependentUpon>cldUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro2\cldUserControl2.ascx.vb">
+      <DependentUpon>cldUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro2\ddlUserControl2.ascx.designer.vb">
+      <DependentUpon>ddlUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro2\ddlUserControl2.ascx.vb">
+      <DependentUpon>ddlUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro2\ddlUserControlR2.ascx.designer.vb">
+      <DependentUpon>ddlUserControlR2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro2\ddlUserControlR2.ascx.vb">
+      <DependentUpon>ddlUserControlR2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro2\rbUserControl2.ascx.designer.vb">
+      <DependentUpon>rbUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro2\rbUserControl2.ascx.vb">
+      <DependentUpon>rbUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro2\txtUserControl2.ascx.designer.vb">
+      <DependentUpon>txtUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro2\txtUserControl2.ascx.vb">
+      <DependentUpon>txtUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ucDoctosProrroga.ascx.designer.vb">
+      <DependentUpon>ucDoctosProrroga.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucDoctosProrroga.ascx.vb">
+      <DependentUpon>ucDoctosProrroga.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CopiarFolios.ascx.designer.vb">
+      <DependentUpon>CopiarFolios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CopiarFolios.ascx.vb">
+      <DependentUpon>CopiarFolios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\cuDetalleVisita.ascx.designer.vb">
+      <DependentUpon>cuDetalleVisita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cuDetalleVisita.ascx.vb">
+      <DependentUpon>cuDetalleVisita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro\ddlUserControlR.ascx.designer.vb">
+      <DependentUpon>ddlUserControlR.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro\ddlUserControlR.ascx.vb">
+      <DependentUpon>ddlUserControlR.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ghCargaArchivo.ashx.vb">
+      <DependentUpon>ghCargaArchivo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PersonalizarColumnas.ascx.designer.vb">
+      <DependentUpon>PersonalizarColumnas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PersonalizarColumnas.ascx.vb">
+      <DependentUpon>PersonalizarColumnas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro\chkButtomUserControl.ascx.designer.vb">
+      <DependentUpon>chkButtomUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro\chkButtomUserControl.ascx.vb">
+      <DependentUpon>chkButtomUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\SubVisitas.ascx.designer.vb">
+      <DependentUpon>SubVisitas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\SubVisitas.ascx.vb">
+      <DependentUpon>SubVisitas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ucDocumentos.ascx.designer.vb">
+      <DependentUpon>ucDocumentos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucDocumentos.ascx.vb">
+      <DependentUpon>ucDocumentos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ucDocumentosVisita.ascx.designer.vb">
+      <DependentUpon>ucDocumentosVisita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucDocumentosVisita.ascx.vb">
+      <DependentUpon>ucDocumentosVisita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ucFiltro3.ascx.designer.vb">
+      <DependentUpon>ucFiltro3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucFiltro3.ascx.vb">
+      <DependentUpon>ucFiltro3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ucFiltro2.ascx.designer.vb">
+      <DependentUpon>ucFiltro2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucFiltro2.ascx.vb">
+      <DependentUpon>ucFiltro2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ucRespVisita.ascx.designer.vb">
+      <DependentUpon>ucRespVisita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucRespVisita.ascx.vb">
+      <DependentUpon>ucRespVisita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\wucAyuda.ascx.designer.vb">
+      <DependentUpon>wucAyuda.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\wucAyuda.ascx.vb">
+      <DependentUpon>wucAyuda.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\wucNotificaciones.ascx.designer.vb">
+      <DependentUpon>wucNotificaciones.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\wucNotificaciones.ascx.vb">
+      <DependentUpon>wucNotificaciones.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\wucPersonalizarColumnas.ascx.designer.vb">
+      <DependentUpon>wucPersonalizarColumnas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\wucPersonalizarColumnas.ascx.vb">
+      <DependentUpon>wucPersonalizarColumnas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\wucVencimientoSesion.ascx.designer.vb">
+      <DependentUpon>wucVencimientoSesion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\wucVencimientoSesion.ascx.vb">
+      <DependentUpon>wucVencimientoSesion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extensores\ControlExtensions.vb" />
+    <Compile Include="Images\ImageHandler.ashx.vb">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Catalogo.aspx.designer.vb">
+      <DependentUpon>Catalogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Catalogo.aspx.vb">
+      <DependentUpon>Catalogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoDocumento.aspx.designer.vb">
+      <DependentUpon>CatalogoDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoDocumento.aspx.vb">
+      <DependentUpon>CatalogoDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFormato.aspx.designer.vb">
+      <DependentUpon>CatalogoFormato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFormato.aspx.vb">
+      <DependentUpon>CatalogoFormato.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoModif.aspx.designer.vb">
+      <DependentUpon>CatalogoModif.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoModif.aspx.vb">
+      <DependentUpon>CatalogoModif.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Catalogos.aspx.designer.vb">
+      <DependentUpon>Catalogos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Catalogos.aspx.vb">
+      <DependentUpon>Catalogos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\ImgProceso.aspx.designer.vb">
+      <DependentUpon>ImgProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\ImgProceso.aspx.vb">
+      <DependentUpon>ImgProceso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\ProcesosVigilancia.aspx.designer.vb">
+      <DependentUpon>ProcesosVigilancia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\ProcesosVigilancia.aspx.vb">
+      <DependentUpon>ProcesosVigilancia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\ProcesoVigilancia.aspx.designer.vb">
+      <DependentUpon>ProcesoVigilancia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\ProcesoVigilancia.aspx.vb">
+      <DependentUpon>ProcesoVigilancia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\ProcesoVigilanciaModif.aspx.designer.vb">
+      <DependentUpon>ProcesoVigilanciaModif.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\ProcesoVigilanciaModif.aspx.vb">
+      <DependentUpon>ProcesoVigilanciaModif.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MensajeModal\MensajeModal.ascx.designer.vb">
+      <DependentUpon>MensajeModal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeModal\MensajeModal.ascx.vb">
+      <DependentUpon>MensajeModal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\BandejaOPI.aspx.designer.vb">
+      <DependentUpon>BandejaOPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\BandejaOPI.aspx.vb">
+      <DependentUpon>BandejaOPI.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPI\cInspectorOPI.vb" />
+    <Compile Include="OPI\cSupervisorOPI.vb" />
+    <Compile Include="OPI\Data\BitacoraOPI.vb" />
+    <Compile Include="OPI\Data\Registro_OPI.vb" />
+    <Compile Include="OPI\DetalleOPI.aspx.designer.vb">
+      <DependentUpon>DetalleOPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\DetalleOPI.aspx.vb">
+      <DependentUpon>DetalleOPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\Entidades\OPI_Incumplimiento.vb" />
+    <Compile Include="OPI\ExpedienteOPI.aspx.designer.vb">
+      <DependentUpon>ExpedienteOPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\ExpedienteOPI.aspx.vb">
+      <DependentUpon>ExpedienteOPI.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OPI\NotificacionesOPI.vb" />
+    <Compile Include="OPI\RegistroOPI.aspx.designer.vb">
+      <DependentUpon>RegistroOPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\RegistroOPI.aspx.vb">
+      <DependentUpon>RegistroOPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UploadFileOPI.ashx.vb">
+      <DependentUpon>UploadFileOPI.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\AltaIrregularidadesOPI.ascx.designer.vb">
+      <DependentUpon>AltaIrregularidadesOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\AltaIrregularidadesOPI.ascx.vb">
+      <DependentUpon>AltaIrregularidadesOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\Bitacora.ascx.designer.vb">
+      <DependentUpon>Bitacora.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\Bitacora.ascx.vb">
+      <DependentUpon>Bitacora.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\ClasificacionOPI.ascx.designer.vb">
+      <DependentUpon>ClasificacionOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\ClasificacionOPI.ascx.vb">
+      <DependentUpon>ClasificacionOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\ComentariosOPI.ascx.designer.vb">
+      <DependentUpon>ComentariosOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\ComentariosOPI.ascx.vb">
+      <DependentUpon>ComentariosOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\DetalleOPIuc.ascx.designer.vb">
+      <DependentUpon>DetalleOPIuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\DetalleOPIuc.ascx.vb">
+      <DependentUpon>DetalleOPIuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\ExpedienteSisan.ascx.designer.vb">
+      <DependentUpon>ExpedienteSisan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\ExpedienteSisan.ascx.vb">
+      <DependentUpon>ExpedienteSisan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\InspectoresOPI.ascx.designer.vb">
+      <DependentUpon>InspectoresOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\InspectoresOPI.ascx.vb">
+      <DependentUpon>InspectoresOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\IrregularidadOPI.ascx.designer.vb">
+      <DependentUpon>IrregularidadOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\IrregularidadOPI.ascx.vb">
+      <DependentUpon>IrregularidadOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\Motivo.ascx.designer.vb">
+      <DependentUpon>Motivo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\Motivo.ascx.vb">
+      <DependentUpon>Motivo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\MotivoOpi1.ascx.designer.vb">
+      <DependentUpon>MotivoOpi1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\MotivoOpi1.ascx.vb">
+      <DependentUpon>MotivoOpi1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\PosibleIncumplimiento.ascx.designer.vb">
+      <DependentUpon>PosibleIncumplimiento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\PosibleIncumplimiento.ascx.vb">
+      <DependentUpon>PosibleIncumplimiento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\RespuestaAforeOPI.ascx.designer.vb">
+      <DependentUpon>RespuestaAforeOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\RespuestaAforeOPI.ascx.vb">
+      <DependentUpon>RespuestaAforeOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\SupervisorOPI.ascx.designer.vb">
+      <DependentUpon>SupervisorOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\SupervisorOPI.ascx.vb">
+      <DependentUpon>SupervisorOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPI\UserControls\SupuestoAvisoOPI.ascx.designer.vb">
+      <DependentUpon>SupuestoAvisoOPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OPI\UserControls\SupuestoAvisoOPI.ascx.vb">
+      <DependentUpon>SupuestoAvisoOPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\BandejaPC.aspx.designer.vb">
+      <DependentUpon>BandejaPC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\BandejaPC.aspx.vb">
+      <DependentUpon>BandejaPC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\CompletarIrregularidad.aspx.designer.vb">
+      <DependentUpon>CompletarIrregularidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\CompletarIrregularidad.aspx.vb">
+      <DependentUpon>CompletarIrregularidad.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PC\Conexiones\ConexionSISAN.vb" />
+    <Compile Include="PC\DetallePC.aspx.designer.vb">
+      <DependentUpon>DetallePC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\DetallePC.aspx.vb">
+      <DependentUpon>DetallePC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\Entidades\Estatus.vb" />
+    <Compile Include="PC\ExpedientePC.aspx.designer.vb">
+      <DependentUpon>ExpedientePC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\ExpedientePC.aspx.vb">
+      <DependentUpon>ExpedientePC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PC\Entidades\Inspector.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\Entidades\NotificacionesPC.vb" />
+    <Compile Include="PC\NuevaIrregularidad.aspx.designer.vb">
+      <DependentUpon>NuevaIrregularidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\NuevaIrregularidad.aspx.vb">
+      <DependentUpon>NuevaIrregularidad.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PC\Paso1.aspx.designer.vb">
+      <DependentUpon>Paso1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\Paso1.aspx.vb">
+      <DependentUpon>Paso1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PC\Conexiones\ConexionSICOD.vb" />
+    <Compile Include="PC\Entidades\Proceso.vb" />
+    <Compile Include="PC\ReasignaSupervisores.aspx.designer.vb">
+      <DependentUpon>ReasignaSupervisores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\ReasignaSupervisores.aspx.vb">
+      <DependentUpon>ReasignaSupervisores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PC\ServiciosSICOD.aspx.designer.vb">
+      <DependentUpon>ServiciosSICOD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\ServiciosSICOD.aspx.vb">
+      <DependentUpon>ServiciosSICOD.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PC\Entidades\Subproceso.vb" />
+    <Compile Include="PC\Entidades\Supervisor.vb" />
+    <Compile Include="PC\UploadFilePC.ashx.vb">
+      <DependentUpon>UploadFilePC.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Actividad.vb" />
+    <Compile Include="PC\UserControls\Actividades.ascx.designer.vb">
+      <DependentUpon>Actividades.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Actividades.ascx.vb">
+      <DependentUpon>Actividades.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\Bitacora.ascx.designer.vb">
+      <DependentUpon>Bitacora.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Bitacora.ascx.vb">
+      <DependentUpon>Bitacora.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\Checklist.ascx.designer.vb">
+      <DependentUpon>Checklist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Checklist.ascx.vb">
+      <DependentUpon>Checklist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\cIrregularidades.vb" />
+    <Compile Include="PC\UserControls\DetalleSICOD.ascx.designer.vb">
+      <DependentUpon>DetalleSICOD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\DetalleSICOD.ascx.vb">
+      <DependentUpon>DetalleSICOD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\Documentos.ascx.designer.vb">
+      <DependentUpon>Documentos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Documentos.ascx.vb">
+      <DependentUpon>Documentos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\ImageHandlerEntidad.ashx.vb">
+      <DependentUpon>ImageHandlerEntidad.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Inspector.ascx.designer.vb">
+      <DependentUpon>Inspector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Inspector.ascx.vb">
+      <DependentUpon>Inspector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\Irregularidad.ascx.designer.vb">
+      <DependentUpon>Irregularidad.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Irregularidad.ascx.vb">
+      <DependentUpon>Irregularidad.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\IrregularidadCompleta.ascx.designer.vb">
+      <DependentUpon>IrregularidadCompleta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\IrregularidadCompleta.ascx.vb">
+      <DependentUpon>IrregularidadCompleta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\Irregularidades.ascx.designer.vb">
+      <DependentUpon>Irregularidades.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Irregularidades.ascx.vb">
+      <DependentUpon>Irregularidades.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\RequerimientoInformacion.ascx.designer.vb">
+      <DependentUpon>RequerimientoInformacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\RequerimientoInformacion.ascx.vb">
+      <DependentUpon>RequerimientoInformacion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\SancionPC.ascx.designer.vb">
+      <DependentUpon>SancionPC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\SancionPC.ascx.vb">
+      <DependentUpon>SancionPC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\UserControls\Supervisor.ascx.designer.vb">
+      <DependentUpon>Supervisor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\UserControls\Supervisor.ascx.vb">
+      <DependentUpon>Supervisor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PC\VerOficios.aspx.designer.vb">
+      <DependentUpon>VerOficios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PC\VerOficios.aspx.vb">
+      <DependentUpon>VerOficios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\ENTRADA\BandejaEntrada.aspx.designer.vb">
+      <DependentUpon>BandejaEntrada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\ENTRADA\BandejaEntrada.aspx.vb">
+      <DependentUpon>BandejaEntrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\ENTRADA\FiltroBusqueda.ascx.designer.vb">
+      <DependentUpon>FiltroBusqueda.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\ENTRADA\FiltroBusqueda.ascx.vb">
+      <DependentUpon>FiltroBusqueda.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\ENTRADA\UserControls\ucAnexoModalRow.ascx.designer.vb">
+      <DependentUpon>ucAnexoModalRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\ENTRADA\UserControls\ucAnexoModalRow.ascx.vb">
+      <DependentUpon>ucAnexoModalRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\BandejaOficios.aspx.designer.vb">
+      <DependentUpon>BandejaOficios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\BandejaOficios.aspx.vb">
+      <DependentUpon>BandejaOficios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\FiltroBusquedaOfi.ascx.designer.vb">
+      <DependentUpon>FiltroBusquedaOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\FiltroBusquedaOfi.ascx.vb">
+      <DependentUpon>FiltroBusquedaOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\Generales.vb" />
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\PersonalizarColumasOfi.ascx.designer.vb">
+      <DependentUpon>PersonalizarColumasOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\PersonalizarColumasOfi.ascx.vb">
+      <DependentUpon>PersonalizarColumasOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\cldUserControlOfi.ascx.designer.vb">
+      <DependentUpon>cldUserControlOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\cldUserControlOfi.ascx.vb">
+      <DependentUpon>cldUserControlOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\ddlUserControlOfi.ascx.designer.vb">
+      <DependentUpon>ddlUserControlOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\ddlUserControlOfi.ascx.vb">
+      <DependentUpon>ddlUserControlOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\rbUserControlOfi.ascx.designer.vb">
+      <DependentUpon>rbUserControlOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\rbUserControlOfi.ascx.vb">
+      <DependentUpon>rbUserControlOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\txtUserControlOfi.ascx.designer.vb">
+      <DependentUpon>txtUserControlOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\filtro\txtUserControlOfi.ascx.vb">
+      <DependentUpon>txtUserControlOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\ucAnexoModalRowOfi.ascx.designer.vb">
+      <DependentUpon>ucAnexoModalRowOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\ucAnexoModalRowOfi.ascx.vb">
+      <DependentUpon>ucAnexoModalRowOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\ucFiltroOfi.ascx.designer.vb">
+      <DependentUpon>ucFiltroOfi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Bandejas_SICOD\OFICIOS\UserControls\ucFiltroOfi.ascx.vb">
+      <DependentUpon>ucFiltroOfi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\DetalleVisita.aspx.designer.vb">
+      <DependentUpon>DetalleVisita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\DetalleVisita.aspx.vb">
+      <DependentUpon>DetalleVisita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\DetalleVisita_V17.aspx.designer.vb">
+      <DependentUpon>DetalleVisita_V17.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\DetalleVisita_V17.aspx.vb">
+      <DependentUpon>DetalleVisita_V17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\Seguimiento.aspx.designer.vb">
+      <DependentUpon>Seguimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Seguimiento.aspx.vb">
+      <DependentUpon>Seguimiento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Correos\CatalogoMensajes.aspx.designer.vb">
+      <DependentUpon>CatalogoMensajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Correos\CatalogoMensajes.aspx.vb">
+      <DependentUpon>CatalogoMensajes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Correos\CorreosPerfil.aspx.designer.vb">
+      <DependentUpon>CorreosPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Correos\CorreosPerfil.aspx.vb">
+      <DependentUpon>CorreosPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Correos\ExclusionCorreoUsuario.aspx.designer.vb">
+      <DependentUpon>ExclusionCorreoUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Correos\ExclusionCorreoUsuario.aspx.vb">
+      <DependentUpon>ExclusionCorreoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Correos\MenuOpciones.aspx.designer.vb">
+      <DependentUpon>MenuOpciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Correos\MenuOpciones.aspx.vb">
+      <DependentUpon>MenuOpciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CrearSolicitud.aspx.designer.vb">
+      <DependentUpon>CrearSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearSolicitud.aspx.vb">
+      <DependentUpon>CrearSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocBitacora.aspx.designer.vb">
+      <DependentUpon>DocBitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocBitacora.aspx.vb">
+      <DependentUpon>DocBitacora.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCarrusel.aspx.designer.vb">
+      <DependentUpon>DocCarrusel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCarrusel.aspx.vb">
+      <DependentUpon>DocCarrusel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoAyuda.aspx.designer.vb">
+      <DependentUpon>DocCatalogoAyuda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoAyuda.aspx.vb">
+      <DependentUpon>DocCatalogoAyuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoErrores.aspx.designer.vb">
+      <DependentUpon>DocCatalogoErrores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoErrores.aspx.vb">
+      <DependentUpon>DocCatalogoErrores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoEstatus.aspx.designer.vb">
+      <DependentUpon>DocCatalogoEstatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoEstatus.aspx.vb">
+      <DependentUpon>DocCatalogoEstatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoImagenes.aspx.designer.vb">
+      <DependentUpon>DocCatalogoImagenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoImagenes.aspx.vb">
+      <DependentUpon>DocCatalogoImagenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoMenus.aspx.designer.vb">
+      <DependentUpon>DocCatalogoMenus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoMenus.aspx.vb">
+      <DependentUpon>DocCatalogoMenus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoParametros.aspx.designer.vb">
+      <DependentUpon>DocCatalogoParametros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoParametros.aspx.vb">
+      <DependentUpon>DocCatalogoParametros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoPerfiles.aspx.designer.vb">
+      <DependentUpon>DocCatalogoPerfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoPerfiles.aspx.vb">
+      <DependentUpon>DocCatalogoPerfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoSubmenus.aspx.designer.vb">
+      <DependentUpon>DocCatalogoSubmenus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoSubmenus.aspx.vb">
+      <DependentUpon>DocCatalogoSubmenus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoUsuarios.aspx.designer.vb">
+      <DependentUpon>DocCatalogoUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoUsuarios.aspx.vb">
+      <DependentUpon>DocCatalogoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoUsuariosInternos.aspx.designer.vb">
+      <DependentUpon>DocCatalogoUsuariosInternos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCatalogoUsuariosInternos.aspx.vb">
+      <DependentUpon>DocCatalogoUsuariosInternos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocComponenteAyuda.aspx.designer.vb">
+      <DependentUpon>DocComponenteAyuda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocComponenteAyuda.aspx.vb">
+      <DependentUpon>DocComponenteAyuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocControlSesiones.aspx.designer.vb">
+      <DependentUpon>DocControlSesiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocControlSesiones.aspx.vb">
+      <DependentUpon>DocControlSesiones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocCorreos.aspx.designer.vb">
+      <DependentUpon>DocCorreos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocCorreos.aspx.vb">
+      <DependentUpon>DocCorreos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocExportarExcel.aspx.designer.vb">
+      <DependentUpon>DocExportarExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocExportarExcel.aspx.vb">
+      <DependentUpon>DocExportarExcel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocFiltrosDinamicos.aspx.designer.vb">
+      <DependentUpon>DocFiltrosDinamicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocFiltrosDinamicos.aspx.vb">
+      <DependentUpon>DocFiltrosDinamicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocLogin.aspx.designer.vb">
+      <DependentUpon>DocLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocLogin.aspx.vb">
+      <DependentUpon>DocLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocMasterPage.aspx.designer.vb">
+      <DependentUpon>DocMasterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocMasterPage.aspx.vb">
+      <DependentUpon>DocMasterPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocMensajeModal.aspx.designer.vb">
+      <DependentUpon>DocMensajeModal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocMensajeModal.aspx.vb">
+      <DependentUpon>DocMensajeModal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocMensajesNotificacion.aspx.designer.vb">
+      <DependentUpon>DocMensajesNotificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocMensajesNotificacion.aspx.vb">
+      <DependentUpon>DocMensajesNotificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocMenuPerfiles.aspx.designer.vb">
+      <DependentUpon>DocMenuPerfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocMenuPerfiles.aspx.vb">
+      <DependentUpon>DocMenuPerfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocPantallasInicio.aspx.designer.vb">
+      <DependentUpon>DocPantallasInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocPantallasInicio.aspx.vb">
+      <DependentUpon>DocPantallasInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documentacion\DocPersonalizarColumnas.aspx.designer.vb">
+      <DependentUpon>DocPersonalizarColumnas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documentacion\DocPersonalizarColumnas.aspx.vb">
+      <DependentUpon>DocPersonalizarColumnas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoAplicativo.aspx.designer.vb">
+      <DependentUpon>CatalogoAplicativo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoAplicativo.aspx.vb">
+      <DependentUpon>CatalogoAplicativo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoArea.aspx.designer.vb">
+      <DependentUpon>CatalogoArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoArea.aspx.vb">
+      <DependentUpon>CatalogoArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoAspectosEvaluar.aspx.designer.vb">
+      <DependentUpon>CatalogoAspectosEvaluar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoAspectosEvaluar.aspx.vb">
+      <DependentUpon>CatalogoAspectosEvaluar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoAyuda.aspx.designer.vb">
+      <DependentUpon>CatalogoAyuda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoAyuda.aspx.vb">
+      <DependentUpon>CatalogoAyuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoEncuestas.aspx.designer.vb">
+      <DependentUpon>CatalogoEncuestas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoEncuestas.aspx.vb">
+      <DependentUpon>CatalogoEncuestas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoErrores.aspx.designer.vb">
+      <DependentUpon>CatalogoErrores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoErrores.aspx.vb">
+      <DependentUpon>CatalogoErrores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoEstatus.aspx.designer.vb">
+      <DependentUpon>CatalogoEstatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoEstatus.aspx.vb">
+      <DependentUpon>CatalogoEstatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoEstatusServicio.aspx.designer.vb">
+      <DependentUpon>CatalogoEstatusServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoEstatusServicio.aspx.vb">
+      <DependentUpon>CatalogoEstatusServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFlujo.aspx.designer.vb">
+      <DependentUpon>CatalogoFlujo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFlujo.aspx.vb">
+      <DependentUpon>CatalogoFlujo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFunciones.aspx.designer.vb">
+      <DependentUpon>CatalogoFunciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFunciones.aspx.vb">
+      <DependentUpon>CatalogoFunciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFuncionesGrupo.aspx.designer.vb">
+      <DependentUpon>CatalogoFuncionesGrupo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoFuncionesGrupo.aspx.vb">
+      <DependentUpon>CatalogoFuncionesGrupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoGrupoPerfil.aspx.designer.vb">
+      <DependentUpon>CatalogoGrupoPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoGrupoPerfil.aspx.vb">
+      <DependentUpon>CatalogoGrupoPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoGrupos.aspx.designer.vb">
+      <DependentUpon>CatalogoGrupos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoGrupos.aspx.vb">
+      <DependentUpon>CatalogoGrupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoNivelServicioPaqueteServicio.aspx.designer.vb">
+      <DependentUpon>CatalogoNivelServicioPaqueteServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoNivelServicioPaqueteServicio.aspx.vb">
+      <DependentUpon>CatalogoNivelServicioPaqueteServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoOpcionesEvaluacion.aspx.designer.vb">
+      <DependentUpon>CatalogoOpcionesEvaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoOpcionesEvaluacion.aspx.vb">
+      <DependentUpon>CatalogoOpcionesEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoPaqueteServicios.aspx.designer.vb">
+      <DependentUpon>CatalogoPaqueteServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoPaqueteServicios.aspx.vb">
+      <DependentUpon>CatalogoPaqueteServicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoImagen.aspx.designer.vb">
+      <DependentUpon>CatalogoImagen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoImagen.aspx.vb">
+      <DependentUpon>CatalogoImagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoParametros.aspx.designer.vb">
+      <DependentUpon>CatalogoParametros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoParametros.aspx.vb">
+      <DependentUpon>CatalogoParametros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoNivelesServicio.aspx.designer.vb">
+      <DependentUpon>CatalogoNivelesServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoNivelesServicio.aspx.vb">
+      <DependentUpon>CatalogoNivelesServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoPasosFlujo.aspx.designer.vb">
+      <DependentUpon>CatalogoPasosFlujo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoPasosFlujo.aspx.vb">
+      <DependentUpon>CatalogoPasosFlujo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoPeriodosVacacionales.aspx.designer.vb">
+      <DependentUpon>CatalogoPeriodosVacacionales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoPeriodosVacacionales.aspx.vb">
+      <DependentUpon>CatalogoPeriodosVacacionales.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoSeguimientoFlujo.aspx.designer.vb">
+      <DependentUpon>CatalogoSeguimientoFlujo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoSeguimientoFlujo.aspx.vb">
+      <DependentUpon>CatalogoSeguimientoFlujo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoServicios.aspx.designer.vb">
+      <DependentUpon>CatalogoServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoServicios.aspx.vb">
+      <DependentUpon>CatalogoServicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoActividades.aspx.designer.vb">
+      <DependentUpon>CatalogoTipoActividades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoActividades.aspx.vb">
+      <DependentUpon>CatalogoTipoActividades.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoAusencias.aspx.designer.vb">
+      <DependentUpon>CatalogoTipoAusencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoAusencias.aspx.vb">
+      <DependentUpon>CatalogoTipoAusencias.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoImagen.aspx.designer.vb">
+      <DependentUpon>CatalogoTipoImagen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoImagen.aspx.vb">
+      <DependentUpon>CatalogoTipoImagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoServicio.aspx.designer.vb">
+      <DependentUpon>CatalogoTipoServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\CatalogoTipoServicio.aspx.vb">
+      <DependentUpon>CatalogoTipoServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Encuestas.aspx.designer.vb">
+      <DependentUpon>Encuestas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Encuestas.aspx.vb">
+      <DependentUpon>Encuestas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\Notificaciones.aspx.designer.vb">
+      <DependentUpon>Notificaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\Notificaciones.aspx.vb">
+      <DependentUpon>Notificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\NotificacionesBandeja.aspx.designer.vb">
+      <DependentUpon>NotificacionesBandeja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\NotificacionesBandeja.aspx.vb">
+      <DependentUpon>NotificacionesBandeja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\NotificacionesConfiguracionEstilos.aspx.designer.vb">
+      <DependentUpon>NotificacionesConfiguracionEstilos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\NotificacionesConfiguracionEstilos.aspx.vb">
+      <DependentUpon>NotificacionesConfiguracionEstilos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\NotificacionesDatos.aspx.designer.vb">
+      <DependentUpon>NotificacionesDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\NotificacionesDatos.aspx.vb">
+      <DependentUpon>NotificacionesDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\SeguimientoDetalle.aspx.designer.vb">
+      <DependentUpon>SeguimientoDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\SeguimientoDetalle.aspx.vb">
+      <DependentUpon>SeguimientoDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\SeguimientoReporte.aspx.designer.vb">
+      <DependentUpon>SeguimientoReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\SeguimientoReporte.aspx.vb">
+      <DependentUpon>SeguimientoReporte.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PruebaOSIRIS.aspx.designer.vb">
+      <DependentUpon>PruebaOSIRIS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PruebaOSIRIS.aspx.vb">
+      <DependentUpon>PruebaOSIRIS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PruebaServicios.aspx.designer.vb">
+      <DependentUpon>PruebaServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PruebaServicios.aspx.vb">
+      <DependentUpon>PruebaServicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PruebaSISAN.aspx.designer.vb">
+      <DependentUpon>PruebaSISAN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PruebaSISAN.aspx.vb">
+      <DependentUpon>PruebaSISAN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReasignarServicio.aspx.designer.vb">
+      <DependentUpon>ReasignarServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReasignarServicio.aspx.vb">
+      <DependentUpon>ReasignarServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarAgenda.aspx.designer.vb">
+      <DependentUpon>RegistrarAgenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarAgenda.aspx.vb">
+      <DependentUpon>RegistrarAgenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReiniciaSesion.ashx.vb">
+      <DependentUpon>ReiniciaSesion.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Bitacora.aspx.designer.vb">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Bitacora.aspx.vb">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoMenu.aspx.designer.vb">
+      <DependentUpon>CatalogoMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoMenu.aspx.vb">
+      <DependentUpon>CatalogoMenu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Manual.aspx.designer.vb">
+      <DependentUpon>Manual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manual.aspx.vb">
+      <DependentUpon>Manual.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\SiteInterno.Master.designer.vb">
+      <DependentUpon>SiteInterno.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\SiteInterno.Master.vb">
+      <DependentUpon>SiteInterno.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Principal.aspx.designer.vb">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.aspx.vb">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PruebaConexion.aspx.designer.vb">
+      <DependentUpon>PruebaConexion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PruebaConexion.aspx.vb">
+      <DependentUpon>PruebaConexion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Recuperar.aspx.designer.vb">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recuperar.aspx.vb">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Requerimientos.aspx.designer.vb">
+      <DependentUpon>Requerimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requerimientos.aspx.vb">
+      <DependentUpon>Requerimientos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Responsables.aspx.designer.vb">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsables.aspx.vb">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro\chkUserControl.ascx.designer.vb">
+      <DependentUpon>chkUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro\chkUserControl.ascx.vb">
+      <DependentUpon>chkUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro\cldUserControl.ascx.designer.vb">
+      <DependentUpon>cldUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro\cldUserControl.ascx.vb">
+      <DependentUpon>cldUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro\ddlUserControl.ascx.designer.vb">
+      <DependentUpon>ddlUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro\ddlUserControl.ascx.vb">
+      <DependentUpon>ddlUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro\rbUserControl.ascx.designer.vb">
+      <DependentUpon>rbUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro\rbUserControl.ascx.vb">
+      <DependentUpon>rbUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Filtro\txtUserControl.ascx.designer.vb">
+      <DependentUpon>txtUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Filtro\txtUserControl.ascx.vb">
+      <DependentUpon>txtUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ucFiltro.ascx.designer.vb">
+      <DependentUpon>ucFiltro.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucFiltro.ascx.vb">
+      <DependentUpon>ucFiltro.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoMenuPerfil.aspx.designer.vb">
+      <DependentUpon>CatalogoMenuPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoMenuPerfil.aspx.vb">
+      <DependentUpon>CatalogoMenuPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoPerfiles.aspx.designer.vb">
+      <DependentUpon>CatalogoPerfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoPerfiles.aspx.vb">
+      <DependentUpon>CatalogoPerfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoSubmenu.aspx.designer.vb">
+      <DependentUpon>CatalogoSubmenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoSubmenu.aspx.vb">
+      <DependentUpon>CatalogoSubmenu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoUsuarios.aspx.designer.vb">
+      <DependentUpon>CatalogoUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\CatalogoUsuarios.aspx.vb">
+      <DependentUpon>CatalogoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\RegistroSesiones.aspx.designer.vb">
+      <DependentUpon>RegistroSesiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\RegistroSesiones.aspx.vb">
+      <DependentUpon>RegistroSesiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ValidacionSelloDigital.aspx.designer.vb">
+      <DependentUpon>ValidacionSelloDigital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\ValidacionSelloDigital.aspx.vb">
+      <DependentUpon>ValidacionSelloDigital.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ServiciosWeb\Auxiliares.vb" />
+    <Compile Include="ServiciosWeb\Auxiliares_V17.vb" />
+    <Compile Include="ServiciosWeb\IwcfRegistro.vb" />
+    <Compile Include="ServiciosWeb\IwcfRegistro_V17.vb" />
+    <Compile Include="ServiciosWeb\OperacionesVisita.vb" />
+    <Compile Include="ServiciosWeb\Registro.vb" />
+    <Compile Include="ServiciosWeb\Registro_V17.vb" />
+    <Compile Include="ServiciosWeb\wcfRegistro.svc.vb">
+      <DependentUpon>wcfRegistro.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServiciosWeb\wcfRegistro_V17.svc.vb">
+      <DependentUpon>wcfRegistro_V17.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\AccesoBD.vb" />
+    <Compile Include="Visita\Bandeja.aspx.designer.vb">
+      <DependentUpon>Bandeja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\Bandeja.aspx.vb">
+      <DependentUpon>Bandeja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\BandejaVisita.vb" />
+    <Compile Include="Visita\Constantes.vb" />
+    <Compile Include="Visita\Reporte4.aspx.designer.vb">
+      <DependentUpon>Reporte4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\Reporte4.aspx.vb">
+      <DependentUpon>Reporte4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\Reporte3.aspx.designer.vb">
+      <DependentUpon>Reporte3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\Reporte3.aspx.vb">
+      <DependentUpon>Reporte3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\Reporte2.aspx.designer.vb">
+      <DependentUpon>Reporte2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\Reporte2.aspx.vb">
+      <DependentUpon>Reporte2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\Graficas.vb" />
+    <Compile Include="Visita\Reportes.aspx.designer.vb">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\Reportes.aspx.vb">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\UserControls\AltaIrregularidadesVisita.ascx.designer.vb">
+      <DependentUpon>AltaIrregularidadesVisita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\UserControls\AltaIrregularidadesVisita.ascx.vb">
+      <DependentUpon>AltaIrregularidadesVisita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\UserControls\BitacoraVisita.ascx.designer.vb">
+      <DependentUpon>BitacoraVisita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\UserControls\BitacoraVisita.ascx.vb">
+      <DependentUpon>BitacoraVisita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\UserControls\ObjetoVisita.ascx.designer.vb">
+      <DependentUpon>ObjetoVisita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\UserControls\ObjetoVisita.ascx.vb">
+      <DependentUpon>ObjetoVisita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\ValidaDocumentos.vb" />
+    <Compile Include="Visita\Documento.vb" />
+    <Compile Include="Visita\EncabezadoReporteVisita.vb" />
+    <Compile Include="Visita\EstatusPaso.vb" />
+    <Compile Include="Visita\Expediente.vb" />
+    <Compile Include="Visita\NegocioVisita.vb" />
+    <Compile Include="Visita\NotificacionesVisita.vb" />
+    <Compile Include="Visita\Notificar.vb" />
+    <Compile Include="Visita\Paso.vb" />
+    <Compile Include="Visita\PasoProcesoVisita.vb" />
+    <Compile Include="Visita\Persona.vb" />
+    <Compile Include="Visita\Prorroga.vb" />
+    <Compile Include="Visita\Registro.aspx.designer.vb">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visita\Registro.aspx.vb">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visita\TiposVisita.vb" />
+    <Compile Include="Visita\Visita.vb" />
+    <Compile Include="Web References\WR_Osiris\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WR_SICOD\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsSisanRegV2\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsSisanReg\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.asmx.vb">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WS\Osiris.asmx.vb">
+      <DependentUpon>Osiris.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WS\Sicod.asmx.vb">
+      <DependentUpon>Sicod.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\SiteInterno.Master" />
+    <Content Include="App_Themes\ThemeConsar\ThemeConsar.skin" />
+    <Content Include="App_Themes\ThemeConsar\fonts\trajan_pro_regular-webfont.eot" />
+    <Content Include="App_Themes\ThemeConsar\fonts\trajan_pro_regular-webfont.svg" />
+    <Content Include="App_Themes\ThemeConsar\fonts\trajan_pro_regular-webfont.ttf" />
+    <Content Include="App_Themes\ThemeConsar\fonts\trajan_pro_regular-webfont.woff" />
+    <None Include="fonts\trajan_pro_regular-webfont.eot" />
+    <None Include="fonts\trajan_pro_regular-webfont.svg" />
+    <None Include="fonts\trajan_pro_regular-webfont.ttf" />
+    <None Include="fonts\trajan_pro_regular-webfont.woff" />
+    <Content Include="Manuales\Manual Usuario.pdf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ADExtender\ADExtender.csproj">
+      <Project>{8b2b7563-07f4-4b5f-9186-e3c29d335329}</Project>
+      <Name>ADExtender</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Conexion\Conexion.vbproj">
+      <Project>{4AF38AA9-ED17-4BCD-BF73-6EA077D8EA6F}</Project>
+      <Name>Conexion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomGridView\CustomGridView.vbproj">
+      <Project>{116D6C0F-F01A-45EC-96D5-FB9BC91100A3}</Project>
+      <Name>CustomGridView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.vbproj">
+      <Project>{56AEB0DF-E736-4E13-B087-6DDF560F0308}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.vbproj">
+      <Project>{AD3CA7BF-EC16-4375-ACD1-6FE3BB560EF9}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilerias\Utilerias.vbproj">
+      <Project>{50BE5976-E4D6-4724-8E39-6C3E792E031D}</Project>
+      <Name>Utilerias</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.16.51.10:98/ws/RegistroExternoV2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsSisanRegV2\</RelPath>
+      <UpdateFromURL>http://172.16.51.10:98/ws/RegistroExternoV2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SEPRIS_wsSisanRegV2_RegistroExternoV2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.51.10:82/ws/ws_sicod.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WR_SICOD\</RelPath>
+      <UpdateFromURL>http://172.16.51.10:82/ws/ws_sicod.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SEDI_WR_SICOD_ws_SICOD</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.51.10:98/WS/RegistroExterno.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsSisanReg\</RelPath>
+      <UpdateFromURL>http://172.16.51.10:98/WS/RegistroExterno.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SEPRIS_wsSisanReg_RegistroExterno</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.51.17:96/ws/osiris.asmx%3fop=ObtenerSubEntidades">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WR_Osiris\</RelPath>
+      <UpdateFromURL>http://172.16.51.17:96/ws/osiris.asmx%3fop=ObtenerSubEntidades</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SEPRIS_WR_Osiris_Osiris</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DynamicData\FieldTemplates\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56450</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SEPRIS_DES</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inSEDI one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+﻿
+<asp:Button runat="server" CssClass="botones"  />
+<asp:Button runat="server" CssClass="botones_x" SkinID="botones_x"  />
+<asp:Button runat="server" CssClass="botonArchivo" SkinID="botonArchivo"  />
+<asp:Button runat="server" CssClass="botones_disabled" SkinID="botones_disabled"  />
+
+<asp:Label runat="server" CssClass="txt_gral" />
+<asp:TextBox runat="server" CssClass="txt_gral" />
+
+<asp:TextBox runat="server" SkinID="txt_solo_lectura" CssClass="txt_solo_lectura" />
+
+<cc1:CustomGridView runat="server" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" HabilitaSeleccion="Simple" ToolTip="Para consultar el registro hacer Doble Click sobre el registro." />
+<cc1:CustomGridView runat="server" SkinID="SeleccionMultipleCliente" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" HabilitaSeleccion="MultipleCliente" DataBindEnPostBack="false" ToolTip="Para consultar el registro hacer Doble Click sobre el registro."  />
+<cc1:CustomGridView runat="server" SkinID="SeleccionSimpleCliente" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" HabilitaSeleccion="SimpleCliente" DataBindEnPostBack="false" ToolTip="Para consultar el registro hacer Doble Click sobre el registro."  />
+<cc1:CustomGridView runat="server" SkinID="SeleccionMultiple" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" HabilitaSeleccion="Multiple" DataBindEnPostBack="true" ToolTip="Para consultar el registro hacer Doble Click sobre el registro."  />
+<cc1:CustomGridView runat="server" SkinID="SinSeleccion" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" />
+
+<cc1:CustomGridView runat="server" SkinID="SeleccionMultipleEspecialMensajes" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" HabilitaSeleccion="Multiple" DataBindEnPostBack="false" ToolTip="Para consultar el registro hacer Doble Click sobre el registro."  />
+<cc1:CustomGridView runat="server" SkinID="SeleccionSimpleCliente2" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" HabilitaSeleccion="SimpleCliente" DataBindEnPostBack="true" ToolTip="Para consultar el registro hacer Doble Click sobre el registro."  />
+
+<cc1:CustomGridView runat="server" SkinID="SinTooltip" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager" HabilitaSeleccion="Simple"/>
+
+
+<asp:GridView runat="server" AutoGenerateColumns="false" HeaderStyle-CssClass="GridViewEncabezado" AlternatingRowStyle-CssClass="GridViewContenidoAlternate"  RowStyle-CssClass="GridViewContenido" PagerStyle-CssClass="GridviewScrollPager"/>

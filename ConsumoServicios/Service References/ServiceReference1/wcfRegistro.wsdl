@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wcfRegistro" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SEPRIS" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IwcfRegistro_InsertaVisita_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaVisita" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_InsertaVisita_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaVisitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_EditaVisita_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditaVisita" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_EditaVisita_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditaVisitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_AvanzaPaso_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvanzaPaso" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_AvanzaPaso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvanzaPasoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_AvanzaPasoSiete_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvanzaPasoSiete" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_AvanzaPasoSiete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvanzaPasoSieteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_AvanzaPasoOcho_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvanzaPasoOcho" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_AvanzaPasoOcho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvanzaPasoOchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_RechazaPaso_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechazaPaso" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_RechazaPaso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechazaPasoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_ActualizaFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizaFecha" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_ActualizaFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizaFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_FinalizaCargaDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizaCargaDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_FinalizaCargaDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizaCargaDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_SolicitaProrroga_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitaProrroga" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_SolicitaProrroga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitaProrrogaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_getErrorValidacionSupervisar_InputMessage">
+    <wsdl:part name="parameters" element="tns:getErrorValidacionSupervisar" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_getErrorValidacionSupervisar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getErrorValidacionSupervisarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_CancelarVisita_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarVisita" />
+  </wsdl:message>
+  <wsdl:message name="IwcfRegistro_CancelarVisita_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarVisitaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IwcfRegistro">
+    <wsdl:operation name="InsertaVisita">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/InsertaVisita" message="tns:IwcfRegistro_InsertaVisita_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/InsertaVisitaResponse" message="tns:IwcfRegistro_InsertaVisita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditaVisita">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/EditaVisita" message="tns:IwcfRegistro_EditaVisita_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/EditaVisitaResponse" message="tns:IwcfRegistro_EditaVisita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvanzaPaso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/AvanzaPaso" message="tns:IwcfRegistro_AvanzaPaso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/AvanzaPasoResponse" message="tns:IwcfRegistro_AvanzaPaso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvanzaPasoSiete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/AvanzaPasoSiete" message="tns:IwcfRegistro_AvanzaPasoSiete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/AvanzaPasoSieteResponse" message="tns:IwcfRegistro_AvanzaPasoSiete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvanzaPasoOcho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/AvanzaPasoOcho" message="tns:IwcfRegistro_AvanzaPasoOcho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/AvanzaPasoOchoResponse" message="tns:IwcfRegistro_AvanzaPasoOcho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechazaPaso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/RechazaPaso" message="tns:IwcfRegistro_RechazaPaso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/RechazaPasoResponse" message="tns:IwcfRegistro_RechazaPaso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/ActualizaFecha" message="tns:IwcfRegistro_ActualizaFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/ActualizaFechaResponse" message="tns:IwcfRegistro_ActualizaFecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizaCargaDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/FinalizaCargaDocumentos" message="tns:IwcfRegistro_FinalizaCargaDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/FinalizaCargaDocumentosResponse" message="tns:IwcfRegistro_FinalizaCargaDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaProrroga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/SolicitaProrroga" message="tns:IwcfRegistro_SolicitaProrroga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/SolicitaProrrogaResponse" message="tns:IwcfRegistro_SolicitaProrroga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getErrorValidacionSupervisar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/getErrorValidacionSupervisar" message="tns:IwcfRegistro_getErrorValidacionSupervisar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/getErrorValidacionSupervisarResponse" message="tns:IwcfRegistro_getErrorValidacionSupervisar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarVisita">
+      <wsdl:input wsaw:Action="http://tempuri.org/IwcfRegistro/CancelarVisita" message="tns:IwcfRegistro_CancelarVisita_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IwcfRegistro/CancelarVisitaResponse" message="tns:IwcfRegistro_CancelarVisita_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IwcfRegistro" type="tns:IwcfRegistro">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertaVisita">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/InsertaVisita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaVisita">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/EditaVisita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvanzaPaso">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/AvanzaPaso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvanzaPasoSiete">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/AvanzaPasoSiete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvanzaPasoOcho">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/AvanzaPasoOcho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechazaPaso">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/RechazaPaso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaFecha">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/ActualizaFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizaCargaDocumentos">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/FinalizaCargaDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaProrroga">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/SolicitaProrroga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getErrorValidacionSupervisar">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/getErrorValidacionSupervisar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarVisita">
+      <soap:operation soapAction="http://tempuri.org/IwcfRegistro/CancelarVisita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wcfRegistro">
+    <wsdl:port name="BasicHttpBinding_IwcfRegistro" binding="tns:BasicHttpBinding_IwcfRegistro">
+      <soap:address location="http://localhost:56450/ServiciosWeb/wcfRegistro.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

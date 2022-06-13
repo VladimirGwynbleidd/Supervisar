@@ -1,0 +1,74 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Entities.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Entities.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Entities.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Conexion.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\ADExtender.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\itextsharp.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\SharePoint.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\OpenXML.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\ControlErrores.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Encryption64.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Conexion.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Conexion.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Utilerias.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\bin\Release\ADExtender.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.vbproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.Resources.resources
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.vbproj.GenerateResource.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.vbproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.vbproj.CopyComplete
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Entities\obj\Release\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Conexion.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Conexion.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Conexion.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\bin\Release\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Release\Entities.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Release\Entities.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Release\Entities.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Release\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Release\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Entities\obj\Release\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Conexion.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Conexion.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Conexion.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\bin\Release\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\obj\Release\Entities.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\obj\Release\Entities.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\obj\Release\Entities.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\obj\Release\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\obj\Release\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Entities\obj\Release\Entities.pdb

@@ -1,0 +1,1901 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Entities
+</name>
+</assembly>
+<members>
+<member name="M:Entities.Agenda.ObtenerTodos(Conexion.SQLServer,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Obtiene todos los registro dentro de una transaccion
+ </summary>
+ <param name="con">Objeto Conexion</param>
+ <param name="tran">Objeto Transaccion</param>
+ <returns>DataView con los registros</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Agenda.ObtenerSiguienteIdentificador(Conexion.SQLServer,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Obtener el siguiente identificador dentro de transaccion para una insercion en bloque
+ </summary>
+ <param name="conexion">Objeto conexion</param>
+ <param name="tran">Objeto Transaccion</param>
+ <returns>Siguiente identificador</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Agenda.AgregarAgendaServicios(Conexion.SQLServer,System.Data.SqlClient.SqlTransaction,Conexion.Bitacora)">
+ <summary>
+ Agrega un registro a Agenda para un ingeniero en una hora especifica
+ </summary>
+ <param name="con">Objeto Conexion</param>
+ <param name="tran">Objeto transaccion</param>
+ <param name="bitac">Objeto Bitacora</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Agenda.Eliminar(System.Int32,Conexion.SQLServer,Conexion.Bitacora,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Elimina un registro de agenda
+ </summary>
+ <param name="idAgenda">Id</param>
+ <param name="con">Objeto Conexion</param>
+ <param name="bitacora">Objeto Botacora</param>
+ <param name="tran">Objeto Transaccion</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Agenda.FechaDisponibleAgenda(System.DateTime,System.String,Conexion.SQLServer,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Determina si una fecha dada esta disponible
+ </summary>
+ <param name="fecha">Fecha</param>
+ <param name="Ingeniero">Ingeniero a validar</param>
+ <param name="con">Objeto conexion</param>
+ <param name="tran">Objeto Transaccion</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Agenda.EliminarGrupoTareas(System.String,System.Int32,System.Int32,Conexion.SQLServer,Conexion.Bitacora,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Se eliminan las tareas asiganadas a un ingeniero de un nivel de servicio
+ </summary>
+ <param name="ingeniero">Ingeniero que tiene asignadas las tareas</param>
+ <param name="idSol">Id de la solicitud</param>
+ <param name="idNivel">Id de nivel de servicio</param>
+ <param name="con">Objeto conexion</param>
+ <param name="bitac">Objeto bitacora</param>
+ <param name="tran">objeto transaccion</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aplicativo.CargarDatos">
+ <summary>
+ Carga los datos del Aplicativo tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aplicativo.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aplicativo.ObtenerTodosConNombreResponsables">
+ <summary>
+ Obtiene todos los registros de la entidad logica 
+ Adicionando el nombre completo de los ingenieros
+ </summary>
+ <returns>Dataview con los registros</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aplicativo.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aplicativo.Agregar">
+ <summary>
+ Agrega el aplicativo al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aplicativo.Actualizar">
+ <summary>
+ Actualiza un Aplicativo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aplicativo.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Area.ObtenerTodosConNombreResponsables">
+ <summary>
+ Obtiene todos los registros de la entidad logica 
+ Adicionando el nombre completo de los ingenieros
+ </summary>
+ <returns>Dataview con los registros</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Areas.CargarDatos">
+ <summary>
+ Obtiene los dsatos de ua area
+ </summary>
+ <remarks>agc</remarks>
+</member>
+<member name="M:Entities.Aspecto.CargarDatos">
+ <summary>
+ Carga los datos de Servicio tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aspecto.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aspecto.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aspecto.Agregar">
+ <summary>
+ Agrega el Servicio al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aspecto.Actualizar">
+ <summary>
+ Actualiza un Tipo de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Aspecto.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Ayuda.ObtenerIndice(System.String)">
+ <summary>
+ Obtiene un Datatable con los temas de ayuda ordenados
+ </summary>
+ <returns>Datatable con ayuda ordenada</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Catalogos.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Catalogos.Agregar">
+ <summary>
+ Agrega el Estatus de Servicio al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Catalogos.Actualizar">
+ <summary>
+ Actualiza un Estatus de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Catalogos.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.CargarDatos">
+ <summary>
+ Carga los datos de Servicio tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.CreaCorreo(System.Data.DataRow)">
+ <summary>
+ Crea un correo a partir de un datarrow 
+ </summary>
+ <param name="dr">DataRow de la tabla BDS_C_GR_CORREO</param>
+ <returns>Un correo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.ObtenerCorreosPerfil(System.Int32)">
+ <summary>
+ Obtiene los correos que el perfil tiene asignados
+ </summary>
+ <param name="idPerfil">Id del perfil</param>
+ <returns>Lista de correos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.ObtenerCorreosNoEnPerfil(System.Int32)">
+ <summary>
+ Obtiene los correos que se pueden asignar al perfil
+ </summary>
+ <param name="idPerfil">Id del perfil</param>
+ <returns>Lista de Correos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.GuardaCorreoPerfil(System.Collections.Generic.List{Entities.Correo},System.Collections.Generic.List{Entities.Correo},System.Int32,System.Int32)">
+ <summary>
+ Actualiza los correos asignados de un Perfil
+ </summary>
+ <param name="lstAgrega">Lista de Correos a asignar</param>
+ <param name="lstQuita">Lista de Correos a quitar</param>
+ <param name="idPerfil">Id del Perfil</param>
+ <remarks></remarks>
+ Se MODIFICO PARA AGREGAR EL AREA A LA LISTA DE CORREO YA QUE NO EXISTE EN CORREO DICHO PARAMETRO
+</member>
+<member name="M:Entities.Correo.AgregaCorreosPerfil(System.Int32,System.Collections.Generic.List{Entities.Correo},System.Int32)">
+ <summary>
+ Agrega correos a un perfil
+ </summary>
+ <param name="idPerfil">Id del Perfil</param>
+ <param name="lstAgrega">Lista de Correos a agregar</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.QuitaCorreosPerfil(System.Int32,System.Collections.Generic.List{Entities.Correo},System.Int32)">
+ <summary>
+ Quita correos de un perfil
+ </summary>
+ <param name="idPerfil">Id del perfil</param>
+ <param name="lstQuita">Lista de correos a quitar</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.EliminaExclucionUsuario(System.Int32,System.Int32)">
+ <summary>
+ Elimina los usuarios Excluidos de un Correo para un perfil
+ </summary>
+ <param name="idPerfil">Id del Perfil</param>
+ <param name="idCorreo">Id del Correo</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.ObtenerCorreosUsuario(System.String,System.Int32)">
+ <summary>
+ Devuelve los correos que recibe un usuario basado en su perfil
+ Sin las exclusiones que pueda tener
+ </summary>
+ <param name="idUsuario">Id de usuario</param>
+ <param name="idPerfil">Id de Perfil</param>
+ <returns>Lista de correos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.ObtenerCorreosExcluyeUsuario(System.String,System.Int32)">
+ <summary>
+ Devuelve los correos en los que esta excluido un usuario, de acuerdo a su perfil
+ </summary>
+ <param name="idUsuario">Id de usuario</param>
+ <param name="idPerfil">Id de Perfil</param>
+ <returns>Lista de correos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.BorrarExclusion(System.String,System.Int32,System.Collections.Generic.List{Entities.Correo})">
+ <summary>
+ Borra las excluciones de correo para un usuario
+ </summary>
+ <param name="idUsuario">Id de Usuario</param>
+ <param name="idPerfil">Id de Perfil</param>
+ <param name="lstAgregados">Lista de correos</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.AgregarExclusion(System.String,System.Int32,System.Collections.Generic.List{Entities.Correo})">
+ <summary>
+ Agrega una exclucion de correo a un usuario
+ </summary>
+ <param name="idUsuario">Id de Usuario</param>
+ <param name="idPerfil">Id Perfil</param>
+ <param name="lstExcluidos">Lista de correos excluidos</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.GuardaExclusion(System.String,System.Int32,System.Collections.Generic.List{Entities.Correo},System.Collections.Generic.List{Entities.Correo})">
+ <summary>
+ Actualiza los correos asignados a un usuario
+ </summary>
+ <param name="idUsuario">Id de Usuario</param>
+ <param name="idPerfil">Id de Perfil</param>
+ <param name="lstAgregados">Lista de Correos Agregados</param>
+ <param name="lstExcluidos">Lista de Correos Excluidos</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.ObtenerCorreosCopia(System.String)">
+ <summary>
+ Obtiene los correos a los cuales un usuario tiene asignada copia
+ </summary>
+ <param name="idUsuario">Identifdicador del Usuario</param>
+ <returns>Lista de correos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.ObtenerCorreosDisponibleCopia(System.String)">
+ <summary>
+ Obtiene la lista de correos a los cuales el usuario no tiene asiganada una copia
+ </summary>
+ <param name="idUsuario">Identifdicador del Usuario</param>
+ <returns>Lista de correos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.AgregarCopias(System.String,System.Collections.Generic.List{Entities.Correo})">
+ <summary>
+ Agrega copias de correo a usuarios
+ </summary>
+ <param name="idUsuario">Identificador Usuario</param>
+ <param name="lstAgrega">Lista de Correos a agregar copia</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.QuitarCopias(System.String,System.Collections.Generic.List{Entities.Correo})">
+ <summary>
+ Quita copias de correo para un usuario
+ </summary>
+ <param name="idUsuario">Identificador de Usuario</param>
+ <param name="lstQuita">Lista de Correo a quitar copia</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Correo.GuardaCopiaCorreo(System.Collections.Generic.List{Entities.Correo},System.Collections.Generic.List{Entities.Correo},System.String)">
+ <summary>
+ Actualiza las copias de correos asignados de un usuario
+ </summary>
+ <param name="lstAgrega">Lista de Correos a asignar</param>
+ <param name="lstQuita">Lista de Correos a quitar</param>
+ <param name="idUsuario">Id del Usuario</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.CargarDatos">
+ <summary>
+ Carga los datos de Servicio tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.ObtenerIDEncuestaVigente">
+ <summary>
+ Obtiene id de la encuesta vigente
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.CargarAspectosNuevo">
+ <summary>
+ Obtiene los aspectos para una nueva encuesta
+ </summary>
+ <returns>Tabla de aspectos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.CargarOpcionesNuevo">
+ <summary>
+ Obtiene las opciones para una nueva encuesta
+ </summary>
+ <returns>Tabla de opciones</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.Agregar">
+ <summary>
+ Agrega el Servicio al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.Actualizar">
+ <summary>
+ Actualiza un Tipo de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.RegistrarAspectos">
+ <summary>
+ Agrega los aspectos asociados a la encuesta
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.RegistrarOpciones">
+ <summary>
+ Agrega las opciones asociados a la encuesta
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.ConsultaEncuestaVigente">
+ <summary>
+ Consulta si existe una encuesta vigente
+ </summary>
+ <returns>Datos de la encuesta vigente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Encuesta.DesactivarEncuesta">
+ <summary>
+ Desactiva la encuesta indicada
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Estatus.Agregar">
+ <summary>
+ Registra un ESTATUS
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Estatus.Actualizar">
+ <summary>
+ Actualiza un menú
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Estatus.Baja">
+ <summary>
+ Elimina un ESTATUS
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.EstatusServicio.CargarDatos">
+ <summary>
+ Carga los datos del Estatus de Servicio tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.EstatusServicio.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.EstatusServicio.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.EstatusServicio.Agregar">
+ <summary>
+ Agrega el Estatus de Servicio al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.EstatusServicio.Actualizar">
+ <summary>
+ Actualiza un Estatus de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.EstatusServicio.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.FileSepris.AltaDocumento">
+ <summary>
+ Da de alta y actualiza un documento en sepris
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.FileSepris.AltaDocumentoUsuario">
+ <summary>
+ Da de alta un documento de un usuario cuando no hay visita
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Flujo.CargarDatos">
+ <summary>
+ Carga los datos de Flujo tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Flujo.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Flujo.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Flujo.Agregar">
+ <summary>
+ Agrega el Flujo al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Flujo.Actualizar">
+ <summary>
+ Actualiza un Tipo de Flujo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Flujo.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Formato">
+ <summary>
+ AGC, Metodos que sirven para dar de alta un formato a un documento en base de datos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Formato.InsertarActualizarFormato">
+ <summary>
+ Inserta/Actualiza un formato
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Funcion.CargarDatos">
+ <summary>
+ Carga los datos de Función tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Funcion.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Funcion.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Funcion.Agregar">
+ <summary>
+ Agrega la Función al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Funcion.Actualizar">
+ <summary>
+ Actualiza una Función
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Funcion.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Grupo.CargarDatos">
+ <summary>
+ Carga los datos de Grupo tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Grupo.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Grupo.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Grupo.Agregar">
+ <summary>
+ Agrega el Grupo al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Grupo.Actualizar">
+ <summary>
+ Actualiza un Tipo de Grupo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Grupo.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.HistorialNotas.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.HistorialNotas.Agregar">
+ <summary>
+ Agregar el registro historico
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.HistorialSolicitud.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.HistorialSolicitud.ObtenerSiguienteConsecutivo(System.String)">
+ <summary>
+ Obtiene el siguiente consecutivo por solicitud
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.HistorialSolicitud.Agregar">
+ <summary>
+ Agregar el registro historico
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.NivelServicio.Agregar">
+ <summary>
+ Registra un Nivel de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.NivelServicio.Actualizar">
+ <summary>
+ Actualiza un nivel de servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.NivelServicio.Baja">
+ <summary>
+ Elimina un nivel de servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.TipoEstiloNotificacion">
+ <summary>
+ Enumerador del tipo de estilos definidos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.Color">
+ <summary>
+ Clase para el elemento CSS de color
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.Alineacion">
+ <summary>
+ Clase para el elemento CSS de alineacion
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.TamanioFuente">
+ <summary>
+ Clase para el elemento CSS del tamaño de fuente
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.TipoFuente">
+ <summary>
+ Clase para el elemento CSS de Tipo de fuente
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.EstiloContenido">
+ <summary>
+ Clase para el objeto Estilo de contenido
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.NotificacionPantalla">
+ <summary>
+ Clase para el elemento de notificaciones pantalla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.UsuariosNotificacionPantalla">
+ <summary>
+ Clase para las notificaciones asignadas a usuarios
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Notificaciones.ConvertidorMarkup">
+ <summary>
+ Clase para convertir de markup a HTML
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.ConvertidorMarkup.MatchReplace(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ Match and replace a specific pattern with formatted text
+ </summary>
+<param name="pattern">Regular expression pattern</param>
+<param name="match">Match replacement</param>
+<param name="content">Text to format</param>
+<param name="multi">Multiline text (optional)</param>
+<param name="white">Ignore white space (optional)</param>
+ <returns>HTML Formatted from the original BBCode</returns>
+</member>
+<member name="M:Entities.Notificaciones.ColorGetAll">
+ <summary>
+ Método para obtener todos los elementos del catálogo de colores
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.AlineacionGetAll">
+ <summary>
+ Método para obtener todos los elementos del catálogo de alineaciones
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.TamanioFuenteGetAll">
+ <summary>
+ Método para obtener todos los elementos del catálogo de Tamaños de fuente
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.TipoFuenteGetAll">
+ <summary>
+ Método para obtener todos los elementos del catálogo de Tipos de fuente
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.EstiloContenidoGetAll">
+ <summary>
+ Método para obtener todos los elementos la tabla de Estilos de contenido
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.NotificacionesPantallaGetAll">
+ <summary>
+ Método para obtener todos los elementos de la tabla de Notificaciones de pantalla
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.NotificacionesPantallaGetCustom(System.String)">
+ <summary>
+ Método para obtener los elementos de la tabla de notificaciones de pantalla segun el filtro proporcionado
+ </summary>
+ <param name="where">Filtro para la búsqueda</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.NotificacionesUsuarioGetAll(System.String)">
+ <summary>
+ Método para obtener todos las notificaciones vigentes de un usuario
+ </summary>
+ <param name="Usuario">Identificador del Usuario de quien se buscan notificaciones</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.NotificacionesPantallaGetOne(System.Int32)">
+ <summary>
+ Método para obtener la notificación de pantalla deseada
+ </summary>
+ <param name="identificador">Identificador de la notificación buscada</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.ColorGetOne(System.Int32)">
+ <summary>
+ Método para obtener un color
+ </summary>
+ <param name="IdColor">Identificador del color</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.AlineacionGetOne(System.Int32)">
+ <summary>
+ Método para obtener una alineación
+ </summary>
+ <param name="IdAlineacion">Identificador de la alineación</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.TamanioFuenteGetOne(System.Int32)">
+ <summary>
+ Método para obtener un tamaño de fuente
+ </summary>
+ <param name="IdTamanioFuente">Identificador del tamaño de fuente</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.TipoFuenteGetOne(System.Int32)">
+ <summary>
+ Método para obtener un tipo de fuente
+ </summary>
+ <param name="IdTipoFuente">Identificador del tipo de fuente</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.EstiloContenidoGetOne(System.Int32)">
+ <summary>
+ Método para obtener un estilo de contenido
+ </summary>
+ <param name="IdEstiloContenido">Identificador del estilo de contenido</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.ListaUsuariosNotificacionPantalla(System.Int32)">
+ <summary>
+ Método para obtener la lista de usuarios asignados a una notificación
+ </summary>
+ <param name="identificadorNotificacion">Identificador de la notificación</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.CadenaUsuariosExlusionNotificacionPantalla(System.Int32)">
+ <summary>
+ Método para obtener la cadena de exclusión de usuarios ya asignados a una notificación
+ </summary>
+ <param name="identificadorNotificacion">Identificador de la notificación</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.ObtenEstilo(Entities.Notificaciones.TipoEstiloNotificacion)">
+ <summary>
+ Método para obtener la descrpción CSS completa de un estilo
+ </summary>
+ <param name="IdentificadorEstilo">Identificador del estilo</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.TransformaTextoHtml(System.String)">
+ <summary>
+ Método para transformar un texto Markup en HTML
+ </summary>
+ <param name="texto">Texto a ser transformado</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.GuardaConfiguracionEstilos(System.Collections.Generic.List{Entities.Notificaciones.EstiloContenido},System.String)">
+ <summary>
+ Método para guardar la configuración de estilos
+ </summary>
+ <param name="Estilos">Lista de estilos</param>
+ <param name="Usuario">Usuario que realiza la operacion</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.EliminaNotificacionPantalla(System.Int32)">
+ <summary>
+ Método para eliminar lógicamente una notificación 
+ </summary>
+ <param name="IdentificadorNotificacion">Identificador de la notificación</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.DesasignaUsuariosNotificación(System.Collections.Generic.List{Entities.Notificaciones.UsuariosNotificacionPantalla},System.String)">
+ <summary>
+ Método para Desasignar usuarios de una notificación
+ </summary>
+ <param name="ListaDesasigna">Lista de usuarios a desasignar</param>
+ <param name="Usuario">Usuario que realiza la operación</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.AsignaUsuariosNotificación(System.Collections.Generic.List{Entities.Notificaciones.UsuariosNotificacionPantalla},System.String)">
+ <summary>
+ Método para Asignar usuarios de una notificación
+ </summary>
+ <param name="ListaAsigna">Lista de usuarios a desasignar</param>
+ <param name="Usuario">Usuario que realiza la operación</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.GuardaNotificacionPantalla(Entities.Notificaciones.NotificacionPantalla)">
+ <summary>
+ Método para guardar notificaciones
+ </summary>
+ <param name="notificacion">Notificación a ser guardada</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.ActualizaNotificacionPantalla(Entities.Notificaciones.NotificacionPantalla)">
+ <summary>
+ Método para actualizar notificaciones
+ </summary>
+ <param name="notificacion">Notificación a ser actualizada</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.TamanioFuenteCSS(System.String)">
+ <summary>
+ Método que regresa el texto completo de la etiqueta CSS
+ </summary>
+ <param name="Tamanio">parámetro a ser completado</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.TipoFuenteCSS(System.String)">
+ <summary>
+ Método que regresa el texto completo de la etiqueta CSS
+ </summary>
+ <param name="NombreFuente">parámetro a ser completado</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.AlineacionCSS(System.String)">
+ <summary>
+ Método que regresa el texto completo de la etiqueta CSS
+ </summary>
+ <param name="Alineacion">parámetro a ser completado</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.NegritaCSS(System.Boolean)">
+ <summary>
+ Método que regresa el texto completo de la etiqueta CSS
+ </summary>
+ <param name="IsNegrita">Define si se quiere o no letra en negritas</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.ItalicaCSS(System.Boolean)">
+ <summary>
+ Método que regresa el texto completo de la etiqueta CSS
+ </summary>
+ <param name="IsItalica">Define si se quiere o no letra en itálica</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Notificaciones.ColorCSS(System.String)">
+ <summary>
+ Método que regresa el texto completo de la etiqueta CSS
+ </summary>
+ <param name="colorHex">Código hexadecimal del color</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.OpcionesEvaluacion.CargarDatos">
+ <summary>
+ Carga los datos de Servicio tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.OpcionesEvaluacion.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.OpcionesEvaluacion.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.OpcionesEvaluacion.Agregar">
+ <summary>
+ Agrega el Servicio al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.OpcionesEvaluacion.Actualizar">
+ <summary>
+ Actualiza un Tipo de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.OpcionesEvaluacion.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PasoFlujo.CargarDatos">
+ <summary>
+ Carga los datos de Función tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PasoFlujo.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PasoFlujo.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PasoFlujo.Agregar">
+ <summary>
+ Agrega la Función al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PasoFlujo.Actualizar">
+ <summary>
+ Actualiza un Paso de Flujo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PasoFlujo.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PeriodoVacacional.CargarDatos">
+ <summary>
+ Carga los datos del Periodo Vacacional tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PeriodoVacacional.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PeriodoVacacional.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PeriodoVacacional.Agregar">
+ <summary>
+ Agrega el periodo vacacional al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PeriodoVacacional.Actualizar">
+ <summary>
+ Actualiza un periodo vacacional
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PeriodoVacacional.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.PersonalizarColumnas">
+ <summary>
+ Clase para objetos, métodos y funciones para el proceso de personalización de columnas
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.PersonalizarColumnas.GridView">
+ <summary>
+ Clase para la tabla de relacion de componentes Gridview y páginas donde se alojan
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.GridView.Identificador">
+ <summary>
+ Identificador del GridView
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.GridView.Descripcion">
+ <summary>
+ Descripción del GridView
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.GridView.Pagina">
+ <summary>
+ Descripción de la Página
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.GridView.Vista">
+ <summary>
+ Descripción de la vista asociada al GridView
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.PersonalizarColumnas.Columnas">
+ <summary>
+ Clase para la tabla de columnas pertenecentes a un GridView
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.Columnas.GridView">
+ <summary>
+ Identificador del GridView
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.Columnas.Identificador">
+ <summary>
+ Identificador de la columna
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.Columnas.Descripcion">
+ <summary>
+ Descripción de la columna
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.Columnas.Texto">
+ <summary>
+ Descripcion del Texto de la columna
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.Columnas.Vigencia">
+ <summary>
+ Vigencia de la columna (solo aplica para cuando se obtiene como parte de las columnas asignadas a un usuario)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.PersonalizarColumnas.UsuarioGridViewColumnas">
+ <summary>
+ Clase para la tabla de relacion de columnas de un GridView de un Usuario
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.UsuarioGridViewColumnas.Usuario">
+ <summary>
+ Identificador del usuario
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.UsuarioGridViewColumnas.GridView">
+ <summary>
+ Objeto GridView
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.PersonalizarColumnas.UsuarioGridViewColumnas.Columnas">
+ <summary>
+ Lista de objetos Columnas del GridView en cuestión
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PersonalizarColumnas.ObtenerGridView(System.Int32)">
+ <summary>
+ Método para obtener un Objeto GridView de personalizacion de columnas
+ </summary>
+ <param name="IdentificadorGridView"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PersonalizarColumnas.ObtenerColumnasGridView(System.Int32)">
+ <summary>
+ Método para obtener la lista de columnas de un gridview de personalizacion
+ </summary>
+ <param name="IdentificadorGridView">Identifcador del GridView en Tabla</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PersonalizarColumnas.ObtenerUsuarioColumnasGridView(System.String,System.Int32)">
+ <summary>
+ Método para obtener la lista de columnas de un GridView configuradas para un usuario determinado
+ </summary>
+ <param name="Usuario">Identificador del usuario de quien se requieren las columnas</param>
+ <param name="IdentificadorGridView">Identifcador del GridView en Tabla</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PersonalizarColumnas.UsuarioTieneColumnas(System.String,System.Int32)">
+ <summary>
+ Método que determina si un usuario tiene configuradas columnas para un GridView determinado
+ </summary>
+ <param name="Usuario">usuario a consultar</param>
+ <param name="IdentificadorGridView">Identificador del GridView a consultar</param>
+ <returns>True si tiene columnas, False si no tiene</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PersonalizarColumnas.ConfiguraColumnasPrimeraVez(System.String,System.Int32)">
+ <summary>
+ Método que guarda configuracion de columnas para un usuario y gridview determinado por primera vez
+ </summary>
+ <param name="Usuario">Identificador de Usuario</param>
+ <param name="IdentificadorGridView">Identificador de GridView</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.PersonalizarColumnas.GuardaColumnasGridViewUsuario(Entities.PersonalizarColumnas.UsuarioGridViewColumnas)">
+ <summary>
+ Método que actualiza la configuracion de columnas para un usuario y gridview determinado
+ </summary>
+ <param name="UsuarioColumnas">Objeto del tipo Entities.PersonalizarColumnas.UsuarioGridViewColumnas que contiene los datos necesarios</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.RegistroAgenda.TipoRegistro">
+ <summary>
+ Contiene los tipos de registro disponibles
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador de Registro en agenda
+ </summary>
+ <returns>Entero con el siguiente identificador</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.CargaDatos">
+ <summary>
+ Carga los datos del identificador en el objeto
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.ObtenRegistrosAgenda">
+ <summary>
+ Obtiene todos los registros de Registro agenda para mostrar en la bandeja
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.Agregar">
+ <summary>
+ Inserta un registro en Registro Agenda
+ </summary>
+ <returns>True si se incerto correctamente, de lo contrario false</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.Agregar(Conexion.SQLServer,Conexion.Bitacora,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Inserta un registro en Registro Agenda
+ </summary>
+ <param name="con">Objeto Conexion</param>
+ <param name="bitacora">Objeto Bitacora</param>
+ <param name="tran">Objeto transaccion</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.Modificar">
+ <summary>
+ Modifica un registro agenda
+ </summary>
+ <returns>True si la actualizacion es correcta, de otro modo false</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.Modificar(Conexion.SQLServer,Conexion.Bitacora,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Modifica un registro de agenda
+ </summary>
+ <param name="con">Objeto Conexion</param>
+ <param name="bitacora">Objeto Bitacora</param>
+ <param name="tran">Objeto Transaccion</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.Baja">
+ <summary>
+ Baja logica de registro agenda
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.Baja(Conexion.SQLServer,Conexion.Bitacora,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Baja logica de registro agenda, dentro de una transaccion
+ </summary>
+ <param name="con">Objeto Conexion</param>
+ <param name="bitacora">Objeto Bitacora</param>
+ <param name="tran">Objeto transaccion</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.CargaRegistroAgenda(System.Data.DataRow)">
+ <summary>
+ Carga los datos del objeto actual con los datos del datarow
+ </summary>
+ <param name="dr">DataRow de la tabla BDS_D_TI_REGISTRO_AGENDA</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.RegistroAgenda.CreaRegistroAgenda(System.Data.DataRow)">
+ <summary>
+ Crea un objeto Registro agenda a partir de un datarow
+ </summary>
+ <param name="dr">DataRow de la tabla BDS_D_TI_REGISTRO_AGENDA</param>
+ <returns>Objeto RegistroAgenda</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Servicio.CargarDatos">
+ <summary>
+ Carga los datos de Servicio tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Servicio.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Servicio.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Servicio.Agregar">
+ <summary>
+ Agrega el Servicio al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Servicio.Actualizar">
+ <summary>
+ Actualiza un Tipo de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Servicio.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.ObtenerSolicitudSelloDigital(System.String)">
+ <summary>
+ Regresa un objeto de tipo solicitud en base al sello digital proporcionado
+ </summary>
+ <param name="Sello">
+ Sello digital de la solicitud o sello digital del acuse
+ </param>
+ <returns>
+ Objeto de tipo Solicitud
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.CargarDatosPerfil(System.Int32,System.String)">
+ <summary>
+ Carga las solicitudes segun el perfil del usuario consultante
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.CargarDatos(System.String)">
+ <summary>
+ Carga las solicitudes creadas y que no has sido enviadas a aprobación o a las cuales se les hicieron observaciones
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.CargarDatosSolicitud">
+ <summary>
+ Carga los datos de la Solicitud tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.Agregar">
+ <summary>
+ Agrega la Solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.Actualizar">
+ <summary>
+ Actualiza un la solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.GuardarServicios">
+ <summary>
+ Registra los servicios asociados a una solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.ActualizarServicioAgenda">
+ <summary>
+ Actualiza un servicio asociado a una solicitud, asignandole la fecha limite de termino
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.ActualizarServicioAgenda(Conexion.SQLServer,Conexion.Bitacora,System.Data.SqlClient.SqlTransaction)">
+ <summary>
+ Actualiza un servicio asociado a una solicitud, asignandole la fecha limite de termino
+ </summary>
+ <param name="conexion">Objeto conexion</param>
+ <param name="bitacora">Objeto bitacora</param>
+ <param name="tran">objeto transaccion</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.GuardarDocumentos">
+ <summary>
+ Registra los documentos asociados a una solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.EliminarServicios">
+ <summary>
+ Elimina los servicios asociados a una solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.EliminarServicio">
+ <summary>
+ Elimina el servicio indicado asociado a una solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.EliminarDocumentos">
+ <summary>
+ Elimina los documentos asociado a una solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.EliminarDocumento">
+ <summary>
+ Elimina un documento asociado a una solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.EliminarDocumentoID">
+ <summary>
+ Elimina un documento asociado a una solicitud
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.Eliminar">
+ <summary>
+ "Elimina" la solicitud cambio su estatus a "Cancelado por Solicitante"
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.CambiarEstatus">
+ <summary>
+ Actualiza el estatus de la solicitud por el parametro proporcionado
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Solicitud.ActualizarServicio">
+ <summary>
+ Actualiza el estatus de la solicitud por el parametro proporcionado
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.Agregar">
+ <summary>
+ Registra un menu
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.Actualizar">
+ <summary>
+ Actualiza un submenú
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.Baja">
+ <summary>
+ Elimina un correo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.ObtenerSubMenuPerfil(System.Int32,System.Int32)">
+ <summary>
+ Obtiene los SubMenus de un Menu asignados a un perfil
+ </summary>
+ <param name="idPerfil">Id de Perfil</param>
+ <param name="idMenu">Id de Menu</param>
+ <returns>Lista de SubMenus</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.ObtenerSubMenuNoEnPerfil(System.Int32,System.Int32)">
+ <summary>
+ Obtiene los SubMenus de un Menu no asignados a un perfil
+ </summary>
+ <param name="idPerfil">Id de Perfil</param>
+ <param name="idMenu">Id de Menu</param>
+ <returns>Lista de SubMenus</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.BorraSubMenuPerfil(System.Int32,System.Collections.Generic.List{Entities.SubMenu})">
+ <summary>
+ Borra SubMenu de un Perfil
+ </summary>
+ <param name="idPerfil">Id de Perfil</param>
+ <param name="lstSubMenu">Lista de SubMenu</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.InsertaSubMenuPerfil(System.Int32,System.Collections.Generic.List{Entities.SubMenu})">
+ <summary>
+ Inserta SubMenu a un Perfil
+ </summary>
+ <param name="idPerfil">Id de Perfil</param>
+ <param name="lstSubMenu">Lista de SubMenu</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.SubMenu.ActualizaSubMenuPerfil(System.Int32,System.Collections.Generic.List{Entities.SubMenu},System.Collections.Generic.List{Entities.SubMenu})">
+ <summary>
+ Actualiza los SubMenus Asignados a un Perfil
+ </summary>
+ <param name="idPerfil">Id de Perfil</param>
+ <param name="lstAgregados">Lista de SubMenus Agregados</param>
+ <param name="lstEliminados">Lista de SubMenus Eliminados</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Menu.Agregar">
+ <summary>
+ Registra un menu
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Menu.Actualizar">
+ <summary>
+ Actualiza un menú
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Menu.Baja">
+ <summary>
+ Elimina un correo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Entities.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Entities.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:Entities.Perfil.#ctor(System.Int32,System.String)">
+ <summary>
+ Constructor para crear un perfir con su Id y descripcion
+ </summary>
+ <param name="idPerfil">Identificador del perfil</param>
+ <param name="descripcion">Descripcion del perfil</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Perfil.CreaPerfil(System.Data.DataRow)">
+ <summary>
+ Crea un Perfil con Id y descripcion
+ </summary>
+ <param name="row">Datarow de la tabla BDS_C_GR_PERFIL</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Perfil.ObtenerPerfilesVigentes">
+ <summary>
+ Obtiene una lista de perfiles vigentes
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoActividad.CargarDatos">
+ <summary>
+ Carga los datos del Tipo de Actividad tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoActividad.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoActividad.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoActividad.Agregar">
+ <summary>
+ Agrega el Tipo de Actividad al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoActividad.Actualizar">
+ <summary>
+ Actualiza un Tipo de Actividad
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoActividad.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoAusencia.CargarDatos">
+ <summary>
+ Carga los datos del Tipo de Ausencia tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoAusencia.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoAusencia.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoAusencia.Agregar">
+ <summary>
+ Agrega el Tipo de Ausencia al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoAusencia.Actualizar">
+ <summary>
+ Actualiza un Tipo de Ausencia
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoAusencia.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoImagen.CargarDatos">
+ <summary>
+ Carga los datos de Tipo de Imagen tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoImagen.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoImagen.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoImagen.Agregar">
+ <summary>
+ Agrega el Tipo de Imagen al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoImagen.Actualizar">
+ <summary>
+ Actualiza un Tipo de Tipo de Imagen
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoImagen.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoServicio.CargarDatos">
+ <summary>
+ Carga los datos del Tipo de Servicio tomando el Identificador almacenado en la propiedad
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoServicio.ObtenerTodos">
+ <summary>
+ Obtiene todos los registros del catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoServicio.ObtenerSiguienteIdentificador">
+ <summary>
+ Obtiene el siguiente identificador del catalogo
+ </summary>
+ <returns>Identificador siguiente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoServicio.Agregar">
+ <summary>
+ Agrega el Tipo de Servicio al catalogo
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoServicio.Actualizar">
+ <summary>
+ Actualiza un Tipo de Servicio
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.TipoServicio.Baja">
+ <summary>
+ Termina la vigencia de un registro
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Usuario.CargaDatosExterno">
+ <summary>
+ Carga los datos de un usuario externo
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Entities.Usuario.ValidaContraseniaException">
+ <summary>
+ Excepcion para el proceso de validacion de contraseña
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Vacaciones.ObtnenPeriodosActivos(System.String)">
+ <summary>
+ Obtiene una lista de las vacaciones vigentes y activas para un usuario
+ </summary>
+ <param name="idUsuario">Id de usuario</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Vacaciones.ActualizaVacaciones(Conexion.SQLServer,System.Data.SqlClient.SqlTransaction,Conexion.Bitacora)">
+ <summary>
+ Actualiza un periodo de vacaiones en transaccion
+ </summary>
+ <param name="con">Objeto Conexion</param>
+ <param name="tran">Objeto transaccion</param>
+ <param name="bitac">Objeto Bitacora</param>
+ <remarks></remarks>
+</member>
+<member name="M:Entities.Vacaciones.CreaVacaciones(System.Data.DataRow)">
+ <summary>
+ Crea un objeto vacaciones dado un datarow de la tabla
+ </summary>
+ <param name="dr"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,237 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="SiteInterno.master.vb"
+    Inherits="SEPRIS.SiteInterno" %>
+
+<%@ Register Src="~/Controles/wucVencimientoSesion.ascx" TagName="ucSesiones" TagPrefix="ucSesiones" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Administración y Registro del Proceso de Inspección  y Sanción. 
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <link href="/Styles/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/jsCarousel-2.0.0.css" rel="stylesheet" type="text/css" />    
+    <script src="http://localhost:4364/Scripts/jquery-1.9.1.js"></script>
+    <script src="/Scripts/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>
+    <script src="/Scripts/MensajeModal.js" type="text/javascript"></script>
+    <script src="/Scripts/gridviewScroll.min.js" type="text/javascript"></script>
+    <script src="/Scripts/ToolTip.js" type="text/javascript"></script>
+    <script src="/Scripts/Tools.js" type="text/javascript"></script>
+    <script src="/Scripts/jsCarousel-2.0.0.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap-3.3.4/js/bootstrap.js"></script>
+    <style type="text/css">
+        .GridElementoSeleccionado {
+            background-color: #426939 !important;
+        }
+
+        .stretch {
+            margin-bottom: 24px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="JavaScript" type="text/JavaScript">
+        function MostrarReloj() {
+            if (!document.layers && !document.all && !document.getElementById)
+                return
+            var Digital = new Date()
+            var hours = Digital.getHours()
+            var minutes = Digital.getMinutes()
+            var seconds = Digital.getSeconds()
+            var diames = Digital.getDate()
+            var dia = Digital.getDay()
+            var mes = Digital.getMonth()
+            var anio = Digital.getFullYear()
+            var cadenadia
+            var cadenames
+            var dn = "AM"
+            if (hours > 12) {
+                dn = "PM"
+                hours = hours - 12
+            }
+            if (hours == 0)
+                hours = 12
+            if (minutes <= 9)
+                minutes = "0" + minutes
+            if (seconds <= 9)
+                seconds = "0" + seconds
+
+            switch (mes) {
+                case 0: cadenames = "Enero"; break;
+                case 1: cadenames = "Febrero"; break;
+                case 2: cadenames = "Marzo"; break;
+                case 3: cadenames = "Abril"; break;
+                case 4: cadenames = "Mayo"; break;
+                case 5: cadenames = "Junio"; break;
+                case 6: cadenames = "Julio"; break;
+                case 7: cadenames = "Agosto"; break;
+                case 8: cadenames = "Septiembre"; break;
+                case 9: cadenames = "Octubre"; break;
+                case 10: cadenames = "Noviembre"; break;
+                case 11: cadenames = "Diciembre"; break;
+            }
+
+            switch (dia) {
+                case 1: cadenadia = "Lunes"; break;
+                case 2: cadenadia = "Martes"; break;
+                case 3: cadenadia = "Mi&eacute;rcoles"; break;
+                case 4: cadenadia = "Jueves"; break;
+                case 5: cadenadia = "Viernes"; break;
+                case 6: cadenadia = "S&aacute;bado"; break;
+                case 7: cadenadia = "Domingo"; break;
+            }
+
+
+
+            //change font size here to your desire
+            myclock = cadenadia + "  " + diames + " de "
+                + cadenames + " de " + anio + "  " + hours + ":" + minutes + ":"
+                + seconds + " " + dn + " "
+            if (document.layers) {
+                document.layers.liveclock.document.write(myclock)
+                document.layers.liveclock.document.close()
+            }
+            else if (document.all)
+                liveclock.innerHTML = myclock
+            else if (document.getElementById)
+                //document.getElementById("liveclock").innerText = myclock
+                $("#liveclock").val(myclock);
+            setTimeout("MostrarReloj()", 1000)
+        }
+
+
+        function ClickMenu(id) {
+
+            //document.getElementById("hdnCurrentMenu").innerText = id;
+            $("#hdnCurrentMenu").val(id);
+            $('#btnClickMenu').trigger("click");
+
+
+        }
+
+        function ClickSubMenu(pagina, identificador) {
+
+            //document.getElementById("hdnCurrentSubMenu").innerText = pagina;
+            $("#hdnCurrentSubMenu").val(pagina);
+
+            //document.getElementById("hdnCurrentIdentificadorSubMenu").innerText = identificador;
+            $("#hdnCurrentIdentificadorSubMenu").val(identificador);
+            $('#btnClickSubMenu').trigger("click");
+
+
+        }
+
+        function Deshabilita(btn) {
+            btn.disabled = true;
+            btn.value = 'Procesando...';
+            __doPostBack(btn.name, "");
+        }
+
+        function InIEvent() {
+            $('#carouselh').jsCarousel({ onthumbnailclick: ImageClic, autoscroll: false, circular: true, masked: false, itemstodisplay: 8, orientation: 'h' });
+        }
+
+        $(document).ready(InIEvent);
+
+        function ImageClic(alt) {
+            $(document).ready(function () {
+                $("#hdfImagen").val(alt);
+                document.getElementById("hdfImagen").value = alt;
+                $('#lnkImagen').trigger("click");
+            });
+        }
+    </script>
+</head>
+<body onload="MostrarReloj()">
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="SM">
+        </asp:ScriptManager>
+
+
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(InIEvent);
+        </script>
+        <!-- Header start -->
+        <div id="divEncabezado">
+            <!-- Header start -->
+            <div id="divEncabezadoIzq">
+                <img src="/imagenes/encabezado001.png" alt="Encabezado1" class="stretch" />
+            </div>
+            <div id="divEncabezadoCentro">
+                <img src="/imagenes/encabezado002.png" alt="Encabezado2" class="stretch" />
+            </div>
+            <div id="divEncabezadoDer">
+                <img src="/imagenes/encabezado003.png" alt="Encabezado3" class="stretch" />
+            </div>
+            <!-- Header end -->
+        </div>
+        <!-- Header end -->
+        <!-- Menu start -->
+        <div id="divMenu" class="TemaFondoMuyClaro">
+            <div id="menuIzq" class="TemaFondoMedio">
+                <div class="txt_menuIzq">
+                    Comisión Nacional del Sistema de Ahorro para el retiro
+                </div>
+            </div>
+            <div id="menuContenido">
+                <table align="center" style="height: 100%; width: 100%" border="0" cellpadding="0" cellspacing="0"
+                    class="TemaPieHeaderCentro">
+                    <tr>
+                        <td>
+                            <table align="center" runat="server" id="TablaMenu" style="height: 100%; width: 100%"
+                                class="TemaPieHeaderCentro" width="100%">
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <asp:HiddenField runat="server" ID="hdnCurrentMenu" Value="-1" />
+                <asp:HiddenField ID="hdnCurrentUser" runat="server" />
+                <asp:Button runat="server" ID="btnClickMenu" Style="display: none" />
+            </div>
+            <div id="menuDer" class="TemaFondoMedio">
+                <span class="txt_menuDer">SEPRIS</span>
+            </div>
+        </div>
+        <!-- Menu end -->
+        <div id="divEspaciador" class="TemaFondoMuyClaro">
+            <asp:Label ID="liveclock" CssClass="liveclock" runat="server" EnableTheming="false"></asp:Label>
+            <asp:Label ID="lblUsuarioNombre" CssClass="txt_nombre_usuario" runat="server" EnableTheming="false"></asp:Label>
+        </div>
+        <!-- Content start -->
+        <div id="divMiddle">
+
+            <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                <tr valign="top">
+                    <td id="tdSubmenu">
+                        <table runat="server" id="TablaSubMenu" width="157px" class="TemaFondoMedio">
+                        </table>
+                        <asp:HiddenField runat="server" ID="hdnCurrentSubMenu" Value="" />
+                        <asp:HiddenField runat="server" ID="hdnCurrentIdentificadorSubMenu" Value="0" />
+                        <asp:Button runat="server" ID="btnClickSubMenu" Style="display: none" />
+                    </td>
+                    <td align="center" width="100%" id="tdMainContent">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+        </div>
+        <!-- Content end -->
+        <!-- Pie start -->
+        <div id="Pie" class="TemaPieHeaderCentro div_pie" runat="server">
+            <%-- INICIO Seccion para el manejo de Sesiones DEBE MANTENERSE COMO UN BLOQUE --%>
+            <ucSesiones:ucSesiones runat="server" ID="ucManejaSesion" />
+            <asp:Button runat="server" ID="btnSalirVencimientoSesion" Style="display: none" />
+            <asp:Button runat="server" ID="btnContinuarVencimientoSesion" Style="display: none" />
+            <%-- FIN Seccion para el manejo de Sesiones --%>
+            <div id="LabelPie" class="txt_pie">
+                <asp:Label runat="server" ID="lblPie" Text="" EnableTheming="false"></asp:Label>
+            </div>
+        </div>
+        <!-- Pie end -->
+    </form>
+</body>
+</html>

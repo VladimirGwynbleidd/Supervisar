@@ -1,0 +1,49 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\Utilerias.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\itextsharp.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\OpenXML.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\SharePoint.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\ControlErrores.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Release\Encryption64.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.vbproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.Resources.resources
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.vbproj.GenerateResource.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.vbproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.vbproj.CopyComplete
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Release\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Release\Utilerias.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Release\Utilerias.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\bin\Release\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\obj\Release\Utilerias.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\obj\Release\Utilerias.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\obj\Release\Utilerias.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\obj\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\obj\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Utilerias\obj\Release\Utilerias.pdb

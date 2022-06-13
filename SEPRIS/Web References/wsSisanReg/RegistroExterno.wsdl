@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://consar.gob.mx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://consar.gob.mx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://consar.gob.mx/">
+      <s:element name="RegistroExterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="t_folioReferencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioElaboro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_sistema" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iD_TipoEntidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iD_Entidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iD_SubEntidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iD_Participante" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iD_Clasificacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_numVisitaInspeccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="f_fechaInicioActoSup" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="f_fechaFinActoSup" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_OFICIO_NUMERO_SICOD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioAutorizo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="num_orden_visita_sisvig" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroExternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistroExternoResult" type="tns:WsResultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsResultado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lstMensajes" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="isError" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AdjuntarArchivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioAdjunto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdjuntarArchivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdjuntarArchivoResult" type="tns:WsResultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarSancion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_observaciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarSancionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarSancionResult" type="tns:WsResultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatalogoIrregularidades">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerCatalogoIrregularidadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatalogoIrregularidadesResult" type="tns:WsResultadoCatalogoIrregularidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsResultadoCatalogoIrregularidad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Catalogo">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isError" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistroIncidencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="I_ID_KEY" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="i_id_C_Irregularidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="i_Id_Irregularidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fech_Iregularidad" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_OBS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroIncidenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistroIncidenciasResult" type="tns:WsResultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerIncidencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_Irregularidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Filtro" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerIncidenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerIncidenciasResult" type="tns:WsResultadoCatalogoIrregularidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroReincidencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="I_ID_INCIDENCIA" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="VIG_REINCIDENCIA" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="T_OBS_NOREINCIDENCIA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroReincidenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistroReincidenciaResult" type="tns:WsResultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatalogoIrregularidadesPorProceso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idProceso" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatalogoIrregularidadesPorProcesoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatalogoIrregularidadesPorProcesoResult" type="tns:WsResultadoCatalogoIrregularidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCatalogoProcesos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerCatalogoProcesosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCatalogoProcesosResult" type="tns:WsResultadoCatalogoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsResultadoCatalogoProceso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Catalogo">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isError" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistroExternoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistroExterno" />
+  </wsdl:message>
+  <wsdl:message name="RegistroExternoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistroExternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdjuntarArchivoSoapIn">
+    <wsdl:part name="parameters" element="tns:AdjuntarArchivo" />
+  </wsdl:message>
+  <wsdl:message name="AdjuntarArchivoSoapOut">
+    <wsdl:part name="parameters" element="tns:AdjuntarArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarSancionSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarSancion" />
+  </wsdl:message>
+  <wsdl:message name="enviarSancionSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarSancionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatalogoIrregularidadesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogoIrregularidades" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatalogoIrregularidadesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogoIrregularidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistroIncidenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistroIncidencias" />
+  </wsdl:message>
+  <wsdl:message name="RegistroIncidenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistroIncidenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerIncidenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerIncidencias" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerIncidenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerIncidenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistroReincidenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistroReincidencia" />
+  </wsdl:message>
+  <wsdl:message name="RegistroReincidenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistroReincidenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatalogoIrregularidadesPorProcesoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogoIrregularidadesPorProceso" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatalogoIrregularidadesPorProcesoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogoIrregularidadesPorProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatalogoProcesosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogoProcesos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCatalogoProcesosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogoProcesosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RegistroExternoSoap">
+    <wsdl:operation name="RegistroExterno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Crea una irregularidad en SISAN con estatus 'Aprobada' incluyendo folio de referencia, se le debén adjuntar documentos y enviar a DGAS, se agrego fecha de inicio y fin de acto de supervision, y folio de referencia</wsdl:documentation>
+      <wsdl:input message="tns:RegistroExternoSoapIn" />
+      <wsdl:output message="tns:RegistroExternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdjuntarArchivo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adjunta documentos de evidencia a la irregularidad especificada en el FOLIO, archivo se deberá subir por al SharePoint de SISAN por parte de la aplicación externa, el formato del nombre es: String.Format(‘[{0}][{1}]{2}’,Date.Now.ToString(‘yyyy-MM-dd-hh-mm’),usuario,NombreOriginalDocumento). </wsdl:documentation>
+      <wsdl:input message="tns:AdjuntarArchivoSoapIn" />
+      <wsdl:output message="tns:AdjuntarArchivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSancion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Envía la sanción espesificada con el folio a la bandeja del DGAS, siempre y cuando tenga documentos adjuntos. </wsdl:documentation>
+      <wsdl:input message="tns:enviarSancionSoapIn" />
+      <wsdl:output message="tns:enviarSancionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoIrregularidades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catalogo completo de la tabla BSA_C_IRREGULARIDAD de SISAN, siempre se incluyen los No vigentes </wsdl:documentation>
+      <wsdl:input message="tns:ObtenerCatalogoIrregularidadesSoapIn" />
+      <wsdl:output message="tns:ObtenerCatalogoIrregularidadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroIncidencias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega/modifica una incidencia a una irregularidad ya registrada previamente</wsdl:documentation>
+      <wsdl:input message="tns:RegistroIncidenciasSoapIn" />
+      <wsdl:output message="tns:RegistroIncidenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIncidencias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la lista de incidencias de una irregularidad.  Filtro=0 -&gt; Todas, Filtro=1 -&gt; Proceden, Filtro=-1 -&gt; No Proceden</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerIncidenciasSoapIn" />
+      <wsdl:output message="tns:ObtenerIncidenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroReincidencia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Establece las condiciones de REINCIDENCIA de una incidencia existente</wsdl:documentation>
+      <wsdl:input message="tns:RegistroReincidenciaSoapIn" />
+      <wsdl:output message="tns:RegistroReincidenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoIrregularidadesPorProceso">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catalogo la tabla BSA_C_IRREGULARIDAD de SISAN filtrado por IdProceso, siempre se incluyen los No vigentes</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerCatalogoIrregularidadesPorProcesoSoapIn" />
+      <wsdl:output message="tns:ObtenerCatalogoIrregularidadesPorProcesoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoProcesos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa el catalogo completo de la tabla BDU_C_PROCESOS_DSJ de SISAN, siempre se incluyen los No vigentes </wsdl:documentation>
+      <wsdl:input message="tns:ObtenerCatalogoProcesosSoapIn" />
+      <wsdl:output message="tns:ObtenerCatalogoProcesosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RegistroExternoSoap" type="tns:RegistroExternoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistroExterno">
+      <soap:operation soapAction="http://consar.gob.mx/RegistroExterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjuntarArchivo">
+      <soap:operation soapAction="http://consar.gob.mx/AdjuntarArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSancion">
+      <soap:operation soapAction="http://consar.gob.mx/enviarSancion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoIrregularidades">
+      <soap:operation soapAction="http://consar.gob.mx/ObtenerCatalogoIrregularidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroIncidencias">
+      <soap:operation soapAction="http://consar.gob.mx/RegistroIncidencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIncidencias">
+      <soap:operation soapAction="http://consar.gob.mx/ObtenerIncidencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroReincidencia">
+      <soap:operation soapAction="http://consar.gob.mx/RegistroReincidencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoIrregularidadesPorProceso">
+      <soap:operation soapAction="http://consar.gob.mx/ObtenerCatalogoIrregularidadesPorProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoProcesos">
+      <soap:operation soapAction="http://consar.gob.mx/ObtenerCatalogoProcesos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RegistroExternoSoap12" type="tns:RegistroExternoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistroExterno">
+      <soap12:operation soapAction="http://consar.gob.mx/RegistroExterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjuntarArchivo">
+      <soap12:operation soapAction="http://consar.gob.mx/AdjuntarArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSancion">
+      <soap12:operation soapAction="http://consar.gob.mx/enviarSancion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoIrregularidades">
+      <soap12:operation soapAction="http://consar.gob.mx/ObtenerCatalogoIrregularidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroIncidencias">
+      <soap12:operation soapAction="http://consar.gob.mx/RegistroIncidencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIncidencias">
+      <soap12:operation soapAction="http://consar.gob.mx/ObtenerIncidencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroReincidencia">
+      <soap12:operation soapAction="http://consar.gob.mx/RegistroReincidencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoIrregularidadesPorProceso">
+      <soap12:operation soapAction="http://consar.gob.mx/ObtenerCatalogoIrregularidadesPorProceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogoProcesos">
+      <soap12:operation soapAction="http://consar.gob.mx/ObtenerCatalogoProcesos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegistroExterno">
+    <wsdl:port name="RegistroExternoSoap" binding="tns:RegistroExternoSoap">
+      <soap:address location="http://172.16.51.10:98/WS/RegistroExterno.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RegistroExternoSoap12" binding="tns:RegistroExternoSoap12">
+      <soap12:address location="http://172.16.51.10:98/WS/RegistroExterno.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

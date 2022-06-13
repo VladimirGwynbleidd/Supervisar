@@ -1,0 +1,134 @@
+﻿.anchoGriDocs {
+    width:98%;
+}
+
+.anchoGriDocsEncabezado {
+    width:98%;
+}
+
+.gridDocsCompleta {
+    width:100%;
+}
+
+.AsteriscoHide {
+    display: none;
+}
+
+.AsteriscoShow {
+    display: inline;
+    color: red;
+    font-family: Verdana;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.auto-style1 {
+    width: 30%;
+}
+
+.divMargen {
+    border: 1px solid gray;
+    width: 90%;
+    /*margin-left:5%;*/
+}
+
+.divBtnEditar {
+    width: 90%;
+    text-align:right;
+}
+
+.tablaDetalle {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+
+.divSnMargen {
+    margin-top: 30px;
+    width: 90%;
+    text-align: right;
+}
+
+.renglonDetalle {
+    /*height: 35px;*/
+    text-align: left;
+}
+
+.coumnaUno {
+    /*height: 35px;*/
+    text-align: left;
+    width: 20%;
+}
+
+.coumnaDos {
+    /*height: 35px;*/
+    text-align: left;
+    width: 10%;
+}
+
+.coumnaTres {
+    /*height: 35px;*/
+    text-align: left;
+    width: 25%;
+}
+
+.colCompleta {
+    width: 99%;
+}
+
+.tabPestanias {
+    text-align: center;
+    width: 100%;
+    font-family: Verdana;
+    font-size: 0.8em;
+    padding: 0px;
+    height: auto;
+}
+
+.marginTopCincuenta {
+    margin-top: 25px;
+}
+
+.fuenteEstandar {
+    font-size: 13px;
+    font-family: Arial, Verdana;
+    color: red;
+}
+.etiquetaGrande {
+    font-family: Arial;
+    font-size: 20px;
+}
+
+
+.loadingDiv{
+    position: fixed;
+	top: 0;
+	left: 0;
+
+    padding-left: 50px;
+    -webkit-padding-start: 47%;
+    padding-right: 50px;
+    width: 100%;
+    /*background-color: rgba(226, 226, 226, 0.59);*/
+    z-index: 40000;
+    height: 100%;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E2E2E2FF,endColorstr=#E2E2E2FF);
+}
+
+.divInterno {
+    margin-top:15%;
+    margin-left:45%;
+}
+
+#WindowLoad
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:3200;
+    filter:alpha(opacity=65);
+   -moz-opacity:65;
+    opacity:0.65;
+    background:#999;
+}

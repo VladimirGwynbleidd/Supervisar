@@ -1,0 +1,21 @@
+﻿.etiquetaGrande {
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.loadingDiv {
+    position: fixed;
+    top: 0px;
+    padding-left: 50px;
+    -webkit-padding-start: 47%;
+    padding-right: 50px;
+    width: 100%;
+    background-color: rgba(226, 226, 226, 0.59);
+    z-index: 40000;
+    height: 100%;
+}
+
+.divInterno {
+    margin-top:15%;
+}
+

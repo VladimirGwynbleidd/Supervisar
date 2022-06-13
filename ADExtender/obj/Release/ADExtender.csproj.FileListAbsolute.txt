@@ -1,0 +1,13 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\bin\Release\ADExtender.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\bin\Release\ADExtender.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\bin\Release\itextsharp.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\obj\Release\ADExtender.csproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\obj\Release\ADExtender.csproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\obj\Release\ADExtender.csproj.CopyComplete
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\obj\Release\ADExtender.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\ADExtender\obj\Release\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\ADExtender\bin\Release\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\ADExtender\bin\Release\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\ADExtender\bin\Release\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\ADExtender\obj\Release\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\ADExtender\obj\Release\ADExtender.pdb

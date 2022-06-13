@@ -1,0 +1,83 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Negocio.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Negocio.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Negocio.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Conexion.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Entities.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\ADExtender.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\itextsharp.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\SharePoint.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\OpenXML.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\ControlErrores.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Encryption64.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Conexion.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Conexion.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Entities.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Entities.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Utilerias.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\bin\Release\ADExtender.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.vbproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.Resources.resources
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.vbproj.GenerateResource.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.vbproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.vbproj.CopyComplete
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Negocio\obj\Release\Negocio.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Negocio.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Negocio.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Negocio.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Conexion.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Conexion.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Conexion.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\bin\Release\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\obj\Release\Negocio.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\obj\Release\Negocio.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\obj\Release\Negocio.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\obj\Release\Negocio.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\obj\Release\Negocio.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Negocio\obj\Release\Negocio.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Negocio.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Negocio.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Negocio.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Conexion.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Entities.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\ADExtender.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Conexion.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Conexion.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Entities.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Entities.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\bin\Release\ADExtender.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\obj\Release\Negocio.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\obj\Release\Negocio.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\obj\Release\Negocio.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\obj\Release\Negocio.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\obj\Release\Negocio.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\Cod\Negocio\obj\Release\Negocio.pdb

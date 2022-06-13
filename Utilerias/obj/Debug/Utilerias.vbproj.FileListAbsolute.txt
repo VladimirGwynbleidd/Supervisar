@@ -1,0 +1,83 @@
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\Utilerias.pdb
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\itextsharp.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\OpenXML.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\SharePoint.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\ControlErrores.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\bin\Debug\Encryption64.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.AssemblyReference.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.Resources.resources
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.GenerateResource.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.CoreCompileInputs.cache
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.CopyComplete
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.dll
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.xml
+C:\Users\IPICYT-RODO\source\repos\jjvel59\supervisar\Utilerias\obj\Debug\Utilerias.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\Utilerias.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\Utilerias.pdb
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\Utilerias.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\itextsharp.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\OpenXML.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\SharePoint.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\ControlErrores.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\bin\Debug\Encryption64.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.AssemblyReference.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.Resources.resources
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.GenerateResource.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.CoreCompileInputs.cache
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.vbproj.CopyComplete
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.dll
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.xml
+C:\Users\vladimir.martinez\Downloads\supervisar_26_05_22 (2)\supervisar\Utilerias\obj\Debug\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\Utilerias.pdb
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\DocumentFormat.OpenXml.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\itextsharp.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\OpenXML.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\SharePoint.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\ControlErrores.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\bin\Debug\Encryption64.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Debug\Utilerias.Resources.resources
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Debug\Utilerias.vbproj.GenerateResource.Cache
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Debug\Utilerias.dll
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Debug\Utilerias.xml
+C:\PROYECTOS\CONSAR\SUPERVISAR\2 FASE\VLA VLA\Codigo\Utilerias\obj\Debug\Utilerias.pdb
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\Utilerias.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\Utilerias.pdb
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\Utilerias.xml
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\DocumentFormat.OpenXml.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\itextsharp.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\OpenXML.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\SharePoint.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\ControlErrores.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\bin\Debug\Encryption64.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\obj\Debug\Utilerias.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\obj\Debug\Utilerias.Resources.resources
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\obj\Debug\Utilerias.vbproj.GenerateResource.Cache
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\obj\Debug\Utilerias.dll
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\obj\Debug\Utilerias.xml
+C:\PROYECTOS CON\08062022\Codigo\Utilerias\obj\Debug\Utilerias.pdb
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\Utilerias.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\Utilerias.pdb
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\Utilerias.xml
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\DocumentFormat.OpenXml.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\itextsharp.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\OpenXML.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\SharePoint.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\ControlErrores.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\bin\Debug\Encryption64.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\obj\Debug\Utilerias.vbprojResolveAssemblyReference.cache
+C:\PROYECTOS CON\JR 13062022\Utilerias\obj\Debug\Utilerias.Resources.resources
+C:\PROYECTOS CON\JR 13062022\Utilerias\obj\Debug\Utilerias.vbproj.GenerateResource.Cache
+C:\PROYECTOS CON\JR 13062022\Utilerias\obj\Debug\Utilerias.dll
+C:\PROYECTOS CON\JR 13062022\Utilerias\obj\Debug\Utilerias.xml
+C:\PROYECTOS CON\JR 13062022\Utilerias\obj\Debug\Utilerias.pdb

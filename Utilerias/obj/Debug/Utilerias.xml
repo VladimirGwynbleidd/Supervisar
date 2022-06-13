@@ -1,0 +1,470 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Utilerias
+</name>
+</assembly>
+<members>
+<member name="T:Utilerias.ControlErrores">
+ <summary>
+ Controla los errores escribiendolos en el visor de eventos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.ControlErrores.EscribirEvento(System.String,System.Diagnostics.EventLogEntryType,System.String,System.String)">
+ <summary>
+ Escribe un mensaje en el visor de eventos
+ </summary>
+ <param name="pMensaje">Mensaje que se desea escribir</param>
+ <param name="pTipoMensaje">Tipo de mensaje que se desea escribir</param>
+ <param name="pAplicacion">Nombre de la aplicación</param>
+ <param name="pEventLogSourceOpcional">Nombre complementario del source, este nombre se concatenará al que se recupera del WebConfig de la aplicación y es opcional</param>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.ControlErrores.EscribirEvento(System.String,System.String,System.String,System.Diagnostics.EventLogEntryType)">
+ <summary>
+ Escribe un mensaje en el visor de eventos
+ </summary>
+ <param name="pEventLogSitio">Cadena que indica el nombre del log donde se escribirá</param>
+ <param name="pEventLogSource">Cadena que indica la descripción del Source que se escribirá en el visor de eventos</param>
+ <param name="pMensaje">Mensaje que se desea escribir</param>
+ <param name="pTipoMensaje">Tipo de mensaje que se desea escribir</param>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.ControlErrores.EscribirEvento(System.String,System.String,System.String,System.Diagnostics.EventLogEntryType,System.String)">
+ <summary>
+ Escribe un mensaje en el visor de eventos
+ </summary>
+ <param name="pEventLogSitio">Cadena que indica el nombre del log donde se escribirá</param>
+ <param name="pEventLogSource">Cadena que indica la descripción del Source que se escribirá en el visor de eventos</param>
+ <param name="pMensaje">Mensaje que se desea escribir</param>
+ <param name="pTipoMensaje">Tipo de mensaje que se desea escribir</param>
+ <param name="pEventLogSourceOpcional">Nombre complementario del source, este nombre se concatenará al que se recupera del WebConfig de la aplicación y es opcional</param>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.ExportarExcel.ExportaGrid(System.Data.DataTable,System.Web.UI.WebControls.GridView,System.String,System.Collections.Generic.List{System.String})">
+ <summary>
+ Exporta el datasource de un GridView a excel
+ </summary>
+ <param name="dt">Datatable con el datasource del GridView</param>
+ <param name="gv">Gridview del cual se obtendran las columnas</param>
+ <param name="nombreBandeja">Nombre de la bandeja o pantalla, sera el nombre de la tabla de excel</param>
+ <param name="referencias">Lista de String de las referencias</param>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.VigenciaDataSource">
+ <summary>
+ Método que regresa el Datasource para el fintro de Vigencia, campo DataText = "Vigencia", campo DataValue = "N_FLAG_VIG"
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.VigenciaDataSourceBit">
+ <summary>
+ Método que regresa el Datasource para el fintro de Vigencia, campo DataText = "Vigencia", campo DataValue = "B_FLAG_VIG"
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.CargarCombo(System.Web.UI.WebControls.DropDownList,System.Object,System.String,System.String)">
+ <summary>
+ Método que carga un DropDownList"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.CargarComboOrdenado(System.Web.UI.WebControls.DropDownList,System.Data.DataTable,System.String,System.String)">
+ <summary>
+ Método que carga un DropDownList y ordena sus elementos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.CargarComboOrdenado(System.Web.UI.WebControls.DropDownList,System.Collections.Generic.List{System.Web.UI.WebControls.ListItem},System.String,System.String)">
+ <summary>
+ Método que carga un DropDownList y ordena sus elementos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.CargarComboOrdenadoOriginalRows(System.Web.UI.WebControls.DropDownList,System.Data.DataTable,System.String,System.String)">
+ <summary>
+ Método que carga un DropDownList y ordena sus elementos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.ValidaCamposCapturaHTML(System.Web.UI.WebControls.TextBox)">
+ <summary>
+ Método que valida la entrada capturada en un control TextBox (evitar scripting)
+ </summary>
+ <param name="controlValidar">Control de tipo Textbox a validar</param>
+ <remarks>Se emplea básicamente en aquellas páginas donde explicitamente se deshabilitó la validación de script</remarks>
+</member>
+<member name="M:Utilerias.Generales.ConvertToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+ Convert a IEnumerable(of T) to a DataTable.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="list"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.IsNullable(System.Type)">
+ <summary>
+ Determine of specified type is nullable
+ </summary>
+ <param name="T">Tipo</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Generales.GetCoreType(System.Type)">
+ <summary>
+ Return underlying type if type is Nullable otherwise return the type
+ </summary>
+ <param name="t">tipo a evaluar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.Mensaje">
+ <summary>
+ Contenido del cuerpo del correo a enviar
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.Asunto">
+ <summary>
+ Asunto del correo a enviar
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.EsHTML">
+ <summary>
+ Indica si el cuerpo del correo es formato HTML 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.Usuario">
+ <summary>
+ Usuario del servidor de correo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.Password">
+ <summary>
+ Password del usuario del servidor de correo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.Dominio">
+ <summary>
+ Dominio del usuario del servidor de correo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.ServidorMail">
+ <summary>
+ Dirección IP del servidor de correo 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.ArchivosAdjuntos">
+ <summary>
+ Lista de las rutas completas de los archivos adjuntos al correo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.ReplyTo">
+ <summary>
+ Dirección de correo electrónico de respuesta
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.Destinatarios">
+ <summary>
+ Lista de direcciones de correo electrónico de los destinatarios 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.ConCopia">
+ <summary>
+ Lista de direcciones de correo electrónico de los destinatarios con copia
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.ConCopiaOculta">
+ <summary>
+ Lista de direcciones de correo electrónico de los destinatarios con copia oculta
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.NombreAplicacion">
+ <summary>
+ Nombre de la aplicación
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.Mail.EventLogSource">
+ <summary>
+ Nombre del Source con el que aparecerá en el visor de eventos el mensaje de bitacora de envío de correo electrónico
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Mail.#ctor(System.String,System.String,System.String,System.String)">
+ <summary>
+ Constructor que recibe como parámetros los datos para conectarse al servidor de correo
+ </summary>
+ <param name="ServidorMail">Dirección IP del servidor de correo </param>
+ <param name="Usuario">Usuario del servidor de correo</param>
+ <param name="Password">Password del usuario del servidor de correo</param>
+ <param name="Dominio">Dominio del usuario del servidor de correo</param>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.Mail.Enviar">
+ <summary>
+ Envia un correo electrónico utilizando Exchange
+ </summary>
+ <returns>Devuelve un valor booleano indica si se envío el correo exitosamente true, de lo contrario false</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Utilerias.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Utilerias.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Utilerias.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:Utilerias.PDF.CreateDocumentSeguimientoDetalleV2(System.Collections.Generic.List{System.String},System.Collections.Generic.List{Utilerias.PasoReporte},System.Boolean)">
+ <summary>
+ NO MUESTRA AL 100 LAS TABLAS
+ </summary>
+ <param name="lstDatosEncabezado"></param>
+ <param name="lstDatosPaso"></param>
+ <param name="marcaAgua"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.RutaArchivo">
+ <summary>
+ Ruta de donde se va a cargar un archivo o´ ruta a la cual se va a descargar un archivo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.ServidorSharePoint">
+ <summary>
+ Url del servidor de sharepoint
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.Usuario">
+ <summary>
+ Usuario del servidor de sharepoint
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.Password">
+ <summary>
+ Password del servidor de sharepoint
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.Biblioteca">
+ <summary>
+ Nombre de la biblioteca del sitio de sharepoint
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.NombreArchivo">
+ <summary>
+ Nombre del archivo a cargar o descargar
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.Dominio">
+ <summary>
+ Dominio del usuario del servidor de sharepoint
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.CondicionBusquedaArchivo">
+ <summary>
+ Condición para busqueda de archvios con CAML(Collaborative Application Markup Language) Query Syntax
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.StrBatch">
+ <summary>
+ Cadena que contiene la sintaxis para actualizar listItems 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.BinFile">
+ <summary>
+ Arreglo de byte que contiene la información del archivo que se desea subir a la biblioteca de un sitio de SharePoint
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.QueryOptions">
+ <summary>
+ Propiedades del objeto SPQuery (CondicionBusquedaArchivo) con CAML(Collaborative Application Markup Language)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.ViewFields">
+ <summary>
+ Elemento que especifica que campos regresa la consulta y en que orden con CAML(Collaborative Application Markup Language)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Utilerias.SharePointManager.RowLimit">
+ <summary>
+ Número de registros que va a regresar la consulta 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.#ctor(System.String,System.String,System.String,System.String)">
+ <summary>
+ Constructor que recibe como parámetros los datos para conectarse al servidor de SharePoint
+ </summary>
+ <param name="ServidorSharePoint">Url del servidor de sharepoint</param>
+ <param name="Usuario">Usuario del servidor de sharepoint</param>
+ <param name="Password">Password del usuario del servidor de sharepoint</param>
+ <param name="Dominio">Dominio del usuario del servidor de sharepoint</param>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.CargarArchivo">
+ <summary>
+ Carga un archivo a una biblioteca del servidor de sharepoint de una ruta especifica
+ IMPORTANTE: Si se intenta subir archivos Office (.docx, pptx, xlsx) usar el método posterior (UploadFileToSharePoint)
+ </summary>
+ <returns>Regresa un valor boleano indicando si el archivo se cargo exitosamente true de lo contrario false</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.UploadFileToSharePoint">
+ <summary>
+  Subir archivo a Sharepoint en base a este doc de MS (pero adecuado a funcionar con esta clase)
+ http://msdn.microsoft.com/en-us/library/dd902097%28v=office.12%29.aspx
+ Usar para subir archivos Office (docx, pptx, xlsx)
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.DescargarArchivo">
+ <summary>
+ Descarga un archivo de una biblioteca del servidor de sharepoint a una ruta especifica
+ </summary>
+ <returns>Regresa un valor boleano indicando si el archivo se descargo exitosamente true de lo contrario false</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.ConsultarDocumentos">
+ <summary>
+ Consulta todos los documentos de una biblioteca de un sitio del servidor de sharepoint
+ </summary>
+ <returns>Regresa un nodo xml</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.ConsultarDocumentos(System.Boolean)">
+ <summary>
+ Consulta todos los documentos de una biblioteca de un sitio del servidor de SharePoint
+ </summary>
+ <param name="EnviarWebId">Indica si se va a obtener el WebId del sitio true o false si se va a mandar en nulo</param>
+ <returns>Regresa un nodo xml</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.ConsultarDocumentosBiblioteca">
+ <summary>
+ Consulta todos los documentos de una biblioteca de un sitio del servidor de sharepoint
+ </summary>
+ <returns>Regresa un dataTable con Id y Nombre de archivo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.ConsultarDocumentosBiblioteca(System.Boolean)">
+ <summary>
+ Consulta todos los documentos de una biblioteca de un sitio del servidor de SharePoint
+ </summary>
+ <param name="pEnviarWebId">Indica si se va a obtener el WebId del sitio true o false si se va a mandar en nulo</param>
+ <returns>Regresa un dataTable con Id y Nombre de archivo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.ObtenerIdArchivo">
+ <summary>
+ Obtiene el Id asignado dentro de la biblioteca del sitio del servidor de sharepoint
+ </summary>
+ <returns>Regresa el Id valor tipo cadena</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.ActualizarListItems">
+ <summary>
+ Agrega, elimina o actualiza los elementos especificados en una biblioteca en el sitio del servidor de sharepoint
+ </summary>
+ <returns>Regresa el resultado de la ejecución</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Utilerias.SharePointManager.VisualizarArchivo">
+ <summary>
+ Permite visualizar o guardar un archivo de una biblioteca del servidor de sharepoint
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9f419354-3338-4b39-b6ac-20cc639596b0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56450/ServiciosWeb/wcfRegistro.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wcfRegistro.disco" MetadataType="Disco" ID="a5ccd384-9e86-4c2e-b87a-24f7f9a23eb0" SourceId="1" SourceUrl="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?disco" />
+    <MetadataFile FileName="wcfRegistro.xsd" MetadataType="Schema" ID="a9808977-f8b5-45d5-856c-3f100a582394" SourceId="1" SourceUrl="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd0" />
+    <MetadataFile FileName="wcfRegistro1.xsd" MetadataType="Schema" ID="4c1f11f6-a326-43ae-a73f-1865e31c77b6" SourceId="1" SourceUrl="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd1" />
+    <MetadataFile FileName="wcfRegistro2.xsd" MetadataType="Schema" ID="676a9b1d-ed41-4d56-80a5-fc72097f331e" SourceId="1" SourceUrl="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd3" />
+    <MetadataFile FileName="wcfRegistro3.xsd" MetadataType="Schema" ID="39ecfd0f-33ea-43b0-8eaf-b20468cb3b9e" SourceId="1" SourceUrl="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?xsd=xsd2" />
+    <MetadataFile FileName="wcfRegistro.wsdl" MetadataType="Wsdl" ID="19dd3e0a-0662-4fb4-823f-c1d630a29e4f" SourceId="1" SourceUrl="http://localhost:56450/ServiciosWeb/wcfRegistro.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

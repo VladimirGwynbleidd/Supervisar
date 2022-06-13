@@ -1,0 +1,250 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CustomGridView
+</name>
+</assembly>
+<members>
+<member name="T:CustomGridView.CustomGridView.TipoSeleccion">
+ <summary>
+ Los tipos de seleccion que pueden existir en el CustomGridView
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.DataBindEnPostBack">
+ <summary>
+ Establece si se decea que se realice el DataSource y DataBind en cada PostBack
+ Se utiliza cuando se usa con los filtros dinamicos
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.UnicoEnPantalla">
+ <summary>
+ Determina si solo existe un CustomGridView en la pantalla
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.ToolTipHabilitado">
+ <summary>
+ Determina si se mostrara el Mensaje de ToolTip en las filas del GridView
+ Por defecto esta habilitado y se muestra si se coloca texto en la propiedad ToolTip
+ Si se coloca texto en la propiedad ToolTip y esta esta en false, no se mostrara el ToolTip
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.HiddenFieldSeleccionSimple">
+ <summary>
+ Indica el valor por defecto del Hidden Field a utilizar para seleccion simple
+ Se debe utilizar cuando hay mas de un customgrid en pantalla con seleccion simple
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.HabilitaSeleccion">
+ <summary>
+ Devuelve o asigna el tipo de seleccion del CustomGridView
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SelectedIndex">
+ <summary>
+ Devuelve o asigna el índice del registro seleccionado
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.MultiSelectedIndex">
+ <summary>
+ Devuelve una lista de los índices seleccionados, si no existe ninguna seleccionado regresa la lista vacía
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.HabilitaScroll">
+ <summary>
+ Devuleve o asigna si es que el CustomGridView tendra Scroll
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.ColumnasCongeladas">
+ <summary>
+ Devuelve o asigna el numero de columnas congeladas
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.WidthScroll">
+ <summary>
+ Devuelve o asigna el ancho cuando se habilita el scroll
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.HeigthScroll">
+ <summary>
+ Devuelve o asigna el alto cuando se habilita el Scroll
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SessionId">
+ <summary>
+ Identificador del nombre de sesion donde se guarda la informacion del Databind
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.DataSourceSession">
+ <summary>
+ Asigna el conjunto de datos al gridview y lo almacena en session en el campo de la propiedad SessionId
+ El conjunto de datos devuelto lo obtiene de la session
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.DataSource">
+ <summary>
+ Se Agrega la funcionalidad de guardar el valor asignado en DataSourceSession
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SelectedRow">
+ <summary>
+ Devuelve la fila seleccionada
+ Si se utiliza en multiselect solo regresa la primera
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SelectedMultiRows">
+ <summary>
+ Devuelve lista de filas seleccionadas
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SessionScriptFunction">
+ <summary>
+ LLave para almacenar en sesion los scripts
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SessionFunctionReady">
+ <summary>
+ LLave para almacenar en sesion la funcion FunctionReady
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SessionFunctionPageLoad">
+ <summary>
+ LLave para almacenar en sesion la funcion PageLoad
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CustomGridView.CustomGridView.SessionScriptSeleccion">
+ <summary>
+ LLave para almacenar en sesion los scripts de seleccion
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:CustomGridView.CustomGridView.Ordenar(System.Web.UI.WebControls.GridViewSortEventArgs)">
+ <summary>
+ Ordena el datasource del CustomGridView y lo muestra
+ El datasource debe ser un datatable de lo contrario de debe crear uno personalizado
+ </summary>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CustomGridView.CustomGridView.GeneraScript">
+ <summary>
+ Genera el Script inicial que tendra la pantalla
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:CustomGridView.CustomGridView.GeneraMultiScript">
+ <summary>
+ Genera los scripts cunado es mas de un CustomGridView
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:CustomGridView.CustomGridView.ArmaMultiScript">
+ <summary>
+ Une los multiples scripts de los diversos CustomGridViews en uno solo
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:CustomGridView.CustomGridView.chkSelect_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ Coloca estilo a la fila seleccionada
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CustomGridView.CustomGridView.CargaSeleccion">
+ <summary>
+ Realiza la carga los estilos de los registros seleccionados
+ Usar siempre que exista la propiedad HabilitaSeleccion en diferente de No
+ Se debe usar en cada pantalla cundo sea postback
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:CustomGridView.CustomGridView.CustomGridView_RowCreated(System.Object,System.Web.UI.WebControls.GridViewRowEventArgs)">
+ <summary>
+ Asigna Imagen al encabezado dependiendo del ordenamiento
+ Asigna el ToolTip a las filas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="T:CustomGridView.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CustomGridView.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CustomGridView.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>
