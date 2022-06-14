@@ -716,7 +716,7 @@ Public Class RegistroOPI
             'dtSubentidades = dsSubEntidades.Tables(0)
 
 
-            If (usuarioActual.IdArea = Constantes.AREA_VF AndAlso usuarioActual.IdentificadorPerfilActual = Constantes.PERFIL_SUP) Then
+            If (usuarioActual.IdArea = Constantes.AREA_VF AndAlso usuarioActual.IdentificadorPerfilActual = Constantes.PERFIL_SUP Or usuarioActual.IdentificadorPerfilActual = Constantes.PERFIL_INS Or usuarioActual.IdentificadorPerfilActual = Constantes.PERFIL_ADM) Then
 
 
 
@@ -984,7 +984,7 @@ Public Class RegistroOPI
             Dim lstEntidadesOrdenada = From l In lstEntidadesSicod Distinct Order By l.DSC
 
 
-            If ((usuario.IdentificadorPerfilActual = Constantes.PERFIL_SUP) Or (usuario.IdentificadorPerfilActual = Constantes.PERFIL_ADM)) Then
+            If ((usuario.IdentificadorPerfilActual = Constantes.PERFIL_SUP) Or (usuario.IdentificadorPerfilActual = Constantes.PERFIL_ADM) Or (usuario.IdentificadorPerfilActual = Constantes.PERFIL_INS)) Then
                 'dplEntidad.Enabled = False
                 'If dsEntidades IsNot Nothing Then
                 If dsEntidades.Tables(0).Rows.Count > 0 Then
