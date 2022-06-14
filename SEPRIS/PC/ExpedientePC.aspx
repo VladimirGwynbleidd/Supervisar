@@ -477,9 +477,9 @@
 
                     //param_data = '{Folio:' + <%=Folio%> + ', IdCatDocumento:' + $("#<%=hdCatDocumento.ClientID%>").val() + ', IdDocumento: ' + $("#<%=hdIdDocumento.ClientID%>").val() + ', Firmas: "' + Firmas + '", Rubricas: "' + Rubricas + '", Destinatario: "' + $("#<%=txtDestinatarioOficio.ClientID%>").val() + '", Puesto: ' + $("#<%=ddlPuestoDestinatario.ClientID%>").val() + ', EsSIE: ' + EsSIE + ', Asunto: "' + $("#<%=txtAsuntoOficio.ClientID%>").val() + '", Comentarios: "' + $("#<%=txtComentariosOficio.ClientID%>").val() + '", UsuarioElaboro: "' + '<%=Usuario%>' + '", Area: "' + $("#<%=ddlAreaOficio.ClientID%>").val() + '", Proceso:1 }';
 
-                    alert( <%=Folio%>)
+                 <%--   alert( <%=Folio%>)
                     alert($("#<%=hdCatDocumento.ClientID%>").val())
-                    alert($("#<%=hdIdTipoOficio.ClientID%>").val())
+                    alert($("#<%=hdIdTipoOficio.ClientID%>").val())--%>
 
 
                     if (Registrar = "Registrar")
@@ -495,8 +495,8 @@
                         //param_data = '{Folio:' + <%=Folio%> + ', IdCatDocumento:' + $("#<%=hdCatDocumento.ClientID%>").val() + ', IdDocumento: ' + $("#<%=hdIdDocumento.ClientID%>").val() + ', Firmas: "' + Firmas + '", Rubricas: "' + Rubricas + '", Destinatario: "' + $("#<%=txtDestinatarioOficio.ClientID%>").val() + '", Puesto: ' + $("#<%=ddlPuestoDestinatario.ClientID%>").val() + ', EsSIE: ' + EsSIE + ', Asunto: "' + $("#<%=txtAsuntoOficio.ClientID%>").val() + '", Comentarios: "' + $("#<%=txtComentariosOficio.ClientID%>").val() + '", UsuarioElaboro: "' + '<%=Usuario%>' + '", Area: "' + $("#<%=ddlAreaOficio.ClientID%>").val() +  '" , Proceso:2 }';
                     else
                         param_data = '{Folio:' + <%=Folio%> + ', IdCatDocumento:' + $("#<%=hdCatDocumento.ClientID%>").val() + ', IdDocumento: ' + $("#<%=hdIdDocumento.ClientID%>").val() + ', Firmas: "' + Firmas + '", Rubricas: "' + Rubricas + '", Destinatario: "' + $("#<%=txtDestinatarioOficio.ClientID%>").val() + '", Puesto: ' + $("#<%=ddlPuestoDestinatario.ClientID%>").val() + ', EsSIE: ' + EsSIE + ', Asunto: "' + $("#<%=txtAsuntoOficio.ClientID%>").val() + '", Comentarios: "' + $("#<%=txtComentariosOficio.ClientID%>").val() + '", UsuarioElaboro: "' + '<%=Usuario%>' + '", Area: "' + $("#<%=ddlAreaOficio.ClientID%>").val() + '", TipoDocumentoP: "' + $("#<%=hdIdTipoOficio.ClientID%>").val() + '", Clasificacion:0, Paso: 0, Proceso:3 }';--%>
-                    alert("paso")
-                    alert(param_data)
+                    //alert("paso")
+                    //alert(param_data)
                     $.ajax({
                         type: "POST",
                         url: "ServiciosSICOD.aspx/RegistrarOficioSD",

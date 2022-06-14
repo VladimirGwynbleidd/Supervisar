@@ -404,7 +404,7 @@
                     else
                         param_data = '{Folio:' + <%=Folio%> + ', IdCatDocumento:' + $("#<%=hdCatDocumento.ClientID%>").val() + ', IdDocumento: ' + $("#<%=hdIdTipoOficio.ClientID%>").val() + ', Firmas: "' + Firmas + '", Rubricas: "' + Rubricas + '", Destinatario: "' + $("#<%=txtDestinatarioOficio.ClientID%>").val() + '", Puesto: ' + $("#<%=ddlPuestoDestinatario.ClientID%>").val() + ', EsSIE: ' + EsSIE + ', Asunto: "' + $("#<%=txtAsuntoOficio.ClientID%>").val() + '", Comentarios: "' + $("#<%=txtComentariosOficio.ClientID%>").val() + '", UsuarioElaboro: "' + '<%=Usuario%>' + '", Area: "' + $("#<%=ddlAreaOficio.ClientID%>").val() + '", TipoDocumentoP: "' + $("#<%=hdIdTipoOficio.ClientID%>").val() + '" , Clasificacion:0, Paso: 0, Proceso:4 }';
                     --%>
-                    alert(param_data)
+                    //alert(param_data)
                     $.ajax({
                         type: "POST",
                         url: "../PC/ServiciosSICOD.aspx/RegistrarOficioSD",
