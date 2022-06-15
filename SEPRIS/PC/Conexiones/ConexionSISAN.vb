@@ -47,7 +47,9 @@ Public Class ConexionSISAN
         End If
 
         data = conexion.ConsultarDT("SELECT ISNULL( CONVERT (VARCHAR,F_FECH_ENVIA_SANCIONES,103), '') AS F_FECH_ENVIA_SANCIONES from [dbo].[BSA_IRREGULARIDAD]")
-
+        If data.Rows.Count > 0 Then
+            strDescripcion = data.Rows(0).Item("F_FECH_ENVIA_SANCIONES")
+        End If
         conexion.CerrarConexion()
 
         Return data
