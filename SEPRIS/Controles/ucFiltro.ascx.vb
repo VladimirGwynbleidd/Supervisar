@@ -979,15 +979,24 @@ Public Class ucFiltro
                                         '                "' AND '" & _
                                         '                Convert.ToDateTime(ucCalendar.fechaFin).ToString("yyyy/MM/dd") & "'")}
 
-                                        SelValues.Add(ucCalendar.DataValueField & " >= '" &
-                                                            Convert.ToDateTime(ucCalendar.FechaInicio).ToString("yyyy/MM/dd") & " 12:00:00 am" &
-                                                            "' AND " &
-                                                             ucCalendar.DataValueField & " <= '" &
-                                                            Convert.ToDateTime(ucCalendar.fechaFin).ToString("yyyy/MM/dd") & " 11:59:59 pm'")
 
+                                        'If (ucCalendar.DataValueField <> "F_FECH_ENVIA_SANSIONES") Then
+                                        'End If
+
+                                        SelValues.Add(ucCalendar.DataValueField & " >= '" &
+                                                              Convert.ToDateTime(ucCalendar.FechaInicio).ToString("yyyy/MM/dd") & " 12:00:00 am" &
+                                                              "' AND " &
+                                                               ucCalendar.DataValueField & " <= '" &
+                                                              Convert.ToDateTime(ucCalendar.fechaFin).ToString("yyyy/MM/dd") & " 11:59:59 pm'")
                                         If Not FiltroParaSesion.ContainsKey(ucCalendar.labelText) Then
                                             FiltroParaSesion.Add(ucCalendar.labelText, ucCalendar.FechaInicio & "|" & ucCalendar.fechaFin)
                                         End If
+
+                                        Session("FechaInicio") = ucCalendar.FechaInicio
+                                        Session("FechaFinal") = ucCalendar.fechaFin
+
+
+
                                     End If
                                 End If
                             End If
@@ -1292,29 +1301,29 @@ Public Class ucFiltro
     ''' <remarks></remarks>
     Protected Sub ddlAgregar_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ddlAgregar.SelectedIndexChanged
         Dim result As CriterioSeleccion = criteriosSeleccion.Find(AddressOf FindNombre)
-      If result IsNot Nothing Then
-         Select Case result.Tipo
-            Case AcceptedControls.TextBox
-               CreateTextbox(result.Nombre, result.DataValueField, result.DataValueType, result.isTextBoxLike, result.IsTextBoxRange, result.IsFixed, result.MaxLength)
-            Case AcceptedControls.DropDownList
-               CreateDropDownList(result.Nombre, result.Source, result.DataTextField, result.DataValueField, result.DataValueType, result.IsFixed, CStr(result.InitValue))
-            Case AcceptedControls.DropDownListR
-               CreateDropDownListR(result.Nombre, result.Source, result.DataTextField, result.DataValueField, result.DataValueType, result.IsFixed, CStr(result.InitValue), result.IsDdlRange)
-            Case AcceptedControls.Calendar
-               CreateCalendar(result.Nombre, result.DataValueField, result.isCalendarSingle, , result.IsFixed)
-            Case AcceptedControls.RadioButton
-               CreateRadioButton(result.Nombre, result.Source, result.DataValueField, result.DataTextField, result.DataValueType, result.IsFixed)
-            Case AcceptedControls.CheckBox
-               CreateCheckBox(result.Nombre, result.Source, result.DataValueField, result.DataTextField, result.DataValueType, result.IsFixed, CInt(result.InitValue))
-         End Select
-         ddlAgregar.Items.Remove(ddlAgregar.SelectedItem.Text)
-         SortDDL(ddlAgregar)
-      End If
+        If result IsNot Nothing Then
+            Select Case result.Tipo
+                Case AcceptedControls.TextBox
+                    CreateTextbox(result.Nombre, result.DataValueField, result.DataValueType, result.isTextBoxLike, result.IsTextBoxRange, result.IsFixed, result.MaxLength)
+                Case AcceptedControls.DropDownList
+                    CreateDropDownList(result.Nombre, result.Source, result.DataTextField, result.DataValueField, result.DataValueType, result.IsFixed, CStr(result.InitValue))
+                Case AcceptedControls.DropDownListR
+                    CreateDropDownListR(result.Nombre, result.Source, result.DataTextField, result.DataValueField, result.DataValueType, result.IsFixed, CStr(result.InitValue), result.IsDdlRange)
+                Case AcceptedControls.Calendar
+                    CreateCalendar(result.Nombre, result.DataValueField, result.isCalendarSingle, , result.IsFixed)
+                Case AcceptedControls.RadioButton
+                    CreateRadioButton(result.Nombre, result.Source, result.DataValueField, result.DataTextField, result.DataValueType, result.IsFixed)
+                Case AcceptedControls.CheckBox
+                    CreateCheckBox(result.Nombre, result.Source, result.DataValueField, result.DataTextField, result.DataValueType, result.IsFixed, CInt(result.InitValue))
+            End Select
+            ddlAgregar.Items.Remove(ddlAgregar.SelectedItem.Text)
+            SortDDL(ddlAgregar)
+        End If
 
 
-      'Si se elimino el boton "X" de un filtro debido a la existencia del Filtro Solo Mio
-      'Al agregar un filtro mas se devuelve el boton "X" al que se le habia quitado
-      HabilitaEliminacionSoloMios()
+        'Si se elimino el boton "X" de un filtro debido a la existencia del Filtro Solo Mio
+        'Al agregar un filtro mas se devuelve el boton "X" al que se le habia quitado
+        HabilitaEliminacionSoloMios()
     End Sub
 
     ''' <summary>
@@ -1748,17 +1757,17 @@ Friend Class CriterioSeleccion
     End Property
 
     Private _Source As Object = Nothing
-   Public Property Source() As Object
-      Get
-         Return _Source
-      End Get
-      Set(ByVal value As Object)
-         _Source = value
+    Public Property Source() As Object
+        Get
+            Return _Source
+        End Get
+        Set(ByVal value As Object)
+            _Source = value
 
-      End Set
-   End Property
+        End Set
+    End Property
 
-   Private _Tipo As ucFiltro.AcceptedControls
+    Private _Tipo As ucFiltro.AcceptedControls
     Public Property Tipo As ucFiltro.AcceptedControls
         Get
             Return _Tipo
@@ -1813,17 +1822,17 @@ Friend Class CriterioSeleccion
         Set(ByVal value As Boolean)
             _isTextBoxRange = value
         End Set
-   End Property
+    End Property
 
-   Private _isDdlRange As Boolean
-   Public Property IsDdlRange() As Boolean
-      Get
-         Return _isDdlRange
-      End Get
-      Set(ByVal value As Boolean)
-         _isDdlRange = value
-      End Set
-   End Property
+    Private _isDdlRange As Boolean
+    Public Property IsDdlRange() As Boolean
+        Get
+            Return _isDdlRange
+        End Get
+        Set(ByVal value As Boolean)
+            _isDdlRange = value
+        End Set
+    End Property
 
     Private _isFixed As Boolean
     Public Property IsFixed() As Boolean
