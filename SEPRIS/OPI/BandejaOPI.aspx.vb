@@ -137,6 +137,7 @@ Public Class BandejaOPI
         Dim consultaFechaSanciones As String = ""
 
 
+
         consulta = "WHERE 1=1 "
         consultaFechaSanciones = "1=1"
 

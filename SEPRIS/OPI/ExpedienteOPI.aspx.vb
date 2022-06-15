@@ -220,6 +220,7 @@
                 Dim rowOficio As New TableRow
                 Dim cellOficio As New TableCell
 
+
                 btnRegistroSICOD.Visible = False
                 btnAgregarDocumento.Visible = False
                 btnReemplazarDocumento.Visible = False
