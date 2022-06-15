@@ -226,7 +226,7 @@
                 btnBuscarSICOD.Visible = False
                 For Each archivo As DataRow In dtArchivos.Rows
 
-                    If ((archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "") Or archivo("T_FOLIO_SICOD").ToString() <> "") Then
+                    If (archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "" Or archivo("T_FOLIO_SICOD").ToString() <> "") Then
                         Dim rowArchivo As New TableRow
                         Dim cellArchivo As New TableCell
 
@@ -271,7 +271,7 @@
 
                     For Each archivo As DataRow In dtArchivos.Rows
 
-                        If ((archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "") Or archivo("T_FOLIO_SICOD").ToString() <> "") Then
+                        If (archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "") Then
                             Dim rowArchivo As New TableRow
                             Dim cellArchivo As New TableCell
 
@@ -284,6 +284,7 @@
                                 rowArchivo.Cells.Add(cellArchivo)
                                 tablaArchivos.Rows.Add(rowArchivo)
                                 btnReemplazarDocumento.Visible = True
+                                btnAgregarDocumento.Visible = False
                             End If
 
 
@@ -311,6 +312,8 @@
                                 btnBuscarSICOD.OnClientClick = "return LevantaVentanaOficio(" + e.Row.RowIndex.ToString() + ", " + archivo("I_ID").ToString() + ", " + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", " + puObjUsuario.IdArea.ToString + ", '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "')"
                                 btnBuscarSICOD.Visible = True
                             End If
+                            btnReemplazarDocumento.Visible = False
+                            'btnAgregarDocumento.Visible = True
 
                         End If
 
@@ -322,7 +325,7 @@
                             'btnReemplazarDocumento.Visible = True
                         End If
 
-                        btnAgregarDocumento.Visible = False
+                        'btnAgregarDocumento.Visible = False
                         'habilitar el boton de registro 
                         'Validar si se debe mostrar botón de registrar
 
@@ -332,7 +335,7 @@
 
 
 
-                        If ((archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "") Or archivo("T_FOLIO_SICOD").ToString() <> "") Then
+                        If (archivo("T_FOLIO_SICOD").ToString() <> "") Then
                             Dim rowOficio As New TableRow
                             Dim cellOficio As New TableCell
 
@@ -344,6 +347,7 @@
                                 cellOficio.Controls.Add(linkFolioSICOD)
                                 rowOficio.Cells.Add(cellOficio)
                                 tablaOficios.Rows.Add(rowOficio)
+                                btnAgregarDocumento.Visible = True
                                 btnReemplazarDocumento.Visible = False
                             End If
 
@@ -352,7 +356,7 @@
 
 
                             btnRegistroSICOD.Visible = False
-                            btnAgregarDocumento.Visible = False
+                            'btnAgregarDocumento.Visible = False
                             btnBuscarSICOD.Visible = False
 
 

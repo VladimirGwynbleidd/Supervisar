@@ -58,7 +58,7 @@ Public Class BandejaOPI
         ucFiltro1.AddFilter("Días hábiles transcurridos desde la detección del posible incumplimiento ", ucFiltro.AcceptedControls.TextBox, Nothing, "DIAS_HABILES", "DIAS_HABILES", ucFiltro.DataValueType.IntegerType)
         ucFiltro1.AddFilter("Área         ", ucFiltro.AcceptedControls.DropDownList, ObtenerArea, "T_DSC_AREA", "I_ID_AREA", ucFiltro.DataValueType.IntegerType)
         ucFiltro1.AddFilter("Folio SISAN         ", ucFiltro.AcceptedControls.TextBox, Nothing, "T_ID_FOLIO_SISAN", "T_ID_FOLIO_SISAN", ucFiltro.DataValueType.StringType, , True)
-        ucFiltro1.AddFilter("Fecha de Envío a Sanciones", ucFiltro.AcceptedControls.Calendar, Nothing, "F_FECH_IRREGULARIDAD", "F_FECH_IRREGULARIDAD", ucFiltro.DataValueType.StringType, False, False, False, False, False, Date.Today.AddMonths(-6), 10, False)
+        ucFiltro1.AddFilter("Fecha de Envío a Sanciones", ucFiltro.AcceptedControls.Calendar, Nothing, "Fecha de Envío a Sanciones", "F_FECH_ENVIA_SANSIONES", ucFiltro.DataValueType.StringType, False, False, False, False, False, Date.Today.AddMonths(-6), 10, False)
 
         ucFiltro1.LoadDDL("BandejaOPI.aspx")
 
@@ -130,12 +130,19 @@ Public Class BandejaOPI
 
     Private Sub LLenaGridOPIS()
         Dim usuario As New Entities.Usuario()
+
         usuario = Session(Entities.Usuario.SessionID)
 
-        Dim consulta As String = "WHERE 1=1 "
+        Dim consulta As String = ""
+        Dim consultaFechaSanciones As String = ""
+
+
+        consulta = "WHERE 1=1 "
+        consultaFechaSanciones = "1=1"
 
         If CType(Session(Entities.Usuario.SessionID), Entities.Usuario).IdArea <> 34 Then
             consulta += " AND opi.I_ID_AREA = " & usuario.IdArea
+            consultaFechaSanciones += " AND opi.I_ID_AREA = " & usuario.IdArea
         End If
 
         For Each filtro In ucFiltro1.getFilterSelection
@@ -188,10 +195,71 @@ Public Class BandejaOPI
             End If
 
             consulta += " AND " + filtro
+            consultaFechaSanciones += " AND " + filtro
         Next
 
-        gvConsultaOPI.DataSource = ObtenerFoliosOPI(consulta)
-        gvConsultaOPI.DataBind()
+
+        'If () Then
+
+        'End If
+
+        'If consulta.ToString().Contains("WHERE 1=1  AND F_FECH_ENVIA_SANSIONES") Then
+        If consultaFechaSanciones.Contains("F_FECH_ENVIA_SANSIONES") Then
+            Dim valor As String
+            Dim dt As DataTable
+            Dim dv As DataView
+            Dim newText = consultaFechaSanciones.Replace("1=1 AND F_FECH_ENVIA_SANSIONES", "1=1 AND F_FECH_REGISTRO >= '" + Session("FechaInicio") + "' AND F_FECH_REGISTRO <= '" + Session("FechaFinal") + "'")
+
+
+            valor = "WHERE 1=1" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+            dt = ObtenerFoliosOPI(valor)
+
+            'F_FECH_ENVIA_SANSIONES
+            dt.Columns.Add("F_FECH_ENVIA_SANSIONES", System.Type.GetType("System.String"))
+
+            'Recorrer La columna FOLIO SISAN'
+            For i As Integer = 0 To dt.Rows.Count - 1
+                Dim dr As DataRow = dt.Rows(i)
+                dr("F_FECH_ENVIA_SANSIONES") = ConexionSISAN.ObtenerFechaSancion(dr("T_ID_FOLIO_SISAN"))
+            Next
+
+
+            If Not IsNothing(dt) Then
+                If dt.Rows.Count > 0 Then
+                    dv = dt.DefaultView
+                    dv.RowFilter = consultaFechaSanciones
+
+                    Dim dtaux As DataTable = dv.ToTable
+
+
+                    For i As Integer = 0 To dtaux.Rows.Count - 1
+                        Dim dr As DataRow = dtaux.Rows(i)
+                        If Not dr("F_FECH_ENVIA_SANSIONES") = "" Then
+                            dr("F_FECH_ENVIA_SANSIONES") = Convert.ToDateTime(dr("F_FECH_ENVIA_SANSIONES")).ToString("dd/MM/yyyy")
+                        End If
+                    Next
+
+                    dv = dtaux.DefaultView
+
+                    gvConsultaOPI.DataSource = dv.Table
+                    gvConsultaOPI.DataBind()
+                Else
+                    gvConsultaOPI.DataSource = Nothing
+                    gvConsultaOPI.DataBind()
+                    Noexisten.Visible = False
+                    gvConsultaOPI.Visible = True
+                End If
+
+            End If
+        Else
+            gvConsultaOPI.DataSource = ObtenerFoliosOPI(consulta)
+            gvConsultaOPI.DataBind()
+
+        End If
+
+
+
+
 
         If gvConsultaOPI.Rows.Count = 0 Then
             Noexisten.Visible = True
