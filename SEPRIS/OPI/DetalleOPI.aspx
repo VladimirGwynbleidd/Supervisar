@@ -1113,6 +1113,8 @@
                         $('#btnAceptarM2B1A').trigger("click");
                     },
                     "Cancelar": function () {
+                          var txtName = document.getElementById('<%=CancelarOPI1.FindControl("txtMotivo1").ClientID %>');
+                        txtName.value = "";
                         $('#btnAceptarM3B1A').trigger("click");
                     }
                 }
