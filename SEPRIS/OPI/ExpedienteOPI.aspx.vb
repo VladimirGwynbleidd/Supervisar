@@ -293,10 +293,26 @@
 
 
 
-                            btnRegistroSICOD.Visible = False
-                            btnAgregarDocumento.Visible = False
+                            'btnRegistroSICOD.Visible = False
+                            'btnAgregarDocumento.Visible = False
 
-                            btnBuscarSICOD.Visible = False
+                            'btnBuscarSICOD.Visible = False
+
+                            If Not e.Row.DataItem("B_REG_SICOD") Then
+                                btnRegistroSICOD.Visible = False
+                            Else
+                                btnRegistroSICOD.OnClientClick = "RegistroSICOD(" + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", " + archivo("I_ID").ToString() + ", '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "'); return false;"
+                                btnRegistroSICOD.Visible = True
+                            End If
+
+
+
+                            If Not e.Row.DataItem("B_BUSCAR_SICOD") Then
+                                btnBuscarSICOD.Visible = False
+                            Else
+                                btnBuscarSICOD.OnClientClick = "return LevantaVentanaOficio(" + e.Row.RowIndex.ToString() + ", " + archivo("I_ID").ToString() + ", " + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", " + puObjUsuario.IdArea.ToString + ", '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "')"
+                                btnBuscarSICOD.Visible = True
+                            End If
 
 
                         Else
