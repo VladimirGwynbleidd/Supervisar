@@ -241,7 +241,7 @@ Public Class BandejaOPI
             'Dim newText = consultaFechaSanciones.Replace("1=1 AND F_FECH_ENVIA_SANSIONES", "1=1 AND F_FECH_REGISTRO >= '" + Session("FechaInicio") + "' AND F_FECH_REGISTRO <= '" + Session("FechaFinal") + "'")
 
 
-            valor = "1=1" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+            valor = "1=1" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm'" + " AND T_ID_FOLIO_SISAN<>'Sin Folio'"
             dt = ObtenerFoliosOPI(consulta1)
 
             'consulta.

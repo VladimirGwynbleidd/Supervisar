@@ -502,8 +502,10 @@
             </asp:Panel>
             <asp:Panel ID="xpnlPaso10" runat="server" Visible="true">
                 <asp:ImageButton ID="btnDejarSEfecto" runat="server" src="../Imagenes/DejarSinEfecto.png" Width="40px" ComanName="DejarSEfecto" OnCommand="btnDejarSinEfecto" ToolTip="Dejar sin efectos el Oficio de Observaciones" />
-                <asp:ImageButton ID="btnAprobarSEfecto" runat="server" src="../Imagenes/AprobarDejarSEfecto.png" Width="40px" ComanName="AprobarDejarSEfecto" OnCommand="AprobarSEfecto" ToolTip="Aprobar Dejar sin efectos el Oficio de Observaciones" />
-                <asp:ImageButton ID="btnRechazarSEfecto" runat="server" src="../Imagenes/RechazarDejarSEfecto.png" Width="40px" ComanName="RechazarDejarSEfecto" OnCommand="RechazarSEfecto" ToolTip="Rechazar Dejar sin efectos el Oficio de Observaciones" />
+                <asp:ImageButton ID="btnAprobarSEfecto" runat="server" src="../Imagenes/AprobarDejarSEfecto.png" Width="40px" ComanName="AprobarDejarSEfecto" OnCommand="AprobarSEfecto" ToolTip="Aprobar solicitud" />
+                <asp:ImageButton ID="btnRechazarSEfecto" runat="server" src="../Imagenes/RechazarDejarSEfecto.png" Width="40px" ComanName="RechazarDejarSEfecto" OnCommand="RechazarSEfecto" ToolTip="Rechazar solicitud" />
+                <%--<asp:ImageButton ID="btnAprobarSEfecto" runat="server" src="../Imagenes/AprobarDejarSEfecto.png" Width="40px" ComanName="AprobarDejarSEfecto" OnCommand="AprobarSEfecto" ToolTip="Aprobar Dejar sin efectos el Oficio de Observaciones" />
+                <asp:ImageButton ID="btnRechazarSEfecto" runat="server" src="../Imagenes/RechazarDejarSEfecto.png" Width="40px" ComanName="RechazarDejarSEfecto" OnCommand="RechazarSEfecto" ToolTip="Rechazar Dejar sin efectos el Oficio de Observaciones" />--%>
                 <%--<asp:ImageButton ID="btnDejarSEfecto" runat="server" src="../Imagenes/detener.png" Width="40px" ComanName="DejarSinEfecto_OPI" CommandArgument="" OnCommand="btnDejarSinEfectoOPI" ToolTip="Dejar sin efectos el Oficio de Observaciones" />--%>
                 <asp:ImageButton ID="btnNotificarP10" runat="server" src="../Imagenes/notificar_3.png" Width="40px"
                     CommandName="Notificar_Paso10" CommandArgument="10,0" OnCommand="btnNotificar_Command" />
