@@ -220,7 +220,6 @@ Public Class BandejaOPI
         '    'ElseIf (consulta.Contains("opi.I_ID_AREA")) Then
         '    '        consulta1 = "WHERE 1=1  AND opi.I_ID_AREA = 35" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
 
-
         'End If
 
         'If consulta.ToString().Contains("WHERE 1=1  AND F_FECH_ENVIA_SANSIONES") Then
