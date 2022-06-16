@@ -147,6 +147,7 @@
             btnReemplazarDocumento.OnClientClick = "ReemplazarArchivo(" + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + "); return false;"
             'btnRegistroSICOD.OnClientClick = "RegistroSICOD(" + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", -1, '" + "1" + "'); return false;"
             btnRegistroSICOD.OnClientClick = "RegistroSICOD(" + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", -1, '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "'); return false;"
+            Session("FolioSicod") = String.Empty
 
             'If Not e.Row.DataItem("B_REG_SICOD") Then
             '    btnRegistroSICOD.Visible = False
@@ -265,6 +266,7 @@
             Else
                 Dim dtArchivos As DataTable = Entities.DocumentoOPI.ObtenerArchivos(Folio, e.Row.DataItem("I_ID_DOCUMENTO").ToString())
 
+
                 If dtArchivos.Rows.Count > 0 Then
 
                     Dim tablaArchivos As New Table
@@ -279,6 +281,7 @@
                             Dim linkArchivo As New LinkButton
 
                             If (archivo("T_DSC_NOMBRE_DOCUMENTO").ToString() <> "") Then
+                                Session("NombreDocumento") = archivo("T_DSC_NOMBRE_DOCUMENTO").ToString()
                                 linkArchivo.Text = archivo("T_DSC_NOMBRE_DOCUMENTO")
                                 linkArchivo.OnClientClick = "__doPostBack('" + Button1.UniqueID + "', '" + archivo("T_DSC_NOMBRE_DOCUMENTO") + "'); return false;"
                                 cellArchivo.Controls.Add(linkArchivo)
@@ -342,14 +345,15 @@
 
 
                             If (archivo("T_FOLIO_SICOD").ToString() <> "") Then
+                                Session("FolioSicod") = archivo("T_FOLIO_SICOD").ToString()
                                 Dim linkFolioSICOD As New LinkButton
                                 linkFolioSICOD.Text = archivo("T_FOLIO_SICOD").ToString()
                                 linkFolioSICOD.OnClientClick = "ConsultarOficios('" + archivo("T_FOLIO_SICOD").ToString().Replace("/", "-") + "'); return false;"
                                 cellOficio.Controls.Add(linkFolioSICOD)
                                 rowOficio.Cells.Add(cellOficio)
                                 tablaOficios.Rows.Add(rowOficio)
-                                btnAgregarDocumento.Visible = True
-                                btnReemplazarDocumento.Visible = False
+                                btnRegistroSICOD.Visible = False
+                                btnBuscarSICOD.Visible = False
                             End If
 
 
@@ -367,22 +371,24 @@
                             '    btnAgregarDocumento.Visible = True
                             'End If
                         Else
-                            If Not e.Row.DataItem("B_REG_SICOD") Then
-                                btnRegistroSICOD.Visible = False
-                            Else
-                                btnRegistroSICOD.OnClientClick = "RegistroSICOD(" + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", " + archivo("I_ID").ToString() + ", '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "'); return false;"
-                                btnRegistroSICOD.Visible = True
+                            If (Session("FolioSicod").ToString() Is Nothing) Then
+                                If Not e.Row.DataItem("B_REG_SICOD") Then
+                                    btnRegistroSICOD.Visible = False
+                                Else
+                                    btnRegistroSICOD.OnClientClick = "RegistroSICOD(" + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", " + archivo("I_ID").ToString() + ", '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "'); return false;"
+                                    btnRegistroSICOD.Visible = True
+                                End If
+
+
+
+                                If Not e.Row.DataItem("B_BUSCAR_SICOD") Then
+                                    btnBuscarSICOD.Visible = False
+                                Else
+                                    btnBuscarSICOD.OnClientClick = "return LevantaVentanaOficio(" + e.Row.RowIndex.ToString() + ", " + archivo("I_ID").ToString() + ", " + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", " + puObjUsuario.IdArea.ToString + ", '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "')"
+                                    btnBuscarSICOD.Visible = True
+                                End If
+
                             End If
-
-
-
-                            If Not e.Row.DataItem("B_BUSCAR_SICOD") Then
-                                btnBuscarSICOD.Visible = False
-                            Else
-                                btnBuscarSICOD.OnClientClick = "return LevantaVentanaOficio(" + e.Row.RowIndex.ToString() + ", " + archivo("I_ID").ToString() + ", " + e.Row.DataItem("I_ID_DOCUMENTO").ToString() + ", " + puObjUsuario.IdArea.ToString + ", '" + e.Row.DataItem("T_OFICIO_SICOD").ToString() + "')"
-                                btnBuscarSICOD.Visible = True
-                            End If
-
 
                         End If
 

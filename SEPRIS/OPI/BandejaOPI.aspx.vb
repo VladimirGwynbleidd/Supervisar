@@ -200,20 +200,51 @@ Public Class BandejaOPI
         Next
 
 
-        'If () Then
+        Dim consulta1 As String = String.Empty
+        Dim reemplazo As String = String.Empty
 
-        'End If
+        If consulta.Contains("F_FECH_ENVIA_SANSIONES") Then
+            If (consulta.Contains("opi.I_ID_AREA")) Then
+                consulta1 = "WHERE 1=1  AND opi.I_ID_AREA = 35" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+            Else
+
+                consulta1 = "WHERE 1=1" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+            End If
+            ''consulta.Replace("WHERE 1=1  AND opi.I_ID_AREA = 35 AND F_FECH_ENVIA_SANSIONES >= '2021/06/15 12:00:00 am' AND F_FECH_ENVIA_SANSIONES <= '2022/06/15 11:59:59 pm'", "")
+            ''consulta1 = consulta.Replace("WHERE 1=1  AND opi.I_ID_AREA = 35 AND F_FECH_ENVIA_SANSIONES >= '2021/06/15 12:00:00 am' AND F_FECH_ENVIA_SANSIONES <= '2022/06/15 11:59:59 pm'", "WHERE 1=1  AND opi.I_ID_AREA = 35 AND F_FECH_REGISTRO >= '2021/06/15 12:00:00 am' AND F_FECH_REGISTRO <= '2022/06/15 11:59:59 pm'")
+
+
+            'consulta = ""
+            'consulta = consulta1
+
+            'ElseIf (consulta.Contains("opi.I_ID_AREA")) Then
+            '        consulta1 = "WHERE 1=1  AND opi.I_ID_AREA = 35" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+
+
+        End If
 
         'If consulta.ToString().Contains("WHERE 1=1  AND F_FECH_ENVIA_SANSIONES") Then
         If consultaFechaSanciones.Contains("F_FECH_ENVIA_SANSIONES") Then
+
+            If (consulta.Contains("opi.I_ID_AREA")) Then
+                consulta1 = "WHERE 1=1  AND opi.I_ID_AREA = 35" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+            Else
+
+                consulta1 = "WHERE 1=1" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+            End If
+
+
+
             Dim valor As String
             Dim dt As DataTable
             Dim dv As DataView
-            Dim newText = consultaFechaSanciones.Replace("1=1 AND F_FECH_ENVIA_SANSIONES", "1=1 AND F_FECH_REGISTRO >= '" + Session("FechaInicio") + "' AND F_FECH_REGISTRO <= '" + Session("FechaFinal") + "'")
+            'Dim newText = consultaFechaSanciones.Replace("1=1 AND F_FECH_ENVIA_SANSIONES", "1=1 AND F_FECH_REGISTRO >= '" + Session("FechaInicio") + "' AND F_FECH_REGISTRO <= '" + Session("FechaFinal") + "'")
 
 
-            valor = "WHERE 1=1" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
-            dt = ObtenerFoliosOPI(valor)
+            valor = "1=1" + " AND F_FECH_REGISTRO >= '" + Convert.ToDateTime(Session("FechaInicio")).ToString("yyyy/MM/dd") & " 12:00:00 am" + "' AND F_FECH_REGISTRO <= '" + Convert.ToDateTime(Session("FechaFinal")).ToString("yyyy/MM/dd") & " 11:59:59 pm" + "'"
+            dt = ObtenerFoliosOPI(consulta1)
+
+            'consulta.
 
             'F_FECH_ENVIA_SANSIONES
             dt.Columns.Add("F_FECH_ENVIA_SANSIONES", System.Type.GetType("System.String"))
@@ -224,11 +255,16 @@ Public Class BandejaOPI
                 dr("F_FECH_ENVIA_SANSIONES") = ConexionSISAN.ObtenerFechaSancion(dr("T_ID_FOLIO_SISAN"))
             Next
 
+            If consulta.Contains("F_FECH_REGISTRO") Then
+
+                consulta = valor
+
+            End If
 
             If Not IsNothing(dt) Then
                 If dt.Rows.Count > 0 Then
                     dv = dt.DefaultView
-                    dv.RowFilter = consultaFechaSanciones
+                    dv.RowFilter = valor
 
                     Dim dtaux As DataTable = dv.ToTable
 
