@@ -306,7 +306,6 @@
                             End If
 
 
-
                             If Not e.Row.DataItem("B_BUSCAR_SICOD") Then
                                 btnBuscarSICOD.Visible = False
                             Else
